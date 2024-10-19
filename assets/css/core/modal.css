@@ -9,7 +9,7 @@
         @apply p-0;
     }
     .tw-modal-dialog {
-        @apply m-3 mt-0 w-full max-w-xl opacity-0 hs-overlay-open:mt-7 hs-overlay-open:opacity-100 hs-overlay-open:duration-500 sm:mx-auto;
+        @apply m-3 mt-0 max-w-xl opacity-0 hs-overlay-open:mt-7 hs-overlay-open:opacity-100 hs-overlay-open:duration-500 sm:mx-auto;
     }
     .tw-modal-scale {
         @apply scale-95 hs-overlay-open:scale-100 hs-overlay-open:opacity-100;
