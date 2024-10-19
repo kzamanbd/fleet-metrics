@@ -107,3 +107,6 @@ Version: 1.0
         transform: rotate(360deg);
     }
 }
+.jvm-tooltip:not(.active) {
+    display: none;
+}

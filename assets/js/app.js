@@ -77,6 +77,7 @@ window.tippy = tippy;
     } else if (activeMenu) {
         activeMenu.scrollIntoView({ block: 'center', behavior: 'smooth' });
     }
+
     const verticalMenu = document.querySelector('.vertical-menu');
     window.addEventListener('resize', () => {
         if (window.innerWidth < 1024) {

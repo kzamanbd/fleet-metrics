@@ -1,14 +1,19 @@
 @layer components {
     .tw-modal {
-        @apply pointer-events-none fixed start-0 top-0 z-[80] hidden size-full overflow-y-auto overflow-x-hidden px-4 py-10;
+        @apply pointer-events-none fixed start-0 top-0 z-[80] size-full overflow-y-auto overflow-x-hidden;
+    }
+    .tw-modal:not(.open) {
+        @apply hidden;
     }
     .tw-modal-full {
         @apply p-0;
     }
     .tw-modal-dialog {
-        @apply pointer-events-auto relative mx-auto w-full max-w-xl;
+        @apply m-3 mt-0 w-full max-w-xl opacity-0 hs-overlay-open:mt-7 hs-overlay-open:opacity-100 hs-overlay-open:duration-500 sm:mx-auto;
     }
-
+    .tw-modal-scale {
+        @apply scale-95 hs-overlay-open:scale-100 hs-overlay-open:opacity-100;
+    }
     .tw-modal-sm .tw-modal-dialog {
         @apply max-w-md;
     }
@@ -24,14 +29,11 @@
     .tw-modal-full .tw-modal-content {
         @apply rounded-none;
     }
-    .tw-modal.open {
-        @apply block;
-    }
     .tw-modal-centered {
-        @apply flex items-center justify-center;
+        @apply flex min-h-[calc(100%-3.5rem)] items-center justify-center;
     }
     .tw-modal-content {
-        @apply relative flex h-full w-full flex-col overflow-hidden rounded-md bg-white shadow-xl dark:bg-slate-800;
+        @apply pointer-events-auto relative flex h-full w-full flex-col overflow-hidden rounded-md bg-white shadow-xl dark:bg-slate-800;
     }
 
     .tw-modal-header,
@@ -54,7 +56,8 @@
     .tw-modal-footer {
         @apply flex items-center justify-end gap-2 border-t border-t-slate-300 dark:border-t-slate-600;
     }
-    .blur-backdrop {
+    .tw-modal.open,
+    .blur-backdrop.open {
         @apply hs-overlay-backdrop-open:supports-[backdrop-filter]:bg-light/30 hs-overlay-backdrop-open:supports-[backdrop-filter]:backdrop-blur-sm hs-overlay-backdrop-open:dark:supports-[backdrop-filter]:bg-gray-700/60;
     }
 }

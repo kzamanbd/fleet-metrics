@@ -10,7 +10,7 @@
         "build": "vite build",
         "preview": "vite preview",
         "lint-staged": "lint-staged",
-        "format": "prettier --write \"pages/**/*.html\" --ignore-path .gitignore",
+        "format": "prettier --write \"pages/**/*.html\" \"assets/**/*.{js,css}\"  --ignore-path .gitignore",
         "prepare": "husky"
     },
     "commitlint": {
@@ -20,7 +20,7 @@
     },
     "lint-staged": {
         "*.{html,js,jsx,cjs,mjs}": [
-            "prettier --write \"pages/**/*.html\" --ignore-path .gitignore"
+            "prettier --write \"pages/**/*.html\" \"assets/**/*.{js,css}\" --ignore-path .gitignore"
         ]
     },
     "dependencies": {
