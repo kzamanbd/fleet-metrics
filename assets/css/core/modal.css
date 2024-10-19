@@ -1,6 +1,6 @@
 @layer components {
     .tw-modal {
-        @apply pointer-events-none fixed start-0 top-0 z-[80] hidden size-full overflow-y-auto overflow-x-hidden px-4 py-10;
+        @apply pointer-events-none fixed start-0 top-0 z-[80] hidden size-full overflow-y-auto overflow-x-hidden px-4 py-8;
     }
     .tw-modal-full {
         @apply p-0;
