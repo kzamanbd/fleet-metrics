@@ -1170,18 +1170,18 @@
                                             <button type="button" class="btn btn-primary" data-hs-overlay="#modal-sm">
                                                 Small Modal
                                             </button>
-                                            <button type="button" class="btn btn-info" data-hs-overlay="#modal-lg">
+                                            <button type="button" class="btn btn-primary" data-hs-overlay="#modal-lg">
                                                 Large Modal
                                             </button>
                                             <button
                                                 type="button"
-                                                class="btn btn-success"
+                                                class="btn btn-primary"
                                                 data-hs-overlay="#modal-custom-size">
                                                 Custom Size Modal
                                             </button>
                                             <button
                                                 type="button"
-                                                class="btn btn-warning"
+                                                class="btn btn-primary"
                                                 data-hs-overlay="#modal-full-screen">
                                                 Open Full Screen Modal
                                             </button>
@@ -1599,15 +1599,40 @@
                         <!-- Custom -->
                         <div class="card">
                             <div class="card-body">
-                                <h4 class="card-title">Disabled Backdrop</h4>
-                                <p class="card-subtitle">More Custom Modals.</p>
+                                <h4 class="card-title">Custom Modal UI</h4>
+                                <p class="card-subtitle mb-2">More Custom Modals.</p>
                                 <div class="flex flex-wrap items-center justify-center gap-2">
-                                    <!-- standard  -->
-
                                     <button type="button" class="btn btn-primary" data-hs-overlay="#modal-standard">
                                         Standard
                                     </button>
-                                    <div class="tw-modal" id="modal-standard">
+                                    <button type="button" class="btn btn-primary" data-hs-overlay="#modal-tabs">
+                                        Tabs
+                                    </button>
+                                    <button type="button" class="btn btn-primary" data-hs-overlay="#modal-profile">
+                                        Profile
+                                    </button>
+
+                                    <button type="button" class="btn btn-primary" data-hs-overlay="#modal-login">
+                                        Login
+                                    </button>
+                                    <button type="button" class="btn btn-primary" data-hs-overlay="#sign-out-alert">
+                                        Sign Out Alert
+                                    </button>
+                                    <button
+                                        type="button"
+                                        class="btn btn-primary"
+                                        data-hs-overlay="#sign-out-alert-small">
+                                        Sign Out Alert Small Window
+                                    </button>
+                                    <button type="button" class="btn btn-primary" data-hs-overlay="#task-created">
+                                        Task Created Alert
+                                    </button>
+                                    <button type="button" class="btn btn-primary" data-hs-overlay="#danger-alert">
+                                        Danger Alert
+                                    </button>
+
+                                    <!-- standard  -->
+                                    <div id="modal-standard" class="tw-modal">
                                         <div class="tw-modal-dialog">
                                             <div class="tw-modal-content">
                                                 <div class="tw-modal-body">
@@ -1662,9 +1687,6 @@
                                     </div>
 
                                     <!-- tabs -->
-                                    <button type="button" class="btn btn-info" data-hs-overlay="#modal-tabs">
-                                        Tabs
-                                    </button>
                                     <div id="modal-tabs" class="tw-modal">
                                         <div class="tw-modal-dialog">
                                             <div class="tw-modal-content">
@@ -1803,9 +1825,6 @@
                                     </div>
 
                                     <!-- profile -->
-                                    <button type="button" class="btn btn-success" data-hs-overlay="#modal-profile">
-                                        Profile
-                                    </button>
                                     <div id="modal-profile" class="tw-modal">
                                         <div class="tw-modal-dialog">
                                             <div class="tw-modal-content">
@@ -1844,9 +1863,6 @@
                                     </div>
 
                                     <!-- login -->
-                                    <button type="button" class="btn btn-warning" data-hs-overlay="#modal-login">
-                                        Login
-                                    </button>
                                     <div id="modal-login" class="tw-modal">
                                         <div class="tw-modal-dialog tw-modal-centered">
                                             <div class="tw-modal-content">
@@ -2018,6 +2034,302 @@
                                                         </form>
                                                         <!-- End Form -->
                                                     </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- sign out alert  -->
+                                    <div id="sign-out-alert" class="tw-modal">
+                                        <div class="tw-modal-dialog">
+                                            <div class="tw-modal-content">
+                                                <div class="absolute end-2 top-2">
+                                                    <button
+                                                        type="button"
+                                                        class="inline-flex size-8 items-center justify-center gap-x-2 rounded-full border border-transparent bg-gray-100 text-gray-800 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none disabled:pointer-events-none disabled:opacity-50 dark:bg-neutral-700 dark:text-neutral-400 dark:hover:bg-neutral-600 dark:focus:bg-neutral-600"
+                                                        aria-label="Close"
+                                                        data-hs-overlay="#hs-sign-out-alert">
+                                                        <span class="sr-only">Close</span>
+                                                        <svg
+                                                            class="size-4 shrink-0"
+                                                            xmlns="http://www.w3.org/2000/svg"
+                                                            width="24"
+                                                            height="24"
+                                                            viewBox="0 0 24 24"
+                                                            fill="none"
+                                                            stroke="currentColor"
+                                                            stroke-width="2"
+                                                            stroke-linecap="round"
+                                                            stroke-linejoin="round">
+                                                            <path d="M18 6 6 18" />
+                                                            <path d="m6 6 12 12" />
+                                                        </svg>
+                                                    </button>
+                                                </div>
+
+                                                <div class="overflow-y-auto p-4 text-center sm:p-10">
+                                                    <!-- Icon -->
+                                                    <span
+                                                        class="mb-4 inline-flex size-[62px] items-center justify-center rounded-full border-4 border-yellow-50 bg-yellow-100 text-yellow-500 dark:border-yellow-600 dark:bg-yellow-700 dark:text-yellow-100">
+                                                        <svg
+                                                            class="size-5 shrink-0"
+                                                            xmlns="http://www.w3.org/2000/svg"
+                                                            width="16"
+                                                            height="16"
+                                                            fill="currentColor"
+                                                            viewBox="0 0 16 16">
+                                                            <path
+                                                                d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+                                                        </svg>
+                                                    </span>
+                                                    <!-- End Icon -->
+
+                                                    <h3
+                                                        id="hs-sign-out-alert-label"
+                                                        class="mb-2 text-2xl font-bold text-gray-800 dark:text-neutral-200">
+                                                        Sign out
+                                                    </h3>
+                                                    <p class="text-gray-500 dark:text-neutral-500">
+                                                        Are you sure you would like to sign out of your Preline account?
+                                                    </p>
+
+                                                    <div class="mt-6 flex justify-center gap-x-4">
+                                                        <button
+                                                            type="button"
+                                                            class="inline-flex items-center gap-x-2 rounded-lg border border-gray-200 bg-white px-3 py-2 text-sm font-medium text-gray-800 shadow-sm hover:bg-gray-50 focus:bg-gray-50 focus:outline-none disabled:pointer-events-none disabled:opacity-50 dark:border-neutral-700 dark:bg-transparent dark:text-neutral-300 dark:hover:bg-neutral-800 dark:focus:bg-neutral-800">
+                                                            Sign out
+                                                        </button>
+                                                        <button
+                                                            type="button"
+                                                            class="inline-flex items-center gap-x-2 rounded-lg border border-transparent bg-blue-600 px-3 py-2 text-sm font-medium text-white hover:bg-blue-700 focus:bg-blue-700 focus:outline-none disabled:pointer-events-none disabled:opacity-50"
+                                                            data-hs-overlay="#hs-sign-out-alert">
+                                                            Cancel
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- sign out alert small  -->
+                                    <div id="sign-out-alert-small" class="tw-modal">
+                                        <div class="tw-modal-dialog">
+                                            <div class="tw-modal-content">
+                                                <div class="absolute end-2 top-2">
+                                                    <button
+                                                        type="button"
+                                                        class="inline-flex size-8 items-center justify-center gap-x-2 rounded-full border border-transparent bg-gray-100 text-gray-800 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none disabled:pointer-events-none disabled:opacity-50 dark:bg-neutral-700 dark:text-neutral-400 dark:hover:bg-neutral-600 dark:focus:bg-neutral-600"
+                                                        aria-label="Close"
+                                                        data-hs-overlay="#hs-sign-out-alert-small-window">
+                                                        <span class="sr-only">Close</span>
+                                                        <svg
+                                                            class="size-4 shrink-0"
+                                                            xmlns="http://www.w3.org/2000/svg"
+                                                            width="24"
+                                                            height="24"
+                                                            viewBox="0 0 24 24"
+                                                            fill="none"
+                                                            stroke="currentColor"
+                                                            stroke-width="2"
+                                                            stroke-linecap="round"
+                                                            stroke-linejoin="round">
+                                                            <path d="M18 6 6 18" />
+                                                            <path d="m6 6 12 12" />
+                                                        </svg>
+                                                    </button>
+                                                </div>
+
+                                                <div class="overflow-y-auto p-4 text-center sm:p-10">
+                                                    <!-- Icon -->
+                                                    <span
+                                                        class="mb-4 inline-flex size-[62px] items-center justify-center rounded-full border-4 border-yellow-50 bg-yellow-100 text-yellow-500 dark:border-yellow-600 dark:bg-yellow-700 dark:text-yellow-100">
+                                                        <svg
+                                                            class="size-5 shrink-0"
+                                                            xmlns="http://www.w3.org/2000/svg"
+                                                            width="16"
+                                                            height="16"
+                                                            fill="currentColor"
+                                                            viewBox="0 0 16 16">
+                                                            <path
+                                                                d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+                                                        </svg>
+                                                    </span>
+                                                    <!-- End Icon -->
+
+                                                    <h3
+                                                        id="hs-sign-out-alert-small-window-label"
+                                                        class="mb-2 text-2xl font-bold text-gray-800 dark:text-neutral-200">
+                                                        Sign out
+                                                    </h3>
+                                                    <p class="text-gray-500 dark:text-neutral-500">
+                                                        Are you sure you would like to sign out of your Preline account?
+                                                    </p>
+
+                                                    <div class="mt-6 grid gap-y-2">
+                                                        <button
+                                                            type="button"
+                                                            class="inline-flex w-full items-center justify-center gap-x-2 rounded-lg border border-gray-200 bg-white px-4 py-2.5 text-sm font-medium text-gray-800 shadow-sm hover:bg-gray-50 focus:bg-gray-50 focus:outline-none disabled:pointer-events-none disabled:opacity-50 dark:border-neutral-700 dark:bg-transparent dark:text-neutral-300 dark:hover:bg-neutral-800 dark:focus:bg-neutral-800">
+                                                            Sign out
+                                                        </button>
+                                                        <button
+                                                            type="button"
+                                                            class="inline-flex items-center justify-center gap-x-2 rounded-lg border border-transparent bg-blue-600 px-4 py-2.5 text-sm font-medium text-white hover:bg-blue-700 focus:bg-blue-700 focus:outline-none disabled:pointer-events-none disabled:opacity-50"
+                                                            data-hs-overlay="#hs-sign-out-alert-small-window">
+                                                            Cancel
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Task created  -->
+                                    <div id="task-created" class="tw-modal">
+                                        <div class="tw-modal-dialog">
+                                            <div class="tw-modal-content">
+                                                <div class="absolute end-2 top-2">
+                                                    <button
+                                                        type="button"
+                                                        class="inline-flex size-8 items-center justify-center gap-x-2 rounded-full border border-transparent bg-gray-100 text-gray-800 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none disabled:pointer-events-none disabled:opacity-50 dark:bg-neutral-700 dark:text-neutral-400 dark:hover:bg-neutral-600 dark:focus:bg-neutral-600"
+                                                        aria-label="Close"
+                                                        data-hs-overlay="#hs-task-created-alert">
+                                                        <span class="sr-only">Close</span>
+                                                        <svg
+                                                            class="size-4 shrink-0"
+                                                            xmlns="http://www.w3.org/2000/svg"
+                                                            width="24"
+                                                            height="24"
+                                                            viewBox="0 0 24 24"
+                                                            fill="none"
+                                                            stroke="currentColor"
+                                                            stroke-width="2"
+                                                            stroke-linecap="round"
+                                                            stroke-linejoin="round">
+                                                            <path d="M18 6 6 18" />
+                                                            <path d="m6 6 12 12" />
+                                                        </svg>
+                                                    </button>
+                                                </div>
+
+                                                <div class="overflow-y-auto p-4 text-center sm:p-10">
+                                                    <!-- Icon -->
+                                                    <span
+                                                        class="mb-4 inline-flex size-[46px] items-center justify-center rounded-full border-4 border-green-50 bg-green-100 text-green-500 dark:border-green-600 dark:bg-green-700 dark:text-green-100">
+                                                        <svg
+                                                            class="size-5 shrink-0"
+                                                            xmlns="http://www.w3.org/2000/svg"
+                                                            width="16"
+                                                            height="16"
+                                                            fill="currentColor"
+                                                            viewBox="0 0 16 16">
+                                                            <path
+                                                                d="M11.251.068a.5.5 0 0 1 .227.58L9.677 6.5H13a.5.5 0 0 1 .364.843l-8 8.5a.5.5 0 0 1-.842-.49L6.323 9.5H3a.5.5 0 0 1-.364-.843l8-8.5a.5.5 0 0 1 .615-.09z" />
+                                                        </svg>
+                                                    </span>
+                                                    <!-- End Icon -->
+
+                                                    <h3
+                                                        id="hs-task-created-alert-label"
+                                                        class="mb-2 text-xl font-bold text-gray-800 dark:text-neutral-200">
+                                                        Task successfully created!
+                                                    </h3>
+                                                    <p class="text-gray-500 dark:text-neutral-500">
+                                                        You can see the progress of your task in your
+                                                        <a
+                                                            class="inline-flex items-center gap-x-1.5 font-medium text-blue-600 decoration-2 hover:underline focus:underline focus:outline-none dark:text-blue-500"
+                                                            href="#"
+                                                            >personal account.</a
+                                                        >
+                                                        You will be notified of its completion.
+                                                    </p>
+
+                                                    <div class="mt-6 flex justify-center gap-x-4">
+                                                        <button
+                                                            type="button"
+                                                            class="inline-flex items-center gap-x-2 rounded-lg border border-gray-200 bg-white px-3 py-2 text-sm font-medium text-gray-800 shadow-sm hover:bg-gray-50 focus:bg-gray-50 focus:outline-none disabled:pointer-events-none disabled:opacity-50 dark:border-neutral-700 dark:bg-transparent dark:text-neutral-300 dark:hover:bg-neutral-800 dark:focus:bg-neutral-800"
+                                                            data-hs-overlay="#hs-task-created-alert">
+                                                            Cancel
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- sign out alert  -->
+                                    <div id="danger-alert" class="tw-modal">
+                                        <div class="tw-modal-dialog">
+                                            <div class="tw-modal-content">
+                                                <div class="absolute end-2 top-2">
+                                                    <button
+                                                        type="button"
+                                                        class="inline-flex size-8 items-center justify-center gap-x-2 rounded-full border border-transparent bg-gray-100 text-gray-800 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none disabled:pointer-events-none disabled:opacity-50 dark:bg-neutral-700 dark:text-neutral-400 dark:hover:bg-neutral-600 dark:focus:bg-neutral-600"
+                                                        aria-label="Close"
+                                                        data-hs-overlay="#hs-danger-alert">
+                                                        <span class="sr-only">Close</span>
+                                                        <svg
+                                                            class="size-4 shrink-0"
+                                                            xmlns="http://www.w3.org/2000/svg"
+                                                            width="24"
+                                                            height="24"
+                                                            viewBox="0 0 24 24"
+                                                            fill="none"
+                                                            stroke="currentColor"
+                                                            stroke-width="2"
+                                                            stroke-linecap="round"
+                                                            stroke-linejoin="round">
+                                                            <path d="M18 6 6 18" />
+                                                            <path d="m6 6 12 12" />
+                                                        </svg>
+                                                    </button>
+                                                </div>
+
+                                                <div class="overflow-y-auto p-4 sm:p-10">
+                                                    <div class="flex gap-x-4 md:gap-x-7">
+                                                        <!-- Icon -->
+                                                        <span
+                                                            class="inline-flex size-[46px] shrink-0 items-center justify-center rounded-full border-4 border-red-50 bg-red-100 text-red-500 dark:border-red-600 dark:bg-red-700 dark:text-red-100 sm:h-[62px] sm:w-[62px]">
+                                                            <svg
+                                                                class="size-5 shrink-0"
+                                                                xmlns="http://www.w3.org/2000/svg"
+                                                                width="16"
+                                                                height="16"
+                                                                fill="currentColor"
+                                                                viewBox="0 0 16 16">
+                                                                <path
+                                                                    d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+                                                            </svg>
+                                                        </span>
+                                                        <!-- End Icon -->
+
+                                                        <div class="grow">
+                                                            <h3
+                                                                id="hs-danger-alert-label"
+                                                                class="mb-2 text-xl font-bold text-gray-800 dark:text-neutral-200">
+                                                                Delete Personal Account
+                                                            </h3>
+                                                            <p class="text-gray-500 dark:text-neutral-500">
+                                                                Permanently remove your Personal Account and all of its
+                                                                contents from the Vercel platform. This action is not
+                                                                reversible, so please continue with caution.
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div
+                                                    class="flex items-center justify-end gap-x-2 border-t bg-gray-50 px-4 py-3 dark:border-neutral-800 dark:bg-neutral-950">
+                                                    <button
+                                                        type="button"
+                                                        class="inline-flex items-center gap-x-2 rounded-lg border border-gray-200 bg-white px-3 py-2 text-sm font-medium text-gray-800 shadow-sm hover:bg-gray-50 focus:bg-gray-50 focus:outline-none disabled:pointer-events-none disabled:opacity-50 dark:border-neutral-700 dark:bg-transparent dark:text-neutral-300 dark:hover:bg-neutral-800 dark:focus:bg-neutral-800"
+                                                        data-hs-overlay="#hs-danger-alert">
+                                                        Cancel
+                                                    </button>
+                                                    <a
+                                                        class="inline-flex items-center gap-x-2 rounded-lg border border-transparent bg-red-500 px-3 py-2 text-sm font-medium text-white hover:bg-red-600 disabled:pointer-events-none disabled:opacity-50"
+                                                        href="#">
+                                                        Delete personal account
+                                                    </a>
                                                 </div>
                                             </div>
                                         </div>
