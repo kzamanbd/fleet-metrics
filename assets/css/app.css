@@ -38,13 +38,14 @@ Version: 1.0
 @import './core/tables.css';
 @import './core/drawer.css';
 @import './core/modal.css';
-@import './core/dashboard.css';
 @import './core/login.css';
 @import './core/calenders.css';
 @import './core/tooltip.css';
 @import './core/datatable.css';
 @import './core/file-upload.css';
 @import './features/dashboard.css';
+@import './features/chat-apps.css';
+@import './features/mailbox.css';
 
 #loader {
     display: block;

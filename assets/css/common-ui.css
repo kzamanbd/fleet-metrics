@@ -1,65 +1,6 @@
 @layer components {
-    /* chats */
-    .chat-wrapper {
-        @apply relative flex h-full gap-5 sm:h-[calc(100vh_-_200px)] sm:min-h-0;
-    }
-    .chat-sidebar {
-        @apply absolute inset-0 z-10 hidden w-full max-w-[20rem] flex-none space-y-4 overflow-hidden p-4 lg:inset-auto xl:relative xl:block xl:h-full;
-    }
-    .chat-users {
-        @apply relative -mr-3.5 h-full min-h-[100px] space-y-0.5 pr-3.5 sm:h-[calc(100vh_-_410px)];
-    }
-    .chat-user-item {
-        @apply flex w-full items-center justify-between rounded-md p-2 hover:bg-gray-100 hover:text-primary dark:hover:bg-[#050b14] dark:hover:text-primary;
-    }
-    .chat-empty-wrapper {
-        @apply mb-8 h-[calc(100vh_-_320px)] min-h-[120px] w-[280px] text-white dark:text-[#0e1726] md:w-[430px];
-    }
-
-    .chat-conversation-box {
-        @apply min-h-[400px] space-y-5 p-4 pb-[68px] sm:min-h-[300px] sm:pb-0;
-    }
-
-    /* mailbox */
-
-    .mailbox-wrapper {
-        @apply grid h-[calc(100vh_-_200px)] gap-4 overflow-hidden lg:grid-cols-12;
-    }
-    .mailbox-header {
-        @apply flex flex-wrap justify-center border-b border-dashed border-gray-200 dark:border-gray-700;
-    }
-    .mailbox-tabs {
-        @apply -mb-px grid w-full grid-cols-3 place-content-stretch space-x-2;
-    }
-    .mailbox-tab {
-        @apply flex w-full items-center justify-center rounded-t-lg border-b-2 border-gray-100 border-transparent px-4 py-3 text-center text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-600 dark:border-gray-700 dark:text-gray-400 dark:hover:text-gray-300;
-    }
-    .mailbox-tab.active {
-        @apply border-b-primary text-primary dark:border-primary dark:text-primary;
-    }
-    .compose-btn {
-        @apply mb-4 w-full rounded bg-primary px-3 py-2 text-sm font-semibold text-white hover:bg-primary-600 lg:px-4;
-    }
-    .mailbox-list-item {
-        @apply flex items-center rounded-md border-0 p-2 text-slate-400 hover:bg-slate-50 hover:text-slate-500 dark:hover:bg-slate-700 dark:hover:text-slate-300;
-    }
-    .mailbox-list-item.active {
-        @apply bg-light text-primary dark:bg-slate-700 dark:text-primary;
-    }
-    .mailbox-pills {
-        @apply self-center rounded border border-orange-300 bg-orange-50 px-2 py-0.5 text-[11px] font-medium text-orange-500 focus:outline-none;
-    }
-    .mailbox-pills.draft {
-        @apply border-slate-300 bg-slate-50 text-slate-500;
-    }
-    .mailbox-list-item.label {
-        @apply justify-between;
-    }
-    .mailbox-detail-icon {
-        @apply rounded-md border border-gray-200 bg-white p-2 text-sm font-medium text-gray-900 hover:bg-gray-100 hover:text-primary-700 focus:z-10 focus:text-primary-700 focus:ring-2 focus:ring-primary-700 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:hover:bg-gray-600 dark:hover:text-white dark:focus:text-white dark:focus:ring-primary;
-    }
-    .mailbox-detail-item {
-        @apply rounded-md p-3 text-slate-500 hover:bg-slate-50 dark:hover:bg-slate-700 dark:hover:text-slate-200;
+    .welcome-banner {
+        @apply relative z-10 overflow-hidden before:absolute before:start-1/2 before:top-0 before:-z-[1] before:size-full before:-translate-x-1/2 before:transform before:bg-[url('/images/polygon-bg-element.svg')] before:bg-cover before:bg-top before:bg-no-repeat dark:before:bg-[url('/images/dark-polygon-bg-element.svg')];
     }
 
     /* todo list */

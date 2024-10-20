@@ -1,7 +1,7 @@
 @layer components {
     /* start top header components */
     .navbar-nav {
-        @apply z-10 supports-[backdrop-filter]:bg-light/50 supports-[backdrop-filter]:backdrop-blur dark:supports-[backdrop-filter]:bg-gray-700/50;
+        @apply z-20 supports-[backdrop-filter]:bg-light/50 supports-[backdrop-filter]:backdrop-blur dark:supports-[backdrop-filter]:bg-gray-700/50;
     }
     .horizontal .navbar-nav {
         @apply shadow;
