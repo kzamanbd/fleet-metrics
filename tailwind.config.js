@@ -10,7 +10,7 @@ import defaultTheme from 'tailwindcss/defaultTheme';
 export default {
     content: [
         './index.html',
-        './assets/**/*.{js}',
+        './assets/**/*.js',
         './pages/**/*.{html,js}',
         './public/features/**/*.{html,js}',
         './node_modules/preline/dist/*.js',
@@ -18,6 +18,9 @@ export default {
     darkMode: 'class', // or 'media'
     theme: {
         extend: {
+            fontSize: {
+                xs: '.75rem',
+            },
             colors: {
                 primary: {
                     ...primary,
