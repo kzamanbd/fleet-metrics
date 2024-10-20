@@ -86,7 +86,7 @@
                             </li>
                             <!-- dashboard end -->
 
-                            <!-- application start -->
+                            <!-- apps start -->
                             <li class="tw-menu-item hs-accordion">
                                 <button type="button" data-ripple class="tw-menu-link hs-accordion-toggle">
                                     <span class="icon-[mdi--apps]"></span>
@@ -94,7 +94,7 @@
                                     <span class="tw-arrow icon-[mdi--chevron-down]"></span>
                                 </button>
 
-                                <ul class="twd--menu hs-accordion-content">
+                                <ul class="twd--menu hs-accordion-content hs-accordion-group">
                                     <li class="twd--menu-item">
                                         <a href="/pages/apps/chats.html" class="twd--link"> Chats </a>
                                     </li>
@@ -104,8 +104,25 @@
                                     <li class="twd--menu-item">
                                         <a href="/pages/apps/calendars.html" class="twd--link"> Calendars </a>
                                     </li>
-                                    <li class="twd--menu-item">
-                                        <a href="/pages/apps/todolist.html" class="twd--link"> Todo List </a>
+                                    <li class="twd--menu-item hs-accordion">
+                                        <button type="button" data-ripple class="twd--link hs-accordion-toggle">
+                                            Task
+                                            <span class="tw-arrow icon-[mdi--chevron-down]"></span>
+                                        </button>
+
+                                        <ul class="twd--menu hs-accordion-content">
+                                            <li class="twd--menu-item">
+                                                <a href="/pages/apps/todolist.html" class="twd--link"> Task List </a>
+                                            </li>
+                                            <li class="twd--menu-item">
+                                                <a href="/pages/apps/taks-details.html" class="twd--link">
+                                                    Task Details
+                                                </a>
+                                            </li>
+                                            <li class="twd--menu-item">
+                                                <a href="/pages/apps/kanban.html" class="twd--link"> Kanban Board </a>
+                                            </li>
+                                        </ul>
                                     </li>
                                     <li class="twd--menu-item">
                                         <a href="/pages/apps/scrumboard.html" class="twd--link"> Scrum Board </a>
@@ -115,7 +132,7 @@
                                     </li>
                                 </ul>
                             </li>
-                            <!-- application end -->
+                            <!-- apps end -->
 
                             <!-- page header -->
                             <li class="tw-menu-header">
@@ -332,11 +349,29 @@
                             <li class="tw-menu-item hs-accordion">
                                 <button type="button" data-ripple class="tw-menu-link hs-accordion-toggle">
                                     <span class="icon-[mdi--file-chart-outline]"></span>
-                                    <span class="tw-link-label">Pages</span>
+                                    <span class="tw-link-label">
+                                        Pages
+                                        <span
+                                            class="badge rounded bg-yellow-400 px-1 py-0.5 text-[10px] font-medium text-white">
+                                            New
+                                        </span>
+                                    </span>
                                     <span class="tw-arrow icon-[mdi--chevron-down]"></span>
                                 </button>
 
                                 <ul class="twd--menu hs-accordion-content hs-accordion-group">
+                                    <li class="twd--menu-item">
+                                        <a href="/pages/about.html" class="twd--link"> About Us </a>
+                                    </li>
+                                    <li class="twd--menu-item">
+                                        <a href="/pages/landing.html" class="twd--link"> Landing </a>
+                                    </li>
+                                    <li class="twd--menu-item">
+                                        <a href="/pages/jobs-landing.html" class="twd--link"> Jobs Landing </a>
+                                    </li>
+                                    <li class="twd--menu-item">
+                                        <a href="/pages/notification.html" class="twd--link"> Notification </a>
+                                    </li>
                                     <li class="twd--menu-item hs-accordion">
                                         <button type="button" data-ripple class="twd--link hs-accordion-toggle">
                                             Invoices
@@ -361,17 +396,106 @@
                                             </li>
                                         </ul>
                                     </li>
-                                    <li class="twd--menu-item">
-                                        <a href="/pages/ecommerce/sales.html" class="twd--link"> Sales </a>
-                                    </li>
-                                    <li class="twd--menu-item">
-                                        <a href="/pages/ecommerce/customers.html" class="twd--link"> Customers </a>
+                                    <li class="twd--menu-item hs-accordion">
+                                        <button type="button" data-ripple class="twd--link hs-accordion-toggle">
+                                            ECommerce
+                                            <span class="tw-arrow icon-[mdi--chevron-down]"></span>
+                                        </button>
+
+                                        <ul class="twd--menu hs-accordion-content hs-accordion-group">
+                                            <li class="twd--menu-item">
+                                                <a href="/pages/ecommerce/cart.html" class="twd--link"> Cart </a>
+                                            </li>
+                                            <li class="twd--menu-item">
+                                                <a href="/pages/ecommerce/checkout.html" class="twd--link">
+                                                    Checkout
+                                                </a>
+                                            </li>
+                                            <li class="twd--menu-item hs-accordion">
+                                                <button type="button" data-ripple class="twd--link hs-accordion-toggle">
+                                                    Products
+                                                    <span class="tw-arrow icon-[mdi--chevron-down]"></span>
+                                                </button>
+
+                                                <ul class="twd--menu hs-accordion-content">
+                                                    <li class="twd--menu-item">
+                                                        <a href="/pages/products/create.html" class="twd--link">
+                                                            Add Product
+                                                        </a>
+                                                    </li>
+                                                    <li class="twd--menu-item">
+                                                        <a href="/pages/products/details.html" class="twd--link">
+                                                            Product Details
+                                                        </a>
+                                                    </li>
+                                                    <li class="twd--menu-item">
+                                                        <a href="/pages/products/invoice-edit.html" class="twd--link">
+                                                            Product Edit
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li class="twd--menu-item hs-accordion">
+                                                <button type="button" data-ripple class="twd--link hs-accordion-toggle">
+                                                    Orders
+                                                    <span class="tw-arrow icon-[mdi--chevron-down]"></span>
+                                                </button>
+
+                                                <ul class="twd--menu hs-accordion-content">
+                                                    <li class="twd--menu-item">
+                                                        <a href="/pages/orders/overview.html" class="twd--link">
+                                                            Overview
+                                                        </a>
+                                                    </li>
+                                                    <li class="twd--menu-item">
+                                                        <a href="/pages/orders/order-details.html" class="twd--link">
+                                                            Order Details
+                                                        </a>
+                                                    </li>
+                                                    <li class="twd--menu-item">
+                                                        <a href="/pages/orders/purchase-order.html" class="twd--link">
+                                                            Purchase Orders
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li class="twd--menu-item">
+                                                <a href="/pages/ecommerce/wishlist.html" class="twd--link">
+                                                    Wishlist
+                                                </a>
+                                            </li>
+                                            <li class="twd--menu-item">
+                                                <a href="/pages/ecommerce/customers.html" class="twd--link">
+                                                    Customers
+                                                </a>
+                                            </li>
+                                        </ul>
                                     </li>
                                     <li class="twd--menu-item">
                                         <a href="/pages/ecommerce/reports.html" class="twd--link"> Reports </a>
                                     </li>
                                     <li class="twd--menu-item">
-                                        <a href="/pages/ecommerce/settings.html" class="twd--link"> Settings </a>
+                                        <a href="/pages/blank.html" class="twd--link"> Empty </a>
+                                    </li>
+                                    <li class="twd--menu-item">
+                                        <a href="/pages/file-manager.html" class="twd--link"> File Manager </a>
+                                    </li>
+                                    <li class="twd--menu-item">
+                                        <a href="/pages/account/profile.html" class="twd--link"> Profile </a>
+                                    </li>
+                                    <li class="twd--menu-item">
+                                        <a href="/pages/api.html" class="twd--link"> API's </a>
+                                    </li>
+                                    <li class="twd--menu-item">
+                                        <a href="/pages/teams.html" class="twd--link"> Teams </a>
+                                    </li>
+                                    <li class="twd--menu-item">
+                                        <a href="/pages/terms-conditions.html" class="twd--link">
+                                            Terms & Conditions
+                                        </a>
+                                    </li>
+                                    <li class="twd--menu-item">
+                                        <a href="/pages/timeline.html" class="twd--link"> Timeline </a>
                                     </li>
                                 </ul>
                             </li>
@@ -398,6 +522,39 @@
                                     <span class="tw-link-label">Widgets</span>
                                 </a>
                             </li>
+
+                            <!-- user profile start -->
+                            <li class="tw-menu-item hs-accordion">
+                                <button type="button" data-ripple class="tw-menu-link hs-accordion-toggle">
+                                    <span class="icon-[mdi--account-switch]"></span>
+                                    <span class="tw-link-label">Account</span>
+                                    <span class="tw-arrow icon-[mdi--chevron-down]"></span>
+                                </button>
+
+                                <ul class="twd--menu hs-accordion-content">
+                                    <li class="twd--menu-item">
+                                        <a href="/pages/account/overview.html" class="twd--link"> Overview </a>
+                                    </li>
+                                    <li class="twd--menu-item">
+                                        <a href="/pages/account/preferences.html" class="twd--link"> Notification </a>
+                                    </li>
+                                    <li class="twd--menu-item">
+                                        <a href="/pages/account/workspaces.html" class="twd--link"> Workspaces </a>
+                                    </li>
+                                    <li class="twd--menu-item">
+                                        <a href="/pages/account/plan-and-billing.html" class="twd--link">
+                                            Plan & Billing
+                                        </a>
+                                    </li>
+                                    <li class="twd--menu-item">
+                                        <a href="/pages/account/activities.html" class="twd--link"> Activities </a>
+                                    </li>
+                                    <li class="twd--menu-item">
+                                        <a href="/pages/account/members.html" class="twd--link"> Members </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <!-- user profile end -->
 
                             <!-- authentication start -->
                             <li class="tw-menu-item hs-accordion">
@@ -497,59 +654,6 @@
                                 </ul>
                             </li>
                             <!-- end nested menu -->
-
-                            <!-- user profile start -->
-                            <li class="tw-menu-item hs-accordion">
-                                <button type="button" data-ripple class="tw-menu-link hs-accordion-toggle">
-                                    <span class="icon-[mdi--account-switch]"></span>
-                                    <span class="tw-link-label">User Profile</span>
-                                    <span class="tw-arrow icon-[mdi--chevron-down]"></span>
-                                </button>
-
-                                <ul class="twd--menu hs-accordion-content">
-                                    <li class="twd--menu-item">
-                                        <a href="/pages/user-profile/overview.html" class="twd--link"> Overview </a>
-                                    </li>
-                                    <li class="twd--menu-item">
-                                        <a href="/pages/user-profile/documents.html" class="twd--link"> Documents </a>
-                                    </li>
-                                    <li class="twd--menu-item">
-                                        <a href="/pages/user-profile/followers.html" class="twd--link"> Followers </a>
-                                    </li>
-                                    <li class="twd--menu-item">
-                                        <a href="/pages/user-profile/activities.html" class="twd--link"> Activities </a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <!-- user profile end -->
-
-                            <!-- accounts start -->
-                            <li class="tw-menu-item hs-accordion">
-                                <button type="button" data-ripple class="tw-menu-link hs-accordion-toggle">
-                                    <span class="icon-[mdi--badge-account-horizontal-outline]"></span>
-                                    <span class="tw-link-label">Accounts</span>
-                                    <span class="tw-arrow icon-[mdi--chevron-down]"></span>
-                                </button>
-
-                                <ul class="twd--menu hs-accordion-content">
-                                    <li class="twd--menu-item">
-                                        <a href="/pages/accounts/overview.html" class="twd--link"> Overview </a>
-                                    </li>
-                                    <li class="twd--menu-item">
-                                        <a href="/pages/accounts/settings.html" class="twd--link"> Settings </a>
-                                    </li>
-                                    <li class="twd--menu-item">
-                                        <a href="/pages/accounts/statements.html" class="twd--link"> Statements </a>
-                                    </li>
-                                    <li class="twd--menu-item">
-                                        <a href="/pages/accounts/activities.html" class="twd--link"> Activities </a>
-                                    </li>
-                                    <li class="twd--menu-item">
-                                        <a href="/pages/accounts/logs.html" class="twd--link"> Logs </a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <!-- accounts end -->
 
                             <!-- documentation -->
                             <li>

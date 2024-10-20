@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Untitled - Admin Template</title>
+        <title>Kanban - Admin Template</title>
         <link rel="icon" href="/favicon.png" />
         <link rel="mask-icon" href="/favicon.png" color="#009EF7" />
         <meta name="theme-color" content="#009EF7" />
@@ -86,7 +86,7 @@
                             </li>
                             <!-- dashboard end -->
 
-                            <!-- application start -->
+                            <!-- apps start -->
                             <li class="tw-menu-item hs-accordion">
                                 <button type="button" data-ripple class="tw-menu-link hs-accordion-toggle">
                                     <span class="icon-[mdi--apps]"></span>
@@ -94,7 +94,7 @@
                                     <span class="tw-arrow icon-[mdi--chevron-down]"></span>
                                 </button>
 
-                                <ul class="twd--menu hs-accordion-content">
+                                <ul class="twd--menu hs-accordion-content hs-accordion-group">
                                     <li class="twd--menu-item">
                                         <a href="/pages/apps/chats.html" class="twd--link"> Chats </a>
                                     </li>
@@ -104,8 +104,25 @@
                                     <li class="twd--menu-item">
                                         <a href="/pages/apps/calendars.html" class="twd--link"> Calendars </a>
                                     </li>
-                                    <li class="twd--menu-item">
-                                        <a href="/pages/apps/todolist.html" class="twd--link"> Todo List </a>
+                                    <li class="twd--menu-item hs-accordion">
+                                        <button type="button" data-ripple class="twd--link hs-accordion-toggle">
+                                            Task
+                                            <span class="tw-arrow icon-[mdi--chevron-down]"></span>
+                                        </button>
+
+                                        <ul class="twd--menu hs-accordion-content">
+                                            <li class="twd--menu-item">
+                                                <a href="/pages/apps/todolist.html" class="twd--link"> Task List </a>
+                                            </li>
+                                            <li class="twd--menu-item">
+                                                <a href="/pages/apps/taks-details.html" class="twd--link">
+                                                    Task Details
+                                                </a>
+                                            </li>
+                                            <li class="twd--menu-item">
+                                                <a href="/pages/apps/kanban.html" class="twd--link"> Kanban Board </a>
+                                            </li>
+                                        </ul>
                                     </li>
                                     <li class="twd--menu-item">
                                         <a href="/pages/apps/scrumboard.html" class="twd--link"> Scrum Board </a>
@@ -115,7 +132,7 @@
                                     </li>
                                 </ul>
                             </li>
-                            <!-- application end -->
+                            <!-- apps end -->
 
                             <!-- page header -->
                             <li class="tw-menu-header">
@@ -332,11 +349,29 @@
                             <li class="tw-menu-item hs-accordion">
                                 <button type="button" data-ripple class="tw-menu-link hs-accordion-toggle">
                                     <span class="icon-[mdi--file-chart-outline]"></span>
-                                    <span class="tw-link-label">Pages</span>
+                                    <span class="tw-link-label">
+                                        Pages
+                                        <span
+                                            class="badge rounded bg-yellow-400 px-1 py-0.5 text-[10px] font-medium text-white">
+                                            New
+                                        </span>
+                                    </span>
                                     <span class="tw-arrow icon-[mdi--chevron-down]"></span>
                                 </button>
 
                                 <ul class="twd--menu hs-accordion-content hs-accordion-group">
+                                    <li class="twd--menu-item">
+                                        <a href="/pages/about.html" class="twd--link"> About Us </a>
+                                    </li>
+                                    <li class="twd--menu-item">
+                                        <a href="/pages/landing.html" class="twd--link"> Landing </a>
+                                    </li>
+                                    <li class="twd--menu-item">
+                                        <a href="/pages/jobs-landing.html" class="twd--link"> Jobs Landing </a>
+                                    </li>
+                                    <li class="twd--menu-item">
+                                        <a href="/pages/notification.html" class="twd--link"> Notification </a>
+                                    </li>
                                     <li class="twd--menu-item hs-accordion">
                                         <button type="button" data-ripple class="twd--link hs-accordion-toggle">
                                             Invoices
@@ -361,17 +396,106 @@
                                             </li>
                                         </ul>
                                     </li>
-                                    <li class="twd--menu-item">
-                                        <a href="/pages/ecommerce/sales.html" class="twd--link"> Sales </a>
-                                    </li>
-                                    <li class="twd--menu-item">
-                                        <a href="/pages/ecommerce/customers.html" class="twd--link"> Customers </a>
+                                    <li class="twd--menu-item hs-accordion">
+                                        <button type="button" data-ripple class="twd--link hs-accordion-toggle">
+                                            ECommerce
+                                            <span class="tw-arrow icon-[mdi--chevron-down]"></span>
+                                        </button>
+
+                                        <ul class="twd--menu hs-accordion-content hs-accordion-group">
+                                            <li class="twd--menu-item">
+                                                <a href="/pages/ecommerce/cart.html" class="twd--link"> Cart </a>
+                                            </li>
+                                            <li class="twd--menu-item">
+                                                <a href="/pages/ecommerce/checkout.html" class="twd--link">
+                                                    Checkout
+                                                </a>
+                                            </li>
+                                            <li class="twd--menu-item hs-accordion">
+                                                <button type="button" data-ripple class="twd--link hs-accordion-toggle">
+                                                    Products
+                                                    <span class="tw-arrow icon-[mdi--chevron-down]"></span>
+                                                </button>
+
+                                                <ul class="twd--menu hs-accordion-content">
+                                                    <li class="twd--menu-item">
+                                                        <a href="/pages/products/create.html" class="twd--link">
+                                                            Add Product
+                                                        </a>
+                                                    </li>
+                                                    <li class="twd--menu-item">
+                                                        <a href="/pages/products/details.html" class="twd--link">
+                                                            Product Details
+                                                        </a>
+                                                    </li>
+                                                    <li class="twd--menu-item">
+                                                        <a href="/pages/products/invoice-edit.html" class="twd--link">
+                                                            Product Edit
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li class="twd--menu-item hs-accordion">
+                                                <button type="button" data-ripple class="twd--link hs-accordion-toggle">
+                                                    Orders
+                                                    <span class="tw-arrow icon-[mdi--chevron-down]"></span>
+                                                </button>
+
+                                                <ul class="twd--menu hs-accordion-content">
+                                                    <li class="twd--menu-item">
+                                                        <a href="/pages/orders/overview.html" class="twd--link">
+                                                            Overview
+                                                        </a>
+                                                    </li>
+                                                    <li class="twd--menu-item">
+                                                        <a href="/pages/orders/order-details.html" class="twd--link">
+                                                            Order Details
+                                                        </a>
+                                                    </li>
+                                                    <li class="twd--menu-item">
+                                                        <a href="/pages/orders/purchase-order.html" class="twd--link">
+                                                            Purchase Orders
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li class="twd--menu-item">
+                                                <a href="/pages/ecommerce/wishlist.html" class="twd--link">
+                                                    Wishlist
+                                                </a>
+                                            </li>
+                                            <li class="twd--menu-item">
+                                                <a href="/pages/ecommerce/customers.html" class="twd--link">
+                                                    Customers
+                                                </a>
+                                            </li>
+                                        </ul>
                                     </li>
                                     <li class="twd--menu-item">
                                         <a href="/pages/ecommerce/reports.html" class="twd--link"> Reports </a>
                                     </li>
                                     <li class="twd--menu-item">
-                                        <a href="/pages/ecommerce/settings.html" class="twd--link"> Settings </a>
+                                        <a href="/pages/blank.html" class="twd--link"> Empty </a>
+                                    </li>
+                                    <li class="twd--menu-item">
+                                        <a href="/pages/file-manager.html" class="twd--link"> File Manager </a>
+                                    </li>
+                                    <li class="twd--menu-item">
+                                        <a href="/pages/account/profile.html" class="twd--link"> Profile </a>
+                                    </li>
+                                    <li class="twd--menu-item">
+                                        <a href="/pages/api.html" class="twd--link"> API's </a>
+                                    </li>
+                                    <li class="twd--menu-item">
+                                        <a href="/pages/teams.html" class="twd--link"> Teams </a>
+                                    </li>
+                                    <li class="twd--menu-item">
+                                        <a href="/pages/terms-conditions.html" class="twd--link">
+                                            Terms & Conditions
+                                        </a>
+                                    </li>
+                                    <li class="twd--menu-item">
+                                        <a href="/pages/timeline.html" class="twd--link"> Timeline </a>
                                     </li>
                                 </ul>
                             </li>
@@ -398,6 +522,39 @@
                                     <span class="tw-link-label">Widgets</span>
                                 </a>
                             </li>
+
+                            <!-- user profile start -->
+                            <li class="tw-menu-item hs-accordion">
+                                <button type="button" data-ripple class="tw-menu-link hs-accordion-toggle">
+                                    <span class="icon-[mdi--account-switch]"></span>
+                                    <span class="tw-link-label">Account</span>
+                                    <span class="tw-arrow icon-[mdi--chevron-down]"></span>
+                                </button>
+
+                                <ul class="twd--menu hs-accordion-content">
+                                    <li class="twd--menu-item">
+                                        <a href="/pages/account/overview.html" class="twd--link"> Overview </a>
+                                    </li>
+                                    <li class="twd--menu-item">
+                                        <a href="/pages/account/preferences.html" class="twd--link"> Notification </a>
+                                    </li>
+                                    <li class="twd--menu-item">
+                                        <a href="/pages/account/workspaces.html" class="twd--link"> Workspaces </a>
+                                    </li>
+                                    <li class="twd--menu-item">
+                                        <a href="/pages/account/plan-and-billing.html" class="twd--link">
+                                            Plan & Billing
+                                        </a>
+                                    </li>
+                                    <li class="twd--menu-item">
+                                        <a href="/pages/account/activities.html" class="twd--link"> Activities </a>
+                                    </li>
+                                    <li class="twd--menu-item">
+                                        <a href="/pages/account/members.html" class="twd--link"> Members </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <!-- user profile end -->
 
                             <!-- authentication start -->
                             <li class="tw-menu-item hs-accordion">
@@ -497,59 +654,6 @@
                                 </ul>
                             </li>
                             <!-- end nested menu -->
-
-                            <!-- user profile start -->
-                            <li class="tw-menu-item hs-accordion">
-                                <button type="button" data-ripple class="tw-menu-link hs-accordion-toggle">
-                                    <span class="icon-[mdi--account-switch]"></span>
-                                    <span class="tw-link-label">User Profile</span>
-                                    <span class="tw-arrow icon-[mdi--chevron-down]"></span>
-                                </button>
-
-                                <ul class="twd--menu hs-accordion-content">
-                                    <li class="twd--menu-item">
-                                        <a href="/pages/user-profile/overview.html" class="twd--link"> Overview </a>
-                                    </li>
-                                    <li class="twd--menu-item">
-                                        <a href="/pages/user-profile/documents.html" class="twd--link"> Documents </a>
-                                    </li>
-                                    <li class="twd--menu-item">
-                                        <a href="/pages/user-profile/followers.html" class="twd--link"> Followers </a>
-                                    </li>
-                                    <li class="twd--menu-item">
-                                        <a href="/pages/user-profile/activities.html" class="twd--link"> Activities </a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <!-- user profile end -->
-
-                            <!-- accounts start -->
-                            <li class="tw-menu-item hs-accordion">
-                                <button type="button" data-ripple class="tw-menu-link hs-accordion-toggle">
-                                    <span class="icon-[mdi--badge-account-horizontal-outline]"></span>
-                                    <span class="tw-link-label">Accounts</span>
-                                    <span class="tw-arrow icon-[mdi--chevron-down]"></span>
-                                </button>
-
-                                <ul class="twd--menu hs-accordion-content">
-                                    <li class="twd--menu-item">
-                                        <a href="/pages/accounts/overview.html" class="twd--link"> Overview </a>
-                                    </li>
-                                    <li class="twd--menu-item">
-                                        <a href="/pages/accounts/settings.html" class="twd--link"> Settings </a>
-                                    </li>
-                                    <li class="twd--menu-item">
-                                        <a href="/pages/accounts/statements.html" class="twd--link"> Statements </a>
-                                    </li>
-                                    <li class="twd--menu-item">
-                                        <a href="/pages/accounts/activities.html" class="twd--link"> Activities </a>
-                                    </li>
-                                    <li class="twd--menu-item">
-                                        <a href="/pages/accounts/logs.html" class="twd--link"> Logs </a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <!-- accounts end -->
 
                             <!-- documentation -->
                             <li>
@@ -1083,196 +1187,188 @@
                     <!-- Start Breadcrumb -->
                     <nav class="breadcrumb">
                         <div class="left-link">
-                            <h3>Untitled</h3>
+                            <h3>Kanban</h3>
                         </div>
                         <ol class="breadcrumb-nav">
                             <li class="inline-flex items-center">
-                                <a href="/" class="breadcrumb-item"> UI </a>
+                                <a href="/" class="breadcrumb-item"> Apps </a>
                             </li>
 
                             <li aria-current="page">
                                 <div class="flex items-center">
                                     <span class="icon-[mdi--chevron-right]"></span>
-                                    <span class="breadcrumb-item-current"> Untitled </span>
+                                    <span class="breadcrumb-item-current"> Kanban </span>
                                 </div>
                             </li>
                         </ol>
                     </nav>
                     <!-- End Breadcrumb -->
 
-                    <div class="flex flex-wrap items-center gap-1.5 md:gap-2">
-                        <!-- Nav Tabs -->
-                        <div class="flex rounded-lg bg-gray-100 p-0.5 dark:bg-neutral-800">
-                            <nav
-                                class="flex gap-x-0.5 md:gap-x-1"
-                                aria-label="Tabs"
-                                role="tablist"
-                                aria-orientation="horizontal">
-                                <button
-                                    type="button"
-                                    class="active rounded-md border border-transparent p-2 text-xs font-medium text-gray-800 hover:border-gray-400 focus:border-gray-400 focus:outline-none hs-tab-active:bg-white hs-tab-active:text-gray-800 hs-tab-active:shadow-sm hs-tab-active:hover:border-transparent hs-tab-active:focus:border-transparent dark:text-neutral-200 dark:hover:border-neutral-500 dark:hover:text-white dark:focus:border-neutral-500 dark:focus:text-white dark:hs-tab-active:bg-neutral-700 dark:hs-tab-active:text-neutral-200 dark:hs-tab-active:hover:border-transparent dark:hs-tab-active:focus:border-transparent md:text-[13px]"
-                                    id="polygon-bg-element-tab-preview-item"
-                                    aria-selected="true"
-                                    data-hs-tab="#polygon-bg-element-tab-preview"
-                                    aria-controls="polygon-bg-element-tab-preview"
-                                    role="tab">
-                                    Preview
-                                </button>
-                                <button
-                                    type="button"
-                                    class="rounded-md border border-transparent p-2 text-xs font-medium text-gray-800 hover:border-gray-400 focus:border-gray-400 focus:outline-none hs-tab-active:bg-white hs-tab-active:text-gray-800 hs-tab-active:shadow-sm hs-tab-active:hover:border-transparent hs-tab-active:focus:border-transparent dark:text-neutral-200 dark:hover:border-neutral-500 dark:hover:text-white dark:focus:border-neutral-500 dark:focus:text-white dark:hs-tab-active:bg-neutral-700 dark:hs-tab-active:text-neutral-200 dark:hs-tab-active:hover:border-transparent dark:hs-tab-active:focus:border-transparent md:text-[13px]"
-                                    id="polygon-bg-element-tab-html-item"
-                                    aria-selected="false"
-                                    data-hs-tab="#polygon-bg-element-tab-html"
-                                    aria-controls="polygon-bg-element-tab-html"
-                                    role="tab">
-                                    HTML
-                                </button>
-                            </nav>
-                        </div>
-                        <!-- Nav Tabs -->
-
-                        <div class="ms-auto flex gap-x-1.5 md:gap-x-2">
-                            <!-- Dark Mode Toggle -->
-                            <button
-                                type="button"
-                                class="inline-flex size-9 items-center justify-center gap-2 rounded-md border border-gray-200 bg-white text-xs font-medium text-gray-700 hover:bg-gray-100 focus:bg-gray-50 focus:outline-none dark:border-neutral-700 dark:bg-neutral-900 dark:text-neutral-400 dark:hover:bg-neutral-700 dark:focus:bg-neutral-700 md:size-[38px] md:text-sm"
-                                data-hs-component-dark-mode="#polygon-bg-element-tab-preview">
-                                <svg
-                                    class="hidden size-3 shrink-0 md:size-3.5"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    width="24"
-                                    height="24"
-                                    viewBox="0 0 24 24"
-                                    fill="none"
-                                    stroke="currentColor"
-                                    stroke-width="2"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round">
-                                    <circle cx="12" cy="12" r="4"></circle>
-                                    <path d="M12 2v2"></path>
-                                    <path d="M12 20v2"></path>
-                                    <path d="m4.93 4.93 1.41 1.41"></path>
-                                    <path d="m17.66 17.66 1.41 1.41"></path>
-                                    <path d="M2 12h2"></path>
-                                    <path d="M20 12h2"></path>
-                                    <path d="m6.34 17.66-1.41 1.41"></path>
-                                    <path d="m19.07 4.93-1.41 1.41"></path>
-                                </svg>
-                                <svg
-                                    class="size-3 shrink-0 md:size-3.5"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    width="24"
-                                    height="24"
-                                    viewBox="0 0 24 24"
-                                    fill="none"
-                                    stroke="currentColor"
-                                    stroke-width="2"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round">
-                                    <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path>
-                                </svg>
-                            </button>
-                            <!-- End Dark Mode Toggle -->
-
-                            <div class="flex rounded-lg border border-gray-200 dark:border-neutral-700">
-                                <!-- Clipboard -->
-                                <button
-                                    type="button"
-                                    class="js-clipboard inline-flex items-center justify-center gap-2 rounded-s-lg bg-white px-2 py-[9px] text-xs font-medium text-gray-700 hover:bg-gray-100 focus:bg-gray-50 focus:outline-none dark:border-neutral-700 dark:bg-neutral-900 dark:text-neutral-400 dark:hover:bg-neutral-700 dark:focus:bg-neutral-800 md:text-[13px]"
-                                    data-hs-clipboard-options='{
-                                    "contentTarget": "#polygon-bg-element-tab-html-code",
-                                    "successText": "Copied",
-                                    "toggleLight": "#polygon-bg-element-toggle-light"
-                                  }'
-                                    id="copy-markup-03">
-                                    <svg
-                                        class="js-clipboard-default size-3 shrink-0 transition group-hover:rotate-6 md:size-3.5"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        width="24"
-                                        height="24"
-                                        viewBox="0 0 24 24"
-                                        fill="none"
-                                        stroke="currentColor"
-                                        stroke-width="2"
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round">
-                                        <rect width="8" height="4" x="8" y="2" rx="1" ry="1"></rect>
-                                        <path
-                                            d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path>
-                                    </svg>
-                                    <svg
-                                        class="js-clipboard-success hidden size-3 shrink-0 rotate-6 text-blue-600 md:size-3.5"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        width="24"
-                                        height="24"
-                                        viewBox="0 0 24 24"
-                                        fill="none"
-                                        stroke="currentColor"
-                                        stroke-width="2"
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round">
-                                        <polyline points="20 6 9 17 4 12"></polyline>
-                                    </svg>
-                                    <span class="js-clipboard-success-text">Copy</span>
-                                </button>
-                                <!-- End Clipboard -->
-
-                                <!-- Clipboard Dropdown -->
-                                <div class="border-s border-gray-200 dark:border-neutral-700">
-                                    <div
-                                        class="hs-dropdown relative inline-flex [--auto-close:inside] [--placement:top-right] [--strategy:absolute]">
-                                        <button
-                                            type="button"
-                                            class="hs-dropdown-toggle inline-flex size-[34px] items-center justify-center gap-2 rounded-e-lg bg-white text-xs font-medium text-gray-700 hover:bg-gray-100 focus:bg-gray-50 focus:outline-none dark:border-neutral-700 dark:bg-neutral-900 dark:text-neutral-400 dark:hover:bg-neutral-700 dark:focus:bg-neutral-800 md:size-9 md:text-sm"
-                                            aria-haspopup="menu"
-                                            aria-expanded="false"
-                                            aria-label="Dropdown">
-                                            <svg
-                                                class="js-clipboard-default size-3 shrink-0 transition group-hover:rotate-6 md:size-3.5"
-                                                xmlns="http://www.w3.org/2000/svg"
-                                                width="24"
-                                                height="24"
-                                                viewBox="0 0 24 24"
-                                                fill="none"
-                                                stroke="currentColor"
-                                                stroke-width="2"
-                                                stroke-linecap="round"
-                                                stroke-linejoin="round">
-                                                <path d="M20 7h-9"></path>
-                                                <path d="M14 17H5"></path>
-                                                <circle cx="17" cy="17" r="3"></circle>
-                                                <circle cx="7" cy="7" r="3"></circle>
-                                            </svg>
-                                        </button>
-
-                                        <!-- Dropdown -->
-                                        <div
-                                            class="hs-dropdown-menu duration z-20 hidden w-60 rounded-xl bg-white p-3 opacity-0 shadow-[0_10px_40px_10px_rgba(0,0,0,0.08)] transition-[opacity,margin] hs-dropdown-open:opacity-100 dark:divide-neutral-700 dark:bg-neutral-800"
-                                            role="menu"
-                                            aria-orientation="vertical">
-                                            <!-- Switch/Toggle -->
-                                            <div class="flex items-center justify-between gap-x-2">
-                                                <label
-                                                    for="polygon-bg-element-toggle-light"
-                                                    class="text-sm text-gray-600 dark:text-neutral-400">
-                                                    Copy to clipboard with
-                                                    <span class="text-red-500"> dark:</span> classes
-                                                </label>
-                                                <div class="relative inline-block">
+                    <div class="grid grid-cols-12 gap-x-6">
+                        <div class="col-span-12 xl:col-span-12">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="flex-wrap items-center justify-between gap-4 md:flex">
+                                        <div class="flex gap-2 md:w-[30%]">
+                                            <a
+                                                href="javascript:void(0);"
+                                                class="hs-dropdown-toggle btn btn-primary min-w-max"
+                                                data-hs-overlay="#add-board">
+                                                <i class="ri-add-line !text-[1rem]"></i>
+                                                New Board
+                                            </a>
+                                            <div class="relative inline-flex w-full" data-hs-combo-box="">
+                                                <div class="relative w-full">
                                                     <input
-                                                        type="checkbox"
-                                                        id="polygon-bg-element-toggle-light"
-                                                        class="relative h-6 w-11 cursor-pointer rounded-full border-transparent bg-gray-100 p-px text-transparent transition-colors duration-200 ease-in-out before:inline-block before:size-5 before:translate-x-0 before:transform before:rounded-full before:bg-white before:shadow before:ring-0 before:transition before:duration-200 before:ease-in-out checked:border-blue-600 checked:bg-none checked:text-blue-600 checked:before:translate-x-full checked:before:bg-white focus:ring-blue-600 focus:checked:border-blue-600 disabled:pointer-events-none disabled:opacity-50 dark:border-neutral-700 dark:bg-neutral-800 dark:before:bg-neutral-400 dark:checked:border-blue-500 dark:checked:bg-blue-500 dark:checked:before:bg-white dark:focus:ring-offset-neutral-900"
-                                                        checked="" />
+                                                        class="form-input"
+                                                        type="text"
+                                                        role="combobox"
+                                                        aria-expanded="false"
+                                                        placeholder="Sort By"
+                                                        data-hs-combo-box-input="" />
+                                                    <div
+                                                        class="absolute end-3 top-1/2 -translate-y-1/2"
+                                                        data-hs-combo-box-toggle="">
+                                                        <svg
+                                                            class="size-3.5 shrink-0 text-gray-500 dark:text-neutral-500"
+                                                            xmlns="http://www.w3.org/2000/svg"
+                                                            width="24"
+                                                            height="24"
+                                                            viewBox="0 0 24 24"
+                                                            fill="none"
+                                                            stroke="currentColor"
+                                                            stroke-width="2"
+                                                            stroke-linecap="round"
+                                                            stroke-linejoin="round">
+                                                            <path d="m7 15 5 5 5-5"></path>
+                                                            <path d="m7 9 5-5 5 5"></path>
+                                                        </svg>
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="absolute z-50 max-h-72 w-full space-y-0.5 overflow-hidden overflow-y-auto rounded-lg border border-gray-200 bg-white p-1 dark:border-neutral-700 dark:bg-neutral-900"
+                                                    style="display: none"
+                                                    data-hs-combo-box-output="">
+                                                    <div
+                                                        class="w-full cursor-pointer rounded-lg px-4 py-2 text-sm text-gray-800 hover:bg-gray-100 focus:bg-gray-100 focus:outline-none dark:bg-neutral-900 dark:text-neutral-200 dark:hover:bg-neutral-800 dark:focus:bg-neutral-800"
+                                                        tabindex="0"
+                                                        data-hs-combo-box-output-item="">
+                                                        <div class="flex w-full items-center justify-between">
+                                                            <span
+                                                                data-hs-combo-box-search-text="A-Z"
+                                                                data-hs-combo-box-value="">
+                                                                A-Z
+                                                            </span>
+                                                            <span class="hidden hs-combo-box-selected:block">
+                                                                <svg
+                                                                    class="size-3.5 shrink-0 text-blue-600 dark:text-blue-500"
+                                                                    xmlns="http://www.w3.org/2000/svg"
+                                                                    width="24"
+                                                                    height="24"
+                                                                    viewBox="0 0 24 24"
+                                                                    fill="none"
+                                                                    stroke="currentColor"
+                                                                    stroke-width="2"
+                                                                    stroke-linecap="round"
+                                                                    stroke-linejoin="round">
+                                                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                                                </svg>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                    <div
+                                                        class="w-full cursor-pointer rounded-lg px-4 py-2 text-sm text-gray-800 hover:bg-gray-100 focus:bg-gray-100 focus:outline-none dark:bg-neutral-900 dark:text-neutral-200 dark:hover:bg-neutral-800 dark:focus:bg-neutral-800"
+                                                        tabindex="1"
+                                                        data-hs-combo-box-output-item="">
+                                                        <div class="flex w-full items-center justify-between">
+                                                            <span
+                                                                data-hs-combo-box-search-text="Most Recent"
+                                                                data-hs-combo-box-value="">
+                                                                Most Recent
+                                                            </span>
+                                                            <span class="hidden hs-combo-box-selected:block">
+                                                                <svg
+                                                                    class="size-3.5 shrink-0 text-blue-600 dark:text-blue-500"
+                                                                    xmlns="http://www.w3.org/2000/svg"
+                                                                    width="24"
+                                                                    height="24"
+                                                                    viewBox="0 0 24 24"
+                                                                    fill="none"
+                                                                    stroke="currentColor"
+                                                                    stroke-width="2"
+                                                                    stroke-linecap="round"
+                                                                    stroke-linejoin="round">
+                                                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                                                </svg>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                    <div
+                                                        class="w-full cursor-pointer rounded-lg px-4 py-2 text-sm text-gray-800 hover:bg-gray-100 focus:bg-gray-100 focus:outline-none dark:bg-neutral-900 dark:text-neutral-200 dark:hover:bg-neutral-800 dark:focus:bg-neutral-800"
+                                                        tabindex="2"
+                                                        data-hs-combo-box-output-item="">
+                                                        <div class="flex w-full items-center justify-between">
+                                                            <span
+                                                                data-hs-combo-box-search-text="Type"
+                                                                data-hs-combo-box-value="">
+                                                                Type
+                                                            </span>
+                                                            <span class="hidden hs-combo-box-selected:block">
+                                                                <svg
+                                                                    class="size-3.5 shrink-0 text-blue-600 dark:text-blue-500"
+                                                                    xmlns="http://www.w3.org/2000/svg"
+                                                                    width="24"
+                                                                    height="24"
+                                                                    viewBox="0 0 24 24"
+                                                                    fill="none"
+                                                                    stroke="currentColor"
+                                                                    stroke-width="2"
+                                                                    stroke-linecap="round"
+                                                                    stroke-linejoin="round">
+                                                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                                                </svg>
+                                                            </span>
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
-                                            <!-- End Switch/Toggle -->
                                         </div>
-                                        <!-- End Dropdown -->
+                                        <div class="flex items-center justify-start -space-x-4">
+                                            <img
+                                                src="/images/users/avatar-2.png"
+                                                class="h-10 w-10 flex-none rounded-full object-cover ring-2 ring-white"
+                                                alt="avatar" />
+                                            <img
+                                                src="/images/users/avatar-3.png"
+                                                class="h-10 w-10 flex-none rounded-full object-cover ring-2 ring-white"
+                                                alt="avatar" />
+                                            <img
+                                                src="/images/users/avatar-5.png"
+                                                class="h-10 w-10 flex-none rounded-full object-cover ring-2 ring-white"
+                                                alt="avatar" />
+                                            <img
+                                                src="/images/users/avatar-6.png"
+                                                class="h-10 w-10 flex-none rounded-full object-cover ring-2 ring-white"
+                                                alt="avatar" />
+                                            <img
+                                                src="/images/users/avatar-8.png"
+                                                class="h-10 w-10 flex-none rounded-full object-cover ring-2 ring-white"
+                                                alt="avatar" />
+                                            <span
+                                                class="flex h-10 w-10 items-center justify-center rounded-full bg-purple-100 object-cover text-center text-xs ring-2 ring-white"
+                                                >+99</span
+                                            >
+                                        </div>
+                                        <div class="flex" role="search">
+                                            <input
+                                                class="form-input me-2"
+                                                type="search"
+                                                placeholder="Search"
+                                                aria-label="Search" />
+                                            <button class="btn btn-light !mb-0" type="submit">Search</button>
+                                        </div>
                                     </div>
                                 </div>
-                                <!-- End Clipboard Dropdown -->
                             </div>
                         </div>
                     </div>
@@ -1546,5 +1642,6 @@
                 </nav>
             </div>
         </div>
+        <script src="/assets/js/plugins.js" type="module"></script>
     </body>
 </html>
