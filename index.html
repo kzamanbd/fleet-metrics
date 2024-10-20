@@ -58,7 +58,7 @@
 
                                 <ul class="hs-accordion-content twd--menu">
                                     <li class="twd--menu-item">
-                                        <a href="/index.html" class="twd--link"> Sales </a>
+                                        <a href="/index.html" class="twd--link"> Default </a>
                                     </li>
                                     <li class="twd--menu-item">
                                         <a href="/pages/dashboard/crypto.html" class="twd--link"> Crypto </a>
@@ -1089,9 +1089,9 @@
 
                 <main class="tw--content">
                     <!-- Start Breadcrumb -->
-                    <nav class="breadcrumb">
+                    <nav class="breadcrumb hidden">
                         <div class="left-link">
-                            <h3>Sales</h3>
+                            <h3>Default</h3>
                         </div>
                         <ol class="breadcrumb-nav">
                             <li class="inline-flex items-center">
@@ -1101,7 +1101,7 @@
                             <li aria-current="page">
                                 <div class="flex items-center">
                                     <span class="icon-[mdi--chevron-right]"></span>
-                                    <span class="breadcrumb-item-current"> Sales </span>
+                                    <span class="breadcrumb-item-current"> Default </span>
                                 </div>
                             </li>
                         </ol>
@@ -1109,6 +1109,55 @@
                     <!-- End Breadcrumb -->
 
                     <div class="space-y-4">
+                        <!-- Hero -->
+                        <div class="welcome-banner card p-4">
+                            <!-- Title -->
+                            <div class="mx-auto mt-5 max-w-2xl text-center">
+                                <h1
+                                    class="block text-4xl font-bold text-gray-800 dark:text-neutral-200 md:text-5xl lg:text-6xl">
+                                    Let's Build
+                                    <span
+                                        class="bg-gradient-to-tl from-blue-600 to-violet-600 bg-clip-text text-transparent">
+                                        Together
+                                    </span>
+                                </h1>
+                            </div>
+                            <!-- End Title -->
+
+                            <div class="mx-auto my-5 max-w-3xl text-center">
+                                <p class="text-lg text-gray-600 dark:text-neutral-400">
+                                    <span x-html="appName"></span> is an open-source set of prebuilt UI components,
+                                    ready-to-use examples based on the utility-first Tailwind CSS framework.
+                                </p>
+                            </div>
+
+                            <!-- Announcement Banner -->
+                            <div class="flex justify-center">
+                                <a
+                                    class="inline-flex items-center gap-x-2 rounded-full border border-gray-200 bg-white p-1 ps-3 text-sm text-gray-800 transition hover:border-gray-300 focus:border-gray-300 focus:outline-none dark:border-neutral-700 dark:bg-neutral-800 dark:text-neutral-200 dark:hover:border-neutral-600 dark:focus:border-neutral-600"
+                                    href="#">
+                                    Dashboard v1.0.0 is available now
+                                    <span
+                                        class="inline-flex items-center justify-center gap-x-2 rounded-full bg-gray-200 px-2.5 py-1.5 text-sm font-semibold text-gray-600 dark:bg-neutral-700 dark:text-neutral-400">
+                                        <svg
+                                            class="size-4 shrink-0"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            width="24"
+                                            height="24"
+                                            viewBox="0 0 24 24"
+                                            fill="none"
+                                            stroke="currentColor"
+                                            stroke-width="2"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round">
+                                            <path d="m9 18 6-6-6-6" />
+                                        </svg>
+                                    </span>
+                                </a>
+                            </div>
+                            <!-- End Announcement Banner -->
+                        </div>
+                        <!-- End Hero -->
                         <div class="grid grid-cols-12 gap-x-6 space-y-5 lg:space-y-0">
                             <div class="col-span-12 sm:col-span-6 md:col-span-6 lg:col-span-6 xl:col-span-3">
                                 <div class="card">

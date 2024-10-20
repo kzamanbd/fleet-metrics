@@ -9,7 +9,7 @@
         @apply p-0;
     }
     .tw-modal-dialog {
-        @apply m-3 mt-0 w-full max-w-xl opacity-0 hs-overlay-open:mt-7 hs-overlay-open:opacity-100 hs-overlay-open:duration-500 sm:mx-auto;
+        @apply m-3 mt-0 max-w-xl opacity-0 hs-overlay-open:mt-7 hs-overlay-open:opacity-100 hs-overlay-open:duration-500 sm:mx-auto;
     }
     .tw-modal-scale {
         @apply scale-95 hs-overlay-open:scale-100 hs-overlay-open:opacity-100;
@@ -43,7 +43,7 @@
     }
 
     .tw-modal-header {
-        @apply flex items-center justify-between border-b border-b-slate-200 dark:border-b-slate-600;
+        @apply flex items-center justify-between border-b dark:border-neutral-800 dark:bg-neutral-950;
     }
 
     .tw-modal-close {
@@ -54,10 +54,10 @@
     }
 
     .tw-modal-footer {
-        @apply flex items-center justify-end gap-2 border-t border-t-slate-300 dark:border-t-slate-600;
+        @apply flex items-center justify-end gap-x-2 border-t bg-gray-50 px-4 py-3 dark:border-neutral-800 dark:bg-neutral-950;
     }
     .tw-modal.open,
     .blur-backdrop.open {
-        @apply hs-overlay-backdrop-open:supports-[backdrop-filter]:bg-light/30 hs-overlay-backdrop-open:supports-[backdrop-filter]:backdrop-blur-sm hs-overlay-backdrop-open:dark:supports-[backdrop-filter]:bg-gray-700/60;
+        @apply hs-overlay-backdrop-open:supports-[backdrop-filter]:bg-light/40 hs-overlay-backdrop-open:supports-[backdrop-filter]:backdrop-blur hs-overlay-backdrop-open:dark:supports-[backdrop-filter]:bg-gray-700/60;
     }
 }

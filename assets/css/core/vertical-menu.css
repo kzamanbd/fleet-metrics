@@ -63,7 +63,7 @@
     }
     .vertical-menu .twd--link {
         @apply flex w-full items-center truncate rounded-md p-1.5 pl-6 text-sm font-medium text-gray-700 hover:bg-primary-100 hover:text-primary dark:text-gray-400 hover:dark:bg-gray-700 dark:hover:text-primary;
-        @apply relative after:absolute after:left-2 after:top-1/2 after:h-0.5 after:w-2 after:-translate-y-1/2 after:bg-gray-500 hover:after:bg-primary;
+        @apply relative after:absolute after:left-2 after:top-1/2 after:h-1 after:w-1 after:-translate-y-1/2 after:rounded-full after:bg-gray-500 hover:after:bg-primary;
     }
     .vertical-menu .twd--link.active {
         @apply text-primary after:bg-primary;

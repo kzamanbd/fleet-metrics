@@ -38,8 +38,11 @@ window.tippy = tippy;
     loading?.remove();
 
     // vertical menu active
-    let pathName = window.location.pathname;
-    if (pathName == '/') pathName = '/index.html';
+    let currentPath = window.location.pathname;
+    if (currentPath == '/') {
+        currentPath = '/index.html';
+    }
+
     const content = document.querySelector('.tw-nav-menu');
     const sidebarToggle = document.querySelectorAll('.toggle-sidebar');
     const wrapper = document.querySelector('.tw--container');
@@ -57,19 +60,28 @@ window.tippy = tippy;
         });
     });
 
-    const menuItem = document.querySelector(`ul.tw-nav-menu a[href="${pathName}"]`);
-    const dropdownMenu = menuItem?.closest('ul.twd--menu');
+    const menuItem = document.querySelector(`.tw-nav-menu a[href="${currentPath}"]`);
 
     if (menuItem) {
         menuItem.classList.add('active');
+        const dropdownMenu = menuItem.closest('.twd--menu');
         if (dropdownMenu) {
-            let targetElement = dropdownMenu.closest('li.tw-menu-item').querySelector('.tw-menu-link');
+            const targetElement = dropdownMenu.closest('.tw-menu-item')?.querySelector('.tw-menu-link');
+            const targetSubmenu = dropdownMenu.closest('.twd--menu-item')?.querySelector('.twd--link');
             if (targetElement) {
                 targetElement.parentElement.classList.add('active');
                 targetElement.nextElementSibling.classList.add('!block');
+
+                if (targetSubmenu) {
+                    targetSubmenu.classList.add('active');
+                    targetSubmenu.parentElement.classList.add('active');
+                    targetSubmenu.nextElementSibling.classList.add('!block');
+                }
             }
         }
     }
+
+    // for scroll sidebar menu
     const activeMenu = content?.querySelector('.tw-menu-link.active');
     const activeSubmenu = content?.querySelector('.twd--link.active');
     if (activeSubmenu) {

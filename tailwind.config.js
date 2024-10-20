@@ -10,6 +10,7 @@ import defaultTheme from 'tailwindcss/defaultTheme';
 export default {
     content: [
         './index.html',
+        './assets/**/*.js',
         './pages/**/*.{html,js}',
         './public/features/**/*.{html,js}',
         './node_modules/preline/dist/*.js',
@@ -17,19 +18,13 @@ export default {
     darkMode: 'class', // or 'media'
     theme: {
         extend: {
+            fontSize: {
+                xs: '.75rem',
+            },
             colors: {
-                dark: {
-                    ...colors.slate,
-                    DEFAULT: '#1F2937',
-                },
-                white: {
-                    DEFAULT: '#FFFFFF',
-                    light: '#E0E6ED',
-                },
-                light: '#F5F8FA',
                 primary: {
                     ...primary,
-                    DEFAULT: '#00A76F',
+                    DEFAULT: primary[500],
                 },
                 info: {
                     ...colors.indigo,
@@ -51,6 +46,15 @@ export default {
                     ...colors.gray,
                     DEFAULT: colors.gray[400],
                 },
+                dark: {
+                    ...colors.slate,
+                    DEFAULT: '#1F2937',
+                },
+                white: {
+                    DEFAULT: '#FFFFFF',
+                    light: '#E0E6ED',
+                },
+                light: '#F5F8FA',
             },
             fontFamily: {
                 sans: ['Inter, Helvetica, "sans-serif"', ...defaultTheme.fontFamily.sans],

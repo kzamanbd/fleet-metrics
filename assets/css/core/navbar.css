@@ -1,7 +1,7 @@
 @layer components {
     /* start top header components */
     .navbar-nav {
-        @apply z-10 supports-[backdrop-filter]:bg-light/60 supports-[backdrop-filter]:backdrop-blur dark:supports-[backdrop-filter]:bg-gray-700/60;
+        @apply z-20 supports-[backdrop-filter]:bg-light/50 supports-[backdrop-filter]:backdrop-blur dark:supports-[backdrop-filter]:bg-gray-700/50;
     }
     .horizontal .navbar-nav {
         @apply shadow;
@@ -14,7 +14,7 @@
     }
     .vertical .navbar-fixed.scrollable .primary-header,
     .collapsible .navbar-fixed.scrollable .primary-header {
-        @apply rounded-bl-lg rounded-br-lg px-4 shadow-md;
+        @apply rounded-bl-md rounded-br-md px-4 shadow-md;
     }
     .header-icon {
         @apply dark--text relative flex items-center rounded-lg border border-gray-200 bg-white p-1.5 text-xs font-medium hover:bg-gray-100 dark:border-gray-600 dark:bg-dark dark:hover:bg-gray-700 dark:hover:text-white;

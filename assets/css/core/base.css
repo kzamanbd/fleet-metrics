@@ -115,7 +115,22 @@
     .scroll-top {
         @apply btn btn-outline-primary fixed bottom-12 z-50 animate-pulse rounded-full p-2 duration-300 ltr:right-6 rtl:left-6;
     }
+    .d-nav {
+        @apply flex flex-wrap text-center text-sm font-medium text-gray-500 dark:border-gray-700 dark:text-gray-400;
+    }
+    .d-nav-item {
+        @apply inline-block rounded-t-lg p-4 py-2 uppercase hover:bg-gray-50 hover:text-gray-600 dark:hover:bg-gray-800 dark:hover:text-gray-300;
+    }
+    .d-nav-item.active {
+        @apply bg-gray-100 text-blue-600 dark:bg-gray-800 dark:text-blue-500;
+    }
 }
+
+/*====================================
+
+Typography 
+
+====================================*/
 
 :root:has(.dark) {
     color-scheme: dark;
@@ -128,6 +143,25 @@ body:has(.dark) {
 }
 body:has(.dark) {
     color-scheme: dark;
+}
+
+h1 {
+    @apply text-4xl font-semibold;
+}
+h2 {
+    @apply text-3xl font-semibold;
+}
+h3 {
+    @apply text-2xl font-semibold;
+}
+h4 {
+    @apply text-xl font-semibold;
+}
+h5 {
+    @apply text-lg font-semibold;
+}
+h6 {
+    @apply text-base font-semibold;
 }
 
 [data-ripple] {
@@ -184,99 +218,7 @@ body:has(.dark) {
 .sortable-chosen.sortable-ghost {
     @apply opacity-100 !important;
 }
-
-/* range picker */
-input[type='range'] {
-    -webkit-appearance: none;
-}
-
-input[type='range']::-webkit-slider-runnable-track {
-    width: 100%;
-    height: 8px;
-    background: #dee2e6;
-    border: none;
-    border-radius: 3px;
-}
-
-input[type='range']::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    border: none;
-    height: 16px;
-    width: 16px;
-    border-radius: 50%;
-    background: #009ef7;
-    margin-top: -4px;
-}
-
-.dark input[type='range']::-webkit-slider-runnable-track {
-    background: #1b2e4b;
-}
-
-.dark input[type='range'] {
-    background-color: transparent;
-}
-
-input[type='range']:focus {
-    outline: none;
-}
-
-input[type='range']:active::-webkit-slider-thumb {
-    background: #009ef7c2;
-    cursor: pointer;
-}
-
-/*====================================
-
-Typography 
-
-====================================*/
-
-h1 {
-    @apply text-4xl font-semibold;
-}
-h2 {
-    @apply text-3xl font-semibold;
-}
-h3 {
-    @apply text-2xl font-semibold;
-}
-h4 {
-    @apply text-xl font-semibold;
-}
-h5 {
-    @apply text-lg font-semibold;
-}
-h6 {
-    @apply text-sm font-semibold;
-}
-
-.text-10 {
-    font-size: 0.625rem;
-}
-.text-11 {
-    font-size: 0.688rem;
-}
-.text-13 {
-    font-size: 0.813rem;
-}
-.text-15 {
-    font-size: 0.938rem;
-}
-.text-16 {
-    font-size: 1rem;
-}
-.text-17 {
-    font-size: 1.063rem;
-}
-.text-19 {
-    font-size: 1.188rem;
-}
-.text-21 {
-    font-size: 1.313rem;
-}
-.text-22 {
-    font-size: 1.375rem;
-}
+/* mdi icons */
 [class*='icon-[mdi-'] {
     @apply h-5 w-5 dark:bg-gray-200;
 }
