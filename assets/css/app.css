@@ -107,6 +107,9 @@ Version: 1.0
         transform: rotate(360deg);
     }
 }
+.jvm-tooltip {
+    position: absolute;
+}
 .jvm-tooltip:not(.active) {
     display: none;
 }

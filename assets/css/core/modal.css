@@ -58,6 +58,6 @@
     }
     .tw-modal.open,
     .blur-backdrop.open {
-        @apply hs-overlay-backdrop-open:supports-[backdrop-filter]:bg-light/30 hs-overlay-backdrop-open:supports-[backdrop-filter]:backdrop-blur-sm hs-overlay-backdrop-open:dark:supports-[backdrop-filter]:bg-gray-700/60;
+        @apply hs-overlay-backdrop-open:supports-[backdrop-filter]:bg-light/40 hs-overlay-backdrop-open:supports-[backdrop-filter]:backdrop-blur hs-overlay-backdrop-open:dark:supports-[backdrop-filter]:bg-gray-700/60;
     }
 }
