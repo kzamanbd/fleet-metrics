@@ -1103,182 +1103,1119 @@
                     <!-- End Breadcrumb -->
 
                     <!-- Toasts Starts -->
-                    <div class="flex flex-wrap items-center gap-1.5 md:gap-2">
-                        <!-- Nav Tabs -->
-                        <div class="flex rounded-lg bg-gray-100 p-0.5 dark:bg-neutral-800">
-                            <nav
-                                class="flex gap-x-0.5 md:gap-x-1"
-                                aria-label="Tabs"
-                                role="tablist"
-                                aria-orientation="horizontal">
-                                <button
-                                    type="button"
-                                    class="active rounded-md border border-transparent p-2 text-xs font-medium text-gray-800 hover:border-gray-400 focus:border-gray-400 focus:outline-none hs-tab-active:bg-white hs-tab-active:text-gray-800 hs-tab-active:shadow-sm hs-tab-active:hover:border-transparent hs-tab-active:focus:border-transparent dark:text-neutral-200 dark:hover:border-neutral-500 dark:hover:text-white dark:focus:border-neutral-500 dark:focus:text-white dark:hs-tab-active:bg-neutral-700 dark:hs-tab-active:text-neutral-200 dark:hs-tab-active:hover:border-transparent dark:hs-tab-active:focus:border-transparent md:text-[13px]"
-                                    id="polygon-bg-element-tab-preview-item"
-                                    aria-selected="true"
-                                    data-hs-tab="#polygon-bg-element-tab-preview"
-                                    aria-controls="polygon-bg-element-tab-preview"
-                                    role="tab">
-                                    Preview
-                                </button>
-                                <button
-                                    type="button"
-                                    class="rounded-md border border-transparent p-2 text-xs font-medium text-gray-800 hover:border-gray-400 focus:border-gray-400 focus:outline-none hs-tab-active:bg-white hs-tab-active:text-gray-800 hs-tab-active:shadow-sm hs-tab-active:hover:border-transparent hs-tab-active:focus:border-transparent dark:text-neutral-200 dark:hover:border-neutral-500 dark:hover:text-white dark:focus:border-neutral-500 dark:focus:text-white dark:hs-tab-active:bg-neutral-700 dark:hs-tab-active:text-neutral-200 dark:hs-tab-active:hover:border-transparent dark:hs-tab-active:focus:border-transparent md:text-[13px]"
-                                    id="polygon-bg-element-tab-html-item"
-                                    aria-selected="false"
-                                    data-hs-tab="#polygon-bg-element-tab-html"
-                                    aria-controls="polygon-bg-element-tab-html"
-                                    role="tab">
-                                    HTML
-                                </button>
-                            </nav>
-                        </div>
-                        <!-- Nav Tabs -->
-
-                        <div class="ms-auto flex gap-x-1.5 md:gap-x-2">
-                            <!-- Dark Mode Toggle -->
-                            <button
-                                type="button"
-                                class="inline-flex size-9 items-center justify-center gap-2 rounded-md border border-gray-200 bg-white text-xs font-medium text-gray-700 hover:bg-gray-100 focus:bg-gray-50 focus:outline-none dark:border-neutral-700 dark:bg-neutral-900 dark:text-neutral-400 dark:hover:bg-neutral-700 dark:focus:bg-neutral-700 md:size-[38px] md:text-sm"
-                                data-hs-component-dark-mode="#polygon-bg-element-tab-preview">
-                                <svg
-                                    class="hidden size-3 shrink-0 md:size-3.5"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    width="24"
-                                    height="24"
-                                    viewBox="0 0 24 24"
-                                    fill="none"
-                                    stroke="currentColor"
-                                    stroke-width="2"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round">
-                                    <circle cx="12" cy="12" r="4"></circle>
-                                    <path d="M12 2v2"></path>
-                                    <path d="M12 20v2"></path>
-                                    <path d="m4.93 4.93 1.41 1.41"></path>
-                                    <path d="m17.66 17.66 1.41 1.41"></path>
-                                    <path d="M2 12h2"></path>
-                                    <path d="M20 12h2"></path>
-                                    <path d="m6.34 17.66-1.41 1.41"></path>
-                                    <path d="m19.07 4.93-1.41 1.41"></path>
-                                </svg>
-                                <svg
-                                    class="size-3 shrink-0 md:size-3.5"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    width="24"
-                                    height="24"
-                                    viewBox="0 0 24 24"
-                                    fill="none"
-                                    stroke="currentColor"
-                                    stroke-width="2"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round">
-                                    <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path>
-                                </svg>
-                            </button>
-                            <!-- End Dark Mode Toggle -->
-
-                            <div class="flex rounded-lg border border-gray-200 dark:border-neutral-700">
-                                <!-- Clipboard -->
-                                <button
-                                    type="button"
-                                    class="js-clipboard inline-flex items-center justify-center gap-2 rounded-s-lg bg-white px-2 py-[9px] text-xs font-medium text-gray-700 hover:bg-gray-100 focus:bg-gray-50 focus:outline-none dark:border-neutral-700 dark:bg-neutral-900 dark:text-neutral-400 dark:hover:bg-neutral-700 dark:focus:bg-neutral-800 md:text-[13px]"
-                                    data-hs-clipboard-options='{
-                                    "contentTarget": "#polygon-bg-element-tab-html-code",
-                                    "successText": "Copied",
-                                    "toggleLight": "#polygon-bg-element-toggle-light"
-                                  }'
-                                    id="copy-markup-03">
-                                    <svg
-                                        class="js-clipboard-default size-3 shrink-0 transition group-hover:rotate-6 md:size-3.5"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        width="24"
-                                        height="24"
-                                        viewBox="0 0 24 24"
-                                        fill="none"
-                                        stroke="currentColor"
-                                        stroke-width="2"
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round">
-                                        <rect width="8" height="4" x="8" y="2" rx="1" ry="1"></rect>
-                                        <path
-                                            d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path>
-                                    </svg>
-                                    <svg
-                                        class="js-clipboard-success hidden size-3 shrink-0 rotate-6 text-blue-600 md:size-3.5"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        width="24"
-                                        height="24"
-                                        viewBox="0 0 24 24"
-                                        fill="none"
-                                        stroke="currentColor"
-                                        stroke-width="2"
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round">
-                                        <polyline points="20 6 9 17 4 12"></polyline>
-                                    </svg>
-                                    <span class="js-clipboard-success-text">Copy</span>
-                                </button>
-                                <!-- End Clipboard -->
-
-                                <!-- Clipboard Dropdown -->
-                                <div class="border-s border-gray-200 dark:border-neutral-700">
+                    <div class="grid grid-cols-3 gap-4">
+                        <!-- Basic Toast -->
+                        <div class="col-span-12 md:col-span-1">
+                            <div class="card h-full">
+                                <div class="card-header">
+                                    <h5 class="card-title">Basic Toast</h5>
+                                    <p>A basic form of the toasts.</p>
+                                </div>
+                                <div class="card-body space-y-4">
+                                    <!-- Toast -->
                                     <div
-                                        class="hs-dropdown relative inline-flex [--auto-close:inside] [--placement:top-right] [--strategy:absolute]">
-                                        <button
-                                            type="button"
-                                            class="hs-dropdown-toggle inline-flex size-[34px] items-center justify-center gap-2 rounded-e-lg bg-white text-xs font-medium text-gray-700 hover:bg-gray-100 focus:bg-gray-50 focus:outline-none dark:border-neutral-700 dark:bg-neutral-900 dark:text-neutral-400 dark:hover:bg-neutral-700 dark:focus:bg-neutral-800 md:size-9 md:text-sm"
-                                            aria-haspopup="menu"
-                                            aria-expanded="false"
-                                            aria-label="Dropdown">
-                                            <svg
-                                                class="js-clipboard-default size-3 shrink-0 transition group-hover:rotate-6 md:size-3.5"
-                                                xmlns="http://www.w3.org/2000/svg"
-                                                width="24"
-                                                height="24"
-                                                viewBox="0 0 24 24"
-                                                fill="none"
-                                                stroke="currentColor"
-                                                stroke-width="2"
-                                                stroke-linecap="round"
-                                                stroke-linejoin="round">
-                                                <path d="M20 7h-9"></path>
-                                                <path d="M14 17H5"></path>
-                                                <circle cx="17" cy="17" r="3"></circle>
-                                                <circle cx="7" cy="7" r="3"></circle>
-                                            </svg>
-                                        </button>
+                                        class="rounded-xl border border-gray-200 bg-white shadow-lg dark:border-neutral-700 dark:bg-neutral-800"
+                                        role="alert"
+                                        tabindex="-1"
+                                        aria-labelledby="hs-toast-normal-example-label">
+                                        <div class="flex p-4">
+                                            <div class="shrink-0">
+                                                <svg
+                                                    class="mt-0.5 size-4 shrink-0 text-blue-500"
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    width="16"
+                                                    height="16"
+                                                    fill="currentColor"
+                                                    viewBox="0 0 16 16">
+                                                    <path
+                                                        d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z"></path>
+                                                </svg>
+                                            </div>
+                                            <div class="ms-3">
+                                                <p
+                                                    id="hs-toast-normal-example-label"
+                                                    class="text-sm text-gray-700 dark:text-neutral-400">
+                                                    This is a normal message.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- End Toast -->
 
-                                        <!-- Dropdown -->
-                                        <div
-                                            class="hs-dropdown-menu duration z-20 hidden w-60 rounded-xl bg-white p-3 opacity-0 shadow-[0_10px_40px_10px_rgba(0,0,0,0.08)] transition-[opacity,margin] hs-dropdown-open:opacity-100 dark:divide-neutral-700 dark:bg-neutral-800"
-                                            role="menu"
-                                            aria-orientation="vertical">
-                                            <!-- Switch/Toggle -->
-                                            <div class="flex items-center justify-between gap-x-2">
-                                                <label
-                                                    for="polygon-bg-element-toggle-light"
-                                                    class="text-sm text-gray-600 dark:text-neutral-400">
-                                                    Copy to clipboard with
-                                                    <span class="text-red-500"> dark:</span> classes
-                                                </label>
-                                                <div class="relative inline-block">
-                                                    <input
-                                                        type="checkbox"
-                                                        id="polygon-bg-element-toggle-light"
-                                                        class="relative h-6 w-11 cursor-pointer rounded-full border-transparent bg-gray-100 p-px text-transparent transition-colors duration-200 ease-in-out before:inline-block before:size-5 before:translate-x-0 before:transform before:rounded-full before:bg-white before:shadow before:ring-0 before:transition before:duration-200 before:ease-in-out checked:border-blue-600 checked:bg-none checked:text-blue-600 checked:before:translate-x-full checked:before:bg-white focus:ring-blue-600 focus:checked:border-blue-600 disabled:pointer-events-none disabled:opacity-50 dark:border-neutral-700 dark:bg-neutral-800 dark:before:bg-neutral-400 dark:checked:border-blue-500 dark:checked:bg-blue-500 dark:checked:before:bg-white dark:focus:ring-offset-neutral-900"
-                                                        checked="" />
+                                    <!-- Toast -->
+                                    <div
+                                        class="rounded-xl border border-gray-200 bg-white shadow-lg dark:border-neutral-700 dark:bg-neutral-800"
+                                        role="alert"
+                                        tabindex="-1"
+                                        aria-labelledby="hs-toast-success-example-label">
+                                        <div class="flex p-4">
+                                            <div class="shrink-0">
+                                                <svg
+                                                    class="mt-0.5 size-4 shrink-0 text-teal-500"
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    width="16"
+                                                    height="16"
+                                                    fill="currentColor"
+                                                    viewBox="0 0 16 16">
+                                                    <path
+                                                        d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"></path>
+                                                </svg>
+                                            </div>
+                                            <div class="ms-3">
+                                                <p
+                                                    id="hs-toast-success-example-label"
+                                                    class="text-sm text-gray-700 dark:text-neutral-400">
+                                                    This is a success message.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- End Toast -->
+
+                                    <!-- Toast -->
+                                    <div
+                                        class="rounded-xl border border-gray-200 bg-white shadow-lg dark:border-neutral-700 dark:bg-neutral-800"
+                                        role="alert"
+                                        tabindex="-1"
+                                        aria-labelledby="hs-toast-error-example-label">
+                                        <div class="flex p-4">
+                                            <div class="shrink-0">
+                                                <svg
+                                                    class="mt-0.5 size-4 shrink-0 text-red-500"
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    width="16"
+                                                    height="16"
+                                                    fill="currentColor"
+                                                    viewBox="0 0 16 16">
+                                                    <path
+                                                        d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z"></path>
+                                                </svg>
+                                            </div>
+                                            <div class="ms-3">
+                                                <p
+                                                    id="hs-toast-error-example-label"
+                                                    class="text-sm text-gray-700 dark:text-neutral-400">
+                                                    This is an error message.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- End Toast -->
+
+                                    <!-- Toast -->
+                                    <div
+                                        class="rounded-xl border border-gray-200 bg-white shadow-lg dark:border-neutral-700 dark:bg-neutral-800"
+                                        role="alert"
+                                        tabindex="-1"
+                                        aria-labelledby="hs-toast-warning-example-label">
+                                        <div class="flex p-4">
+                                            <div class="shrink-0">
+                                                <svg
+                                                    class="mt-0.5 size-4 shrink-0 text-yellow-500"
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    width="16"
+                                                    height="16"
+                                                    fill="currentColor"
+                                                    viewBox="0 0 16 16">
+                                                    <path
+                                                        d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8 4a.905.905 0 0 0-.9.995l.35 3.507a.552.552 0 0 0 1.1 0l.35-3.507A.905.905 0 0 0 8 4zm.002 6a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"></path>
+                                                </svg>
+                                            </div>
+                                            <div class="ms-3">
+                                                <p
+                                                    id="hs-toast-warning-example-label"
+                                                    class="text-sm text-gray-700 dark:text-neutral-400">
+                                                    This is a warning message.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- End Toast -->
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Solid Color -->
+                        <div class="col-span-12 md:col-span-1">
+                            <div class="card h-full">
+                                <div class="card-header">
+                                    <h5 class="card-title">Solid color variants</h5>
+                                    <p>The default form of solid color toasts.</p>
+                                </div>
+                                <div class="card-body space-y-4">
+                                    <!-- Toast -->
+                                    <div
+                                        class="rounded-xl bg-gray-800 text-sm text-white shadow-lg dark:bg-neutral-900"
+                                        role="alert"
+                                        tabindex="-1"
+                                        aria-labelledby="hs-toast-solid-color-dark-label">
+                                        <div id="hs-toast-solid-color-dark-label" class="flex p-4">
+                                            Hello, world! This is a toast message.
+
+                                            <div class="ms-auto">
+                                                <button
+                                                    type="button"
+                                                    class="inline-flex size-5 shrink-0 items-center justify-center rounded-lg text-white opacity-50 hover:text-white hover:opacity-100 focus:opacity-100 focus:outline-none"
+                                                    aria-label="Close">
+                                                    <span class="sr-only">Close</span>
+                                                    <svg
+                                                        class="size-4 shrink-0"
+                                                        xmlns="http://www.w3.org/2000/svg"
+                                                        width="24"
+                                                        height="24"
+                                                        viewBox="0 0 24 24"
+                                                        fill="none"
+                                                        stroke="currentColor"
+                                                        stroke-width="2"
+                                                        stroke-linecap="round"
+                                                        stroke-linejoin="round">
+                                                        <path d="M18 6 6 18"></path>
+                                                        <path d="m6 6 12 12"></path>
+                                                    </svg>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- End Toast -->
+
+                                    <!-- Toast -->
+                                    <div
+                                        class="rounded-xl bg-gray-500 text-sm text-white shadow-lg dark:bg-neutral-700"
+                                        role="alert"
+                                        tabindex="-1"
+                                        aria-labelledby="hs-toast-solid-color-gray-label">
+                                        <div id="hs-toast-solid-color-gray-label" class="flex p-4">
+                                            Hello, world! This is a toast message.
+
+                                            <div class="ms-auto">
+                                                <button
+                                                    type="button"
+                                                    class="inline-flex size-5 shrink-0 items-center justify-center rounded-lg text-white opacity-50 hover:text-white hover:opacity-100 focus:opacity-100 focus:outline-none"
+                                                    aria-label="Close">
+                                                    <span class="sr-only">Close</span>
+                                                    <svg
+                                                        class="size-4 shrink-0"
+                                                        xmlns="http://www.w3.org/2000/svg"
+                                                        width="24"
+                                                        height="24"
+                                                        viewBox="0 0 24 24"
+                                                        fill="none"
+                                                        stroke="currentColor"
+                                                        stroke-width="2"
+                                                        stroke-linecap="round"
+                                                        stroke-linejoin="round">
+                                                        <path d="M18 6 6 18"></path>
+                                                        <path d="m6 6 12 12"></path>
+                                                    </svg>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- End Toast -->
+
+                                    <!-- Toast -->
+                                    <div
+                                        class="rounded-xl bg-teal-500 text-sm text-white shadow-lg"
+                                        role="alert"
+                                        tabindex="-1"
+                                        aria-labelledby="hs-toast-solid-color-teal-label">
+                                        <div id="hs-toast-solid-color-teal-label" class="flex p-4">
+                                            Hello, world! This is a toast message.
+
+                                            <div class="ms-auto">
+                                                <button
+                                                    type="button"
+                                                    class="inline-flex size-5 shrink-0 items-center justify-center rounded-lg text-white opacity-50 hover:text-white hover:opacity-100 focus:opacity-100 focus:outline-none"
+                                                    aria-label="Close">
+                                                    <span class="sr-only">Close</span>
+                                                    <svg
+                                                        class="size-4 shrink-0"
+                                                        xmlns="http://www.w3.org/2000/svg"
+                                                        width="24"
+                                                        height="24"
+                                                        viewBox="0 0 24 24"
+                                                        fill="none"
+                                                        stroke="currentColor"
+                                                        stroke-width="2"
+                                                        stroke-linecap="round"
+                                                        stroke-linejoin="round">
+                                                        <path d="M18 6 6 18"></path>
+                                                        <path d="m6 6 12 12"></path>
+                                                    </svg>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- End Toast -->
+
+                                    <!-- Toast -->
+                                    <div
+                                        class="rounded-xl bg-blue-500 text-sm text-white shadow-lg"
+                                        role="alert"
+                                        tabindex="-1"
+                                        aria-labelledby="hs-toast-solid-color-blue-label">
+                                        <div id="hs-toast-solid-color-blue-label" class="flex p-4">
+                                            Hello, world! This is a toast message.
+
+                                            <div class="ms-auto">
+                                                <button
+                                                    type="button"
+                                                    class="inline-flex size-5 shrink-0 items-center justify-center rounded-lg text-white opacity-50 hover:text-white hover:opacity-100 focus:opacity-100 focus:outline-none"
+                                                    aria-label="Close">
+                                                    <span class="sr-only">Close</span>
+                                                    <svg
+                                                        class="size-4 shrink-0"
+                                                        xmlns="http://www.w3.org/2000/svg"
+                                                        width="24"
+                                                        height="24"
+                                                        viewBox="0 0 24 24"
+                                                        fill="none"
+                                                        stroke="currentColor"
+                                                        stroke-width="2"
+                                                        stroke-linecap="round"
+                                                        stroke-linejoin="round">
+                                                        <path d="M18 6 6 18"></path>
+                                                        <path d="m6 6 12 12"></path>
+                                                    </svg>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- End Toast -->
+
+                                    <!-- Toast -->
+                                    <div
+                                        class="rounded-xl bg-red-500 text-sm text-white shadow-lg"
+                                        role="alert"
+                                        tabindex="-1"
+                                        aria-labelledby="hs-toast-solid-color-red-label">
+                                        <div id="hs-toast-solid-color-red-label" class="flex p-4">
+                                            Hello, world! This is a toast message.
+
+                                            <div class="ms-auto">
+                                                <button
+                                                    type="button"
+                                                    class="inline-flex size-5 shrink-0 items-center justify-center rounded-lg text-white opacity-50 hover:text-white hover:opacity-100 focus:opacity-100 focus:outline-none"
+                                                    aria-label="Close">
+                                                    <span class="sr-only">Close</span>
+                                                    <svg
+                                                        class="size-4 shrink-0"
+                                                        xmlns="http://www.w3.org/2000/svg"
+                                                        width="24"
+                                                        height="24"
+                                                        viewBox="0 0 24 24"
+                                                        fill="none"
+                                                        stroke="currentColor"
+                                                        stroke-width="2"
+                                                        stroke-linecap="round"
+                                                        stroke-linejoin="round">
+                                                        <path d="M18 6 6 18"></path>
+                                                        <path d="m6 6 12 12"></path>
+                                                    </svg>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- End Toast -->
+
+                                    <!-- Toast -->
+                                    <div
+                                        class="rounded-xl bg-yellow-500 text-sm text-white shadow-lg"
+                                        role="alert"
+                                        tabindex="-1"
+                                        aria-labelledby="hs-toast-solid-color-yellow-label">
+                                        <div id="hs-toast-solid-color-yellow-label" class="flex p-4">
+                                            Hello, world! This is a toast message.
+
+                                            <div class="ms-auto">
+                                                <button
+                                                    type="button"
+                                                    class="inline-flex size-5 shrink-0 items-center justify-center rounded-lg text-white opacity-50 hover:text-white hover:opacity-100 focus:opacity-100 focus:outline-none"
+                                                    aria-label="Close">
+                                                    <span class="sr-only">Close</span>
+                                                    <svg
+                                                        class="size-4 shrink-0"
+                                                        xmlns="http://www.w3.org/2000/svg"
+                                                        width="24"
+                                                        height="24"
+                                                        viewBox="0 0 24 24"
+                                                        fill="none"
+                                                        stroke="currentColor"
+                                                        stroke-width="2"
+                                                        stroke-linecap="round"
+                                                        stroke-linejoin="round">
+                                                        <path d="M18 6 6 18"></path>
+                                                        <path d="m6 6 12 12"></path>
+                                                    </svg>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- End Toast -->
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Soft Color -->
+                        <div class="col-span-12 md:col-span-1">
+                            <div class="card h-full">
+                                <div class="card-header">
+                                    <h5 class="card-title">Soft color variants</h5>
+                                    <p>The default form of Soft color toasts.</p>
+                                </div>
+                                <div class="card-body space-y-4">
+                                    <!-- Toast -->
+                                    <div
+                                        class="rounded-lg border border-gray-200 bg-gray-100 text-sm text-gray-800 dark:border-white/20 dark:bg-white/10 dark:text-white"
+                                        role="alert"
+                                        tabindex="-1"
+                                        aria-labelledby="hs-toast-soft-color-dark-label">
+                                        <div id="hs-toast-soft-color-dark-label" class="flex p-4">
+                                            Hello, world! This is a toast message.
+
+                                            <div class="ms-auto">
+                                                <button
+                                                    type="button"
+                                                    class="inline-flex size-5 shrink-0 items-center justify-center rounded-lg text-gray-800 opacity-50 hover:opacity-100 focus:opacity-100 focus:outline-none dark:text-white"
+                                                    aria-label="Close">
+                                                    <span class="sr-only">Close</span>
+                                                    <svg
+                                                        class="size-4 shrink-0"
+                                                        xmlns="http://www.w3.org/2000/svg"
+                                                        width="24"
+                                                        height="24"
+                                                        viewBox="0 0 24 24"
+                                                        fill="none"
+                                                        stroke="currentColor"
+                                                        stroke-width="2"
+                                                        stroke-linecap="round"
+                                                        stroke-linejoin="round">
+                                                        <path d="M18 6 6 18"></path>
+                                                        <path d="m6 6 12 12"></path>
+                                                    </svg>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- End Toast -->
+
+                                    <!-- Toast -->
+                                    <div
+                                        class="rounded-lg border border-gray-200 bg-gray-50 text-sm text-gray-600 dark:border-white/10 dark:bg-white/10 dark:text-neutral-400"
+                                        role="alert"
+                                        tabindex="-1"
+                                        aria-labelledby="hs-toast-soft-color-gray-label">
+                                        <div id="hs-toast-soft-color-gray-label" class="flex p-4">
+                                            Hello, world! This is a toast message.
+
+                                            <div class="ms-auto">
+                                                <button
+                                                    type="button"
+                                                    class="inline-flex size-5 shrink-0 items-center justify-center rounded-lg text-gray-800 opacity-50 hover:opacity-100 focus:opacity-100 focus:outline-none dark:text-white"
+                                                    aria-label="Close">
+                                                    <span class="sr-only">Close</span>
+                                                    <svg
+                                                        class="size-4 shrink-0"
+                                                        xmlns="http://www.w3.org/2000/svg"
+                                                        width="24"
+                                                        height="24"
+                                                        viewBox="0 0 24 24"
+                                                        fill="none"
+                                                        stroke="currentColor"
+                                                        stroke-width="2"
+                                                        stroke-linecap="round"
+                                                        stroke-linejoin="round">
+                                                        <path d="M18 6 6 18"></path>
+                                                        <path d="m6 6 12 12"></path>
+                                                    </svg>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- End Toast -->
+
+                                    <!-- Toast -->
+                                    <div
+                                        class="rounded-lg border border-teal-200 bg-teal-100 text-sm text-teal-800 dark:border-teal-900 dark:bg-teal-800/10 dark:text-teal-500"
+                                        role="alert"
+                                        tabindex="-1"
+                                        aria-labelledby="hs-toast-soft-color-teal-label">
+                                        <div id="hs-toast-soft-color-teal-label" class="flex p-4">
+                                            Hello, world! This is a toast message.
+
+                                            <div class="ms-auto">
+                                                <button
+                                                    type="button"
+                                                    class="inline-flex size-5 shrink-0 items-center justify-center rounded-lg text-teal-800 opacity-50 hover:opacity-100 focus:opacity-100 focus:outline-none dark:text-teal-200"
+                                                    aria-label="Close">
+                                                    <span class="sr-only">Close</span>
+                                                    <svg
+                                                        class="size-4 shrink-0"
+                                                        xmlns="http://www.w3.org/2000/svg"
+                                                        width="24"
+                                                        height="24"
+                                                        viewBox="0 0 24 24"
+                                                        fill="none"
+                                                        stroke="currentColor"
+                                                        stroke-width="2"
+                                                        stroke-linecap="round"
+                                                        stroke-linejoin="round">
+                                                        <path d="M18 6 6 18"></path>
+                                                        <path d="m6 6 12 12"></path>
+                                                    </svg>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- End Toast -->
+
+                                    <!-- Toast -->
+                                    <div
+                                        class="rounded-lg border border-blue-200 bg-blue-100 text-sm text-blue-800 dark:border-blue-900 dark:bg-blue-800/10 dark:text-blue-500"
+                                        role="alert"
+                                        tabindex="-1"
+                                        aria-labelledby="hs-toast-soft-color-blue-label">
+                                        <div id="hs-toast-soft-color-blue-label" class="flex p-4">
+                                            Hello, world! This is a toast message.
+
+                                            <div class="ms-auto">
+                                                <button
+                                                    type="button"
+                                                    class="inline-flex size-5 shrink-0 items-center justify-center rounded-lg text-blue-800 opacity-50 hover:opacity-100 focus:opacity-100 focus:outline-none dark:text-blue-200"
+                                                    aria-label="Close">
+                                                    <span class="sr-only">Close</span>
+                                                    <svg
+                                                        class="size-4 shrink-0"
+                                                        xmlns="http://www.w3.org/2000/svg"
+                                                        width="24"
+                                                        height="24"
+                                                        viewBox="0 0 24 24"
+                                                        fill="none"
+                                                        stroke="currentColor"
+                                                        stroke-width="2"
+                                                        stroke-linecap="round"
+                                                        stroke-linejoin="round">
+                                                        <path d="M18 6 6 18"></path>
+                                                        <path d="m6 6 12 12"></path>
+                                                    </svg>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- End Toast -->
+
+                                    <!-- Toast -->
+                                    <div
+                                        class="rounded-lg border border-red-200 bg-red-100 text-sm text-red-800 dark:border-red-900 dark:bg-red-800/10 dark:text-red-500"
+                                        role="alert"
+                                        tabindex="-1"
+                                        aria-labelledby="hs-toast-soft-color-red-label">
+                                        <div id="hs-toast-soft-color-red-label" class="flex p-4">
+                                            Hello, world! This is a toast message.
+
+                                            <div class="ms-auto">
+                                                <button
+                                                    type="button"
+                                                    class="inline-flex size-5 shrink-0 items-center justify-center rounded-lg text-red-800 opacity-50 hover:opacity-100 focus:opacity-100 focus:outline-none dark:text-red-200"
+                                                    aria-label="Close">
+                                                    <span class="sr-only">Close</span>
+                                                    <svg
+                                                        class="size-4 shrink-0"
+                                                        xmlns="http://www.w3.org/2000/svg"
+                                                        width="24"
+                                                        height="24"
+                                                        viewBox="0 0 24 24"
+                                                        fill="none"
+                                                        stroke="currentColor"
+                                                        stroke-width="2"
+                                                        stroke-linecap="round"
+                                                        stroke-linejoin="round">
+                                                        <path d="M18 6 6 18"></path>
+                                                        <path d="m6 6 12 12"></path>
+                                                    </svg>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- End Toast -->
+
+                                    <!-- Toast -->
+                                    <div
+                                        class="rounded-lg border border-yellow-200 bg-yellow-100 text-sm text-yellow-800 dark:border-yellow-900 dark:bg-yellow-800/10 dark:text-yellow-500"
+                                        role="alert"
+                                        tabindex="-1"
+                                        aria-labelledby="hs-toast-soft-color-yellow-label">
+                                        <div id="hs-toast-soft-color-yellow-label" class="flex p-4">
+                                            Hello, world! This is a toast message.
+
+                                            <div class="ms-auto">
+                                                <button
+                                                    type="button"
+                                                    class="inline-flex size-5 shrink-0 items-center justify-center rounded-lg text-yellow-800 opacity-50 hover:opacity-100 focus:opacity-100 focus:outline-none dark:text-yellow-200"
+                                                    aria-label="Close">
+                                                    <span class="sr-only">Close</span>
+                                                    <svg
+                                                        class="size-4 shrink-0"
+                                                        xmlns="http://www.w3.org/2000/svg"
+                                                        width="24"
+                                                        height="24"
+                                                        viewBox="0 0 24 24"
+                                                        fill="none"
+                                                        stroke="currentColor"
+                                                        stroke-width="2"
+                                                        stroke-linecap="round"
+                                                        stroke-linejoin="round">
+                                                        <path d="M18 6 6 18"></path>
+                                                        <path d="m6 6 12 12"></path>
+                                                    </svg>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- End Toast -->
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Condensed -->
+                        <div class="col-span-12 md:col-span-1">
+                            <div class="card h-full">
+                                <div class="card-header">
+                                    <h5 class="card-title">Condensed</h5>
+                                    <p>Vertically stacking multiple toasts in a readable manner.</p>
+                                </div>
+                                <div class="card-body space-y-4">
+                                    <!-- Toast -->
+                                    <div
+                                        class="rounded-xl border border-gray-200 bg-white shadow-lg transition duration-300 hs-removing:translate-x-5 hs-removing:opacity-0 dark:border-neutral-700 dark:bg-neutral-800"
+                                        role="alert"
+                                        tabindex="-1"
+                                        aria-labelledby="hs-toast-condensed-label">
+                                        <div class="flex p-4">
+                                            <p
+                                                id="hs-toast-condensed-label"
+                                                class="text-sm text-gray-700 dark:text-neutral-400">
+                                                Your email has been sent
+                                            </p>
+
+                                            <div class="ms-auto flex items-center space-x-3">
+                                                <button
+                                                    type="button"
+                                                    class="text-sm font-medium text-blue-600 decoration-2 hover:underline focus:underline focus:outline-none dark:text-blue-500">
+                                                    Undo
+                                                </button>
+                                                <button
+                                                    type="button"
+                                                    class="inline-flex size-5 shrink-0 items-center justify-center rounded-lg text-gray-800 opacity-50 hover:opacity-100 focus:opacity-100 focus:outline-none dark:text-white"
+                                                    aria-label="Close">
+                                                    <span class="sr-only">Close</span>
+                                                    <svg
+                                                        class="size-4 shrink-0"
+                                                        xmlns="http://www.w3.org/2000/svg"
+                                                        width="24"
+                                                        height="24"
+                                                        viewBox="0 0 24 24"
+                                                        fill="none"
+                                                        stroke="currentColor"
+                                                        stroke-width="2"
+                                                        stroke-linecap="round"
+                                                        stroke-linejoin="round">
+                                                        <path d="M18 6 6 18"></path>
+                                                        <path d="m6 6 12 12"></path>
+                                                    </svg>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- End Toast -->
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Progress -->
+                        <div class="col-span-12 md:col-span-1">
+                            <div class="card h-full">
+                                <div class="card-header">
+                                    <h5 class="card-title">Progress</h5>
+                                    <p>You can also add additional elements, such as an icon and a progress bar.</p>
+                                </div>
+                                <div class="card-body space-y-4">
+                                    <!-- Toast -->
+                                    <div
+                                        class="relative rounded-xl border border-gray-200 bg-white shadow-lg dark:border-neutral-700 dark:bg-neutral-800"
+                                        role="alert"
+                                        tabindex="-1"
+                                        aria-labelledby="hs-toast-progress-label">
+                                        <div class="flex gap-x-3 p-4">
+                                            <div class="shrink-0">
+                                                <!-- Icon -->
+                                                <span
+                                                    class="m-1 inline-flex size-8 items-center justify-center rounded-full bg-gray-100 text-gray-800 dark:bg-neutral-700 dark:text-neutral-200">
+                                                    <svg
+                                                        class="size-4 shrink-0"
+                                                        xmlns="http://www.w3.org/2000/svg"
+                                                        width="24"
+                                                        height="24"
+                                                        viewBox="0 0 24 24"
+                                                        fill="none"
+                                                        stroke="currentColor"
+                                                        stroke-width="2"
+                                                        stroke-linecap="round"
+                                                        stroke-linejoin="round">
+                                                        <path
+                                                            d="M4 14.899A7 7 0 1 1 15.71 8h1.79a4.5 4.5 0 0 1 2.5 8.242"></path>
+                                                        <path d="M12 12v9"></path>
+                                                        <path d="m16 16-4-4-4 4"></path>
+                                                    </svg>
+                                                </span>
+                                                <!-- End Icon -->
+
+                                                <button
+                                                    type="button"
+                                                    class="absolute end-3 top-3 inline-flex size-5 shrink-0 items-center justify-center rounded-lg text-gray-800 opacity-50 hover:opacity-100 focus:opacity-100 focus:outline-none dark:text-white"
+                                                    aria-label="Close">
+                                                    <span class="sr-only">Close</span>
+                                                    <svg
+                                                        class="size-4 shrink-0"
+                                                        xmlns="http://www.w3.org/2000/svg"
+                                                        width="24"
+                                                        height="24"
+                                                        viewBox="0 0 24 24"
+                                                        fill="none"
+                                                        stroke="currentColor"
+                                                        stroke-width="2"
+                                                        stroke-linecap="round"
+                                                        stroke-linejoin="round">
+                                                        <path d="M18 6 6 18"></path>
+                                                        <path d="m6 6 12 12"></path>
+                                                    </svg>
+                                                </button>
+                                            </div>
+
+                                            <div class="me-5 grow">
+                                                <h3
+                                                    id="hs-toast-progress-label"
+                                                    class="text-sm font-medium text-gray-800 dark:text-white">
+                                                    Uploading 3 files
+                                                </h3>
+
+                                                <!-- Progress -->
+                                                <div class="mt-2 flex flex-col gap-x-3">
+                                                    <span
+                                                        class="mb-1.5 block text-xs text-gray-500 dark:text-neutral-400"
+                                                        >57% · 5 seconds left</span
+                                                    >
+                                                    <div
+                                                        class="flex h-1 w-full overflow-hidden rounded-full bg-gray-200 dark:bg-neutral-700"
+                                                        role="progressbar"
+                                                        aria-valuenow="57"
+                                                        aria-valuemin="0"
+                                                        aria-valuemax="100">
+                                                        <div
+                                                            class="flex flex-col justify-center overflow-hidden whitespace-nowrap bg-blue-600 text-center text-xs text-white dark:bg-neutral-200"
+                                                            style="width: 57%"></div>
+                                                    </div>
+                                                </div>
+                                                <!-- End Progress -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- End Toast -->
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Loading -->
+                        <div class="col-span-12 md:col-span-1">
+                            <div class="card h-full">
+                                <div class="card-header">
+                                    <h5 class="card-title">Message with loading indicator</h5>
+                                    <p>
+                                        Display a global loading indicator, which is dismissed by itself asynchronously.
+                                    </p>
+                                </div>
+                                <div class="card-body space-y-4">
+                                    <!-- Toast -->
+                                    <div
+                                        class="rounded-xl border border-gray-200 bg-white shadow-lg dark:border-neutral-700 dark:bg-neutral-800"
+                                        role="alert"
+                                        tabindex="-1"
+                                        aria-labelledby="hs-toast-message-with-loading-indicator-label">
+                                        <div class="flex items-center p-4">
+                                            <div
+                                                class="inline-block size-4 animate-spin rounded-full border-[3px] border-current border-t-transparent text-blue-600"
+                                                role="status"
+                                                aria-label="loading">
+                                                <span class="sr-only">Loading...</span>
+                                            </div>
+                                            <p
+                                                id="hs-toast-message-with-loading-indicator-label"
+                                                class="ms-3 text-sm text-gray-700 dark:text-neutral-400">
+                                                Action in progress
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <!-- End Toast -->
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- With Actions -->
+                        <div class="col-span-12 md:col-span-1">
+                            <div class="card h-full">
+                                <div class="card-header">
+                                    <h5 class="card-title">With Actions</h5>
+                                    <p>Add additional controls and components to toasts.</p>
+                                </div>
+                                <div class="card-body space-y-4">
+                                    <!-- Toast -->
+                                    <div
+                                        class="rounded-xl border border-gray-200 bg-white shadow-lg dark:border-neutral-700 dark:bg-neutral-800"
+                                        role="alert"
+                                        tabindex="-1"
+                                        aria-labelledby="hs-toast-with-icons-label">
+                                        <div class="flex p-4">
+                                            <div class="shrink-0">
+                                                <svg
+                                                    class="mt-1 size-5 text-gray-600 dark:text-neutral-400"
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    width="24"
+                                                    height="24"
+                                                    viewBox="0 0 24 24"
+                                                    fill="none"
+                                                    stroke="currentColor"
+                                                    stroke-width="2"
+                                                    stroke-linecap="round"
+                                                    stroke-linejoin="round">
+                                                    <path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"></path>
+                                                    <path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"></path>
+                                                </svg>
+                                            </div>
+                                            <div class="ms-4">
+                                                <h3
+                                                    id="hs-toast-with-icons-label"
+                                                    class="font-semibold text-gray-800 dark:text-white">
+                                                    App notifications
+                                                </h3>
+                                                <div class="mt-1 text-sm text-gray-600 dark:text-neutral-400">
+                                                    Notifications may include alerts, sounds and icon badges.
+                                                </div>
+                                                <div class="mt-4">
+                                                    <div class="flex gap-x-3">
+                                                        <button
+                                                            type="button"
+                                                            class="text-sm font-medium text-blue-600 decoration-2 hover:underline focus:underline focus:outline-none dark:text-blue-500">
+                                                            Don't allow
+                                                        </button>
+                                                        <button
+                                                            type="button"
+                                                            class="text-sm font-medium text-blue-600 decoration-2 hover:underline focus:underline focus:outline-none dark:text-blue-500">
+                                                            Allow
+                                                        </button>
+                                                    </div>
                                                 </div>
                                             </div>
-                                            <!-- End Switch/Toggle -->
                                         </div>
-                                        <!-- End Dropdown -->
+                                    </div>
+                                    <!-- End Toast -->
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Avatar -->
+                        <div class="col-span-12 md:col-span-1">
+                            <div class="card h-full">
+                                <div class="card-header">
+                                    <h5 class="card-title">Avatar</h5>
+                                    <p>You can also add additional elements, such as an avatar image.</p>
+                                </div>
+                                <div class="card-body space-y-4">
+                                    <!-- Toast -->
+                                    <div
+                                        class="relative rounded-xl border border-gray-200 bg-white shadow-lg dark:border-neutral-700 dark:bg-neutral-800"
+                                        role="alert"
+                                        tabindex="-1"
+                                        aria-labelledby="hs-toast-avatar-label">
+                                        <div class="flex p-4">
+                                            <div class="shrink-0">
+                                                <img
+                                                    class="inline-block size-8 rounded-full"
+                                                    src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=300&h=300&q=80"
+                                                    alt="Avatar" />
+                                                <button
+                                                    type="button"
+                                                    class="absolute end-3 top-3 inline-flex size-5 shrink-0 items-center justify-center rounded-lg text-gray-800 opacity-50 hover:opacity-100 focus:opacity-100 focus:outline-none dark:text-white"
+                                                    aria-label="Close">
+                                                    <span class="sr-only">Close</span>
+                                                    <svg
+                                                        class="size-4 shrink-0"
+                                                        xmlns="http://www.w3.org/2000/svg"
+                                                        width="24"
+                                                        height="24"
+                                                        viewBox="0 0 24 24"
+                                                        fill="none"
+                                                        stroke="currentColor"
+                                                        stroke-width="2"
+                                                        stroke-linecap="round"
+                                                        stroke-linejoin="round">
+                                                        <path d="M18 6 6 18"></path>
+                                                        <path d="m6 6 12 12"></path>
+                                                    </svg>
+                                                </button>
+                                            </div>
+                                            <div class="me-5 ms-4">
+                                                <h3
+                                                    id="hs-toast-avatar-label"
+                                                    class="text-sm font-medium text-gray-800 dark:text-white">
+                                                    <span class="font-semibold">James</span> mentioned you in a comment
+                                                </h3>
+                                                <div class="mt-1 text-sm text-gray-600 dark:text-neutral-400">
+                                                    Nice work! Keep it up!
+                                                </div>
+                                                <div class="mt-3">
+                                                    <button
+                                                        type="button"
+                                                        class="text-sm font-medium text-blue-600 decoration-2 hover:underline focus:underline focus:outline-none dark:text-blue-500">
+                                                        Mark as read
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- End Toast -->
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Stack -->
+                        <div class="col-span-12 md:col-span-1">
+                            <div class="card h-full">
+                                <div class="card-header">
+                                    <h5 class="card-title">Stack</h5>
+                                    <p>Vertically stacking multiple toasts in a readable manner.</p>
+                                </div>
+                                <div class="card-body space-y-4">
+                                    <div class="space-y-3">
+                                        <!-- Toast -->
+                                        <div
+                                            class="rounded-xl border border-gray-200 bg-white shadow-lg dark:border-neutral-700 dark:bg-neutral-800"
+                                            role="alert"
+                                            tabindex="-1"
+                                            aria-labelledby="hs-toast-stack-toggle-label">
+                                            <div class="flex p-4">
+                                                <div class="shrink-0">
+                                                    <svg
+                                                        class="mt-1 size-5 text-gray-600 dark:text-neutral-400"
+                                                        xmlns="http://www.w3.org/2000/svg"
+                                                        width="24"
+                                                        height="24"
+                                                        viewBox="0 0 24 24"
+                                                        fill="none"
+                                                        stroke="currentColor"
+                                                        stroke-width="2"
+                                                        stroke-linecap="round"
+                                                        stroke-linejoin="round">
+                                                        <path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"></path>
+                                                        <path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"></path>
+                                                    </svg>
+                                                </div>
+                                                <div class="ms-4">
+                                                    <h3
+                                                        id="hs-toast-stack-toggle-label"
+                                                        class="font-semibold text-gray-800 dark:text-white">
+                                                        App notifications
+                                                    </h3>
+                                                    <div class="mt-1 text-sm text-gray-600 dark:text-neutral-400">
+                                                        Notifications may include alerts, sounds and icon badges.
+                                                    </div>
+                                                    <div class="mt-4">
+                                                        <div class="flex gap-x-3">
+                                                            <button
+                                                                type="button"
+                                                                class="text-sm font-medium text-blue-600 decoration-2 hover:underline focus:underline focus:outline-none dark:text-blue-500">
+                                                                Don't allow
+                                                            </button>
+                                                            <button
+                                                                type="button"
+                                                                class="text-sm font-medium text-blue-600 decoration-2 hover:underline focus:underline focus:outline-none dark:text-blue-500">
+                                                                Allow
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- End Toast -->
+
+                                        <!-- Toast -->
+                                        <div
+                                            class="rounded-xl border border-gray-200 bg-white shadow-lg dark:border-neutral-700 dark:bg-neutral-800"
+                                            role="alert"
+                                            tabindex="-1"
+                                            aria-labelledby="hs-toast-stack-toggle-update-label">
+                                            <div class="flex p-4">
+                                                <div class="shrink-0">
+                                                    <svg
+                                                        class="mt-0.5 size-4 shrink-0 text-teal-500"
+                                                        xmlns="http://www.w3.org/2000/svg"
+                                                        width="16"
+                                                        height="16"
+                                                        fill="currentColor"
+                                                        viewBox="0 0 16 16">
+                                                        <path
+                                                            d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"></path>
+                                                    </svg>
+                                                </div>
+                                                <div class="ms-3">
+                                                    <p
+                                                        id="hs-toast-stack-toggle-update-label"
+                                                        class="text-sm text-gray-700 dark:text-neutral-400">
+                                                        Your app preferences has been successfully updated.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- End Toast -->
                                     </div>
                                 </div>
-                                <!-- End Clipboard Dropdown -->
                             </div>
                         </div>
                     </div>
+                    <!-- Placement -->
+                    <div class="card mt-4">
+                        <div class="card-header">
+                            <h5 class="card-title">Placement</h5>
+                            <p>Display a notification message at any place of the viewport.</p>
+                        </div>
+                        <div class="card-body">
+                            <div class="relative h-[500px]">
+                                <!-- Toast -->
+                                <div class="absolute start-0 top-0">
+                                    <div
+                                        class="rounded-xl border border-gray-200 bg-white shadow-lg dark:border-neutral-700 dark:bg-neutral-800"
+                                        role="alert"
+                                        tabindex="-1"
+                                        aria-labelledby="hs-toast-placement-top-left-label">
+                                        <div class="p-2 sm:p-4">
+                                            <h3
+                                                id="hs-toast-placement-top-left-label"
+                                                class="text-xs font-semibold text-gray-800 dark:text-white sm:text-base">
+                                                Top left
+                                            </h3>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- End Toast -->
+
+                                <!-- Toast -->
+                                <div class="absolute start-1/2 top-0 -translate-x-1/2">
+                                    <div
+                                        class="rounded-xl border border-gray-200 bg-white shadow-lg dark:border-neutral-700 dark:bg-neutral-800"
+                                        role="alert"
+                                        tabindex="-1"
+                                        aria-labelledby="hs-toast-placement-top-center-label">
+                                        <div class="p-2 sm:p-4">
+                                            <h3
+                                                id="hs-toast-placement-top-center-label"
+                                                class="text-xs font-semibold text-gray-800 dark:text-white sm:text-base">
+                                                Top center
+                                            </h3>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- End Toast -->
+
+                                <!-- Toast -->
+                                <div class="absolute end-0 top-0">
+                                    <div
+                                        class="rounded-xl border border-gray-200 bg-white shadow-lg dark:border-neutral-700 dark:bg-neutral-800"
+                                        role="alert"
+                                        tabindex="-1"
+                                        aria-labelledby="hs-toast-placement-top-right-label">
+                                        <div class="p-2 sm:p-4">
+                                            <h3
+                                                id="hs-toast-placement-top-right-label"
+                                                class="text-xs font-semibold text-gray-800 dark:text-white sm:text-base">
+                                                Top right
+                                            </h3>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- End Toast -->
+
+                                <!-- Toast -->
+                                <div class="absolute start-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 transform">
+                                    <div
+                                        class="rounded-xl border border-gray-200 bg-white shadow-lg dark:border-neutral-700 dark:bg-neutral-800"
+                                        role="alert"
+                                        tabindex="-1"
+                                        aria-labelledby="hs-toast-placement-Center-label">
+                                        <div class="p-2 sm:p-4">
+                                            <h3
+                                                id="hs-toast-placement-Center-label"
+                                                class="text-xs font-semibold text-gray-800 dark:text-white sm:text-base">
+                                                Center
+                                            </h3>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- End Toast -->
+
+                                <!-- Toast -->
+                                <div class="absolute bottom-0 start-0">
+                                    <div
+                                        class="rounded-xl border border-gray-200 bg-white shadow-lg dark:border-neutral-700 dark:bg-neutral-800"
+                                        role="alert"
+                                        tabindex="-1"
+                                        aria-labelledby="hs-toast-placement-bottom-left-label">
+                                        <div class="p-2 sm:p-4">
+                                            <h3
+                                                id="hs-toast-placement-bottom-left-label"
+                                                class="text-xs font-semibold text-gray-800 dark:text-white sm:text-base">
+                                                Bottom left
+                                            </h3>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- End Toast -->
+
+                                <!-- Toast -->
+                                <div class="absolute bottom-0 start-1/2 -translate-x-1/2">
+                                    <div
+                                        class="rounded-xl border border-gray-200 bg-white shadow-lg dark:border-neutral-700 dark:bg-neutral-800"
+                                        role="alert"
+                                        tabindex="-1"
+                                        aria-labelledby="hs-toast-placement-bottom-center-label">
+                                        <div class="p-2 sm:p-4">
+                                            <h3
+                                                id="hs-toast-placement-bottom-center-label"
+                                                class="text-xs font-semibold text-gray-800 dark:text-white sm:text-base">
+                                                Bottom center
+                                            </h3>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- End Toast -->
+
+                                <!-- Toast -->
+                                <div class="absolute bottom-0 end-0">
+                                    <div
+                                        class="rounded-xl border border-gray-200 bg-white shadow-lg dark:border-neutral-700 dark:bg-neutral-800"
+                                        role="alert"
+                                        tabindex="-1"
+                                        aria-labelledby="hs-toast-placement-bottom-right-label">
+                                        <div class="p-2 sm:p-4">
+                                            <h3
+                                                id="hs-toast-placement-bottom-right-label"
+                                                class="text-xs font-semibold text-gray-800 dark:text-white sm:text-base">
+                                                Bottom right
+                                            </h3>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- End Toast -->
+                            </div>
+                        </div>
+                    </div>
+
                     <!-- Toasts Ends -->
                 </main>
 
