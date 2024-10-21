@@ -1,11 +1,13 @@
 @layer components {
     .vertical .horizontal-menu,
     .collapsible .horizontal-logo,
-    .vertical .horizontal-logo,
-    .horizontal .toggle-sidebar {
+    .vertical .horizontal-logo {
         @apply hidden;
     }
-
+    .horizontal .vertical-menu,
+    .horizontal .toggle-sidebar {
+        @apply md:hidden;
+    }
     .horizontal-menu {
         @apply hidden items-center border-t border-gray-200 px-6 py-1.5 font-semibold dark:border-gray-600 lg:flex lg:space-x-1.5 xl:space-x-8 rtl:space-x-reverse;
     }
@@ -13,9 +15,6 @@
     .horizontal .horizontal-logo,
     .vertical.toggle-menu .horizontal-logo {
         @apply flex;
-    }
-    .horizontal-logo svg {
-        @apply h-9 w-9;
     }
     .vertical.toggle-menu .horizontal-logo {
         @apply ml-4;

@@ -47,7 +47,7 @@ window.tippy = tippy;
     const sidebarToggle = document.querySelectorAll('.toggle-sidebar');
     const wrapper = document.querySelector('.tw--container');
     const overlay = document.querySelector('.menu-shadow');
-    sidebarToggle.forEach(toggle => {
+    [overlay, ...sidebarToggle].forEach(toggle => {
         toggle.addEventListener('click', () => {
             const windowWidth = window.innerWidth;
             if (windowWidth < 1024) {

@@ -80,7 +80,7 @@
         @apply relative flex-auto overflow-x-hidden bg-light px-6 pb-4 pt-2 dark:bg-dark-700 dark:text-gray-300 md:pt-4;
     }
     .tw-logo {
-        @apply h-12 w-12 fill-primary;
+        @apply h-12 w-12 fill-primary object-contain;
     }
     .app-drawers {
         @apply fixed -right-[400px] bottom-0 top-0 z-[51] w-full max-w-[400px] bg-white shadow-[5px_0_25px_0_rgba(94,92,154,0.1)] transition-[right] duration-300 dark:bg-[#0e1726];
