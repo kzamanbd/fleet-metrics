@@ -1,10 +1,19 @@
 {
     "editor.formatOnSave": false,
     "editor.defaultFormatter": "esbenp.prettier-vscode",
-    "editor.codeActionsOnSave": {
-        "source.fixAll": "always",
-        "source.fixAll.eslint": "always",
-        "source.organizeImports": "always"
+    "[javascript]": {
+        "editor.codeActionsOnSave": {
+            "source.fixAll": "always",
+            "source.fixAll.eslint": "always",
+            "source.organizeImports": "always"
+        }
+    },
+    "[typescript]": {
+        "editor.codeActionsOnSave": {
+            "source.fixAll": "always",
+            "source.fixAll.eslint": "always",
+            "source.organizeImports": "always"
+        }
     },
     "cSpell.words": ["Customizer", "simplebar", "tailwindcss"]
 }

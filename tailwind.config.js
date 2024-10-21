@@ -18,9 +18,6 @@ export default {
     darkMode: 'class', // or 'media'
     theme: {
         extend: {
-            fontSize: {
-                xs: '.75rem',
-            },
             colors: {
                 primary: {
                     ...primary,

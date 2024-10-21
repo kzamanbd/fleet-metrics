@@ -6,7 +6,7 @@
         @apply fixed inset-y-0 z-30 w-64 -translate-x-full border-gray-200 shadow-md duration-300 ease-in-out lg:translate-x-0;
     }
     .vertical-content {
-        @apply h-full bg-white dark:bg-dark [&.semi-dark]:bg-dark;
+        @apply flex h-full flex-col content-around bg-white dark:bg-dark [&.semi-dark]:bg-dark;
     }
     .expanded.vertical-menu {
         @apply translate-x-0;
@@ -31,7 +31,7 @@
         @apply hidden;
     }
     .tw-menu-content {
-        @apply h-[calc(100vh_-_80px)] overflow-y-auto overflow-x-hidden;
+        @apply h-[calc(100vh_-_150px)] overflow-y-auto overflow-x-hidden;
     }
     .vertical-menu .tw-nav-menu {
         @apply mt-2 space-y-1 px-4 pb-2;
@@ -62,7 +62,7 @@
         @apply rotate-0;
     }
     .vertical-menu .twd--link {
-        @apply flex w-full items-center truncate rounded-md p-1.5 pl-6 text-sm font-medium text-gray-700 hover:bg-primary-100 hover:text-primary dark:text-gray-400 hover:dark:bg-gray-700 dark:hover:text-primary;
+        @apply flex w-full items-center truncate rounded-md p-1.5 pl-5 text-sm font-medium text-gray-700 hover:bg-primary-100 hover:text-primary dark:text-gray-400 hover:dark:bg-gray-700 dark:hover:text-primary;
         @apply relative after:absolute after:left-2 after:top-1/2 after:h-1 after:w-1 after:-translate-y-1/2 after:rounded-full after:bg-gray-500 hover:after:bg-primary;
     }
     .vertical-menu .twd--link.active {
@@ -137,5 +137,17 @@
     }
     .documents-link {
         @apply btn-primary mb-0 flex w-full items-center justify-center justify-items-end py-2;
+    }
+    .footer-menu-dropdown {
+        @apply mt-auto border-t px-6 py-3;
+    }
+    .footer-menu-dropdown .dropdown-menu {
+        @apply w-56 p-1;
+    }
+    .tw-nav-footer-item {
+        @apply inline-flex w-full cursor-pointer items-center gap-2 rounded px-3 py-2 text-start hover:bg-gray-100 dark:text-white;
+    }
+    .footer-menu-text {
+        @apply block text-xs group-hover:text-primary-600 dark:text-neutral-200 dark:group-hover:text-primary-600;
     }
 }
