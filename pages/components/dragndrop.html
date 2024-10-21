@@ -3,17 +3,13 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Select2 - Admin Template</title>
+        <title>Drag & Drop - Admin Template</title>
         <link rel="icon" href="/favicon.png" />
         <link rel="mask-icon" href="/favicon.png" color="#009EF7" />
         <meta name="theme-color" content="#009EF7" />
         <!-- start:Core Style and Script -->
         <link rel="stylesheet" href="/assets/css/app.css" />
         <script type="module" src="/assets/js/app.js"></script>
-
-        <link
-            rel="stylesheet"
-            href="https://cdn.jsdelivr.net/npm/choices.js@9.0.1/public/assets/styles/choices.min.css" />
     </head>
 
     <body>
@@ -1380,114 +1376,591 @@
                     <!-- Start Breadcrumb -->
                     <nav class="breadcrumb">
                         <div class="left-link">
-                            <h3>Choices.js</h3>
+                            <h3>Drag & Drop</h3>
                         </div>
                         <ol class="breadcrumb-nav">
                             <li class="inline-flex items-center">
-                                <a href="/" class="breadcrumb-item"> Dashboard </a>
+                                <a href="/" class="breadcrumb-item"> Draggable </a>
                             </li>
 
                             <li aria-current="page">
                                 <div class="flex items-center">
                                     <span class="icon-[mdi--chevron-right]"></span>
-                                    <span class="breadcrumb-item-current"> Choices.js </span>
+                                    <span class="breadcrumb-item-current"> Drag & Drop </span>
                                 </div>
                             </li>
                         </ol>
                     </nav>
                     <!-- End Breadcrumb -->
 
-                    <div class="grid grid-cols-1 gap-6 lg:grid-cols-2">
-                        <!-- Basic -->
+                    <div x-data="draggable" class="dragndrop space-y-4">
+                        <!-- Sortable -->
                         <div class="card">
-                            <div class="card-header">
-                                <h6>Basic</h6>
-                            </div>
-                            <div class="card-body">
-                                <select class="selectize">
-                                    <option selected="" value="orange">Orange</option>
-                                    <option value="White">White</option>
-                                    <option value="Purple">Purple</option>
-                                </select>
+                            <div class="card-header">Sortable</div>
+                            <div class="card-body grid grid-cols-1 gap-x-12 sm:grid-cols-2">
+                                <div>
+                                    <ul id="example1">
+                                        <template x-for="item in items">
+                                            <li class="mb-2.5 cursor-grab">
+                                                <div
+                                                    class="items-md-center flex flex-col rounded-md border border-white-light bg-white px-6 py-3.5 text-center dark:border-dark dark:bg-[#1b2e4b] md:flex-row ltr:md:text-left rtl:md:text-right">
+                                                    <div class="ltr:sm:mr-4 rtl:sm:ml-4">
+                                                        <img
+                                                            alt="avatar"
+                                                            :src="`/images/users/avatar-${item.id}.png`"
+                                                            class="mx-auto h-11 w-11 rounded-full" />
+                                                    </div>
+                                                    <div
+                                                        class="flex flex-1 flex-col items-center justify-between md:flex-row">
+                                                        <div class="my-3 font-semibold md:my-0">
+                                                            <div
+                                                                class="text-base text-dark dark:text-[#bfc9d4]"
+                                                                x-text="item.text"></div>
+                                                            <div
+                                                                class="text-white-dark text-xs"
+                                                                x-text="item.name"></div>
+                                                        </div>
+                                                        <div>
+                                                            <button
+                                                                type="button"
+                                                                class="btn btn-secondary btn-sm px-5 py-2">
+                                                                View
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </template>
+                                    </ul>
+                                </div>
+
+                                <div>
+                                    <ul id="example2">
+                                        <template x-for="item in items">
+                                            <li class="mb-2.5 cursor-grab">
+                                                <div
+                                                    class="items-md-center flex flex-col rounded-md border border-white-light bg-white px-6 py-3.5 text-center dark:border-dark dark:bg-[#1b2e4b] md:flex-row ltr:md:text-left rtl:md:text-right">
+                                                    <div class="ltr:sm:mr-4 rtl:sm:ml-4">
+                                                        <img
+                                                            alt="avatar"
+                                                            :src="`/images/users/avatar-${item.id + 5}.png`"
+                                                            class="mx-auto h-11 w-11 rounded-full" />
+                                                    </div>
+                                                    <div
+                                                        class="flex flex-1 flex-col items-center justify-between md:flex-row">
+                                                        <div class="my-3 font-semibold md:my-0">
+                                                            <div
+                                                                class="text-base text-dark dark:text-[#bfc9d4]"
+                                                                x-text="item.text"></div>
+                                                            <div
+                                                                class="text-white-dark text-xs"
+                                                                x-text="item.name"></div>
+                                                        </div>
+                                                        <div>
+                                                            <button
+                                                                type="button"
+                                                                class="btn btn-secondary btn-sm px-5 py-2">
+                                                                View
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </template>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
 
-                        <!-- Nested -->
+                        <!-- Icon Change -->
                         <div class="card">
                             <div class="card-header">
-                                <h6>Nested</h6>
+                                <h6>Icon Change</h6>
                             </div>
-                            <div class="card-body">
-                                <select class="selectize">
-                                    <option disabled="">Group 1</option>
-                                    <option selected="" value="orange">Orange</option>
-                                    <option value="White">White</option>
-                                    <option value="Purple">Purple</option>
-                                    <option disabled="">Group 2</option>
-                                    <option>Yellow</option>
-                                    <option value="Red">Red</option>
-                                    <option value="Green">Green</option>
-                                    <option disabled="">Group 3</option>
-                                    <option>Aqua</option>
-                                    <option value="Black">Black</option>
-                                    <option value="Blue">Blue</option>
-                                </select>
+                            <div class="card-body icon-change grid grid-cols-1 gap-x-12 sm:grid-cols-2">
+                                <div>
+                                    <ul id="example3" class="left">
+                                        <template x-for="item in items">
+                                            <li class="mb-2.5 cursor-grab">
+                                                <div
+                                                    class="items-md-center flex flex-col rounded-md border border-white-light bg-white px-6 py-3.5 dark:border-dark dark:bg-[#1b2e4b] md:flex-row ltr:text-left rtl:text-right">
+                                                    <div class="ltr:sm:mr-4 rtl:sm:ml-4">
+                                                        <img
+                                                            alt="avatar"
+                                                            :src="`/images/users/avatar-${item.id}.png`"
+                                                            class="h-11 w-11 rounded-full" />
+                                                    </div>
+                                                    <div class="flex flex-1 items-center justify-between">
+                                                        <div class="my-3 font-semibold md:my-0">
+                                                            <div
+                                                                class="text-base text-dark dark:text-[#bfc9d4]"
+                                                                x-text="item.text"></div>
+                                                            <div
+                                                                class="text-white-dark text-xs"
+                                                                x-text="item.name"></div>
+                                                        </div>
+                                                        <div class="text-white-dark">
+                                                            <svg
+                                                                width="24"
+                                                                height="24"
+                                                                viewBox="0 0 24 24"
+                                                                fill="none"
+                                                                xmlns="http://www.w3.org/2000/svg"
+                                                                class="feather-star h-6 w-6">
+                                                                <path
+                                                                    d="M9.15316 5.40838C10.4198 3.13613 11.0531 2 12 2C12.9469 2 13.5802 3.13612 14.8468 5.40837L15.1745 5.99623C15.5345 6.64193 15.7144 6.96479 15.9951 7.17781C16.2757 7.39083 16.6251 7.4699 17.3241 7.62805L17.9605 7.77203C20.4201 8.32856 21.65 8.60682 21.9426 9.54773C22.2352 10.4886 21.3968 11.4691 19.7199 13.4299L19.2861 13.9372C18.8096 14.4944 18.5713 14.773 18.4641 15.1177C18.357 15.4624 18.393 15.8341 18.465 16.5776L18.5306 17.2544C18.7841 19.8706 18.9109 21.1787 18.1449 21.7602C17.3788 22.3417 16.2273 21.8115 13.9243 20.7512L13.3285 20.4768C12.6741 20.1755 12.3469 20.0248 12 20.0248C11.6531 20.0248 11.3259 20.1755 10.6715 20.4768L10.0757 20.7512C7.77268 21.8115 6.62118 22.3417 5.85515 21.7602C5.08912 21.1787 5.21588 19.8706 5.4694 17.2544L5.53498 16.5776C5.60703 15.8341 5.64305 15.4624 5.53586 15.1177C5.42868 14.773 5.19043 14.4944 4.71392 13.9372L4.2801 13.4299C2.60325 11.4691 1.76482 10.4886 2.05742 9.54773C2.35002 8.60682 3.57986 8.32856 6.03954 7.77203L6.67589 7.62805C7.37485 7.4699 7.72433 7.39083 8.00494 7.17781C8.28555 6.96479 8.46553 6.64194 8.82547 5.99623L9.15316 5.40838Z"
+                                                                    stroke="currentColor"
+                                                                    stroke-width="1.5"></path>
+                                                            </svg>
+                                                            <svg
+                                                                width="24"
+                                                                height="24"
+                                                                viewBox="0 0 24 24"
+                                                                fill="none"
+                                                                xmlns="http://www.w3.org/2000/svg"
+                                                                class="feather-heart h-6 w-6">
+                                                                <path
+                                                                    d="M12 5.50063C7.50016 0.825464 2 4.27416 2 9.1371C2 14 6.01943 16.5914 8.96173 18.9109C10 19.7294 11 20.5 12 20.5"
+                                                                    stroke="currentColor"
+                                                                    stroke-width="1.5"
+                                                                    stroke-linecap="round"></path>
+                                                                <path
+                                                                    opacity="0.5"
+                                                                    d="M12 5.50063C16.4998 0.825464 22 4.27416 22 9.1371C22 14 17.9806 16.5914 15.0383 18.9109C14 19.7294 13 20.5 12 20.5"
+                                                                    stroke="currentColor"
+                                                                    stroke-width="1.5"
+                                                                    stroke-linecap="round"></path>
+                                                            </svg>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </template>
+                                    </ul>
+                                </div>
+
+                                <div>
+                                    <ul id="example4" class="right">
+                                        <template x-for="item in items">
+                                            <li class="mb-2.5 cursor-grab">
+                                                <div
+                                                    class="items-md-center flex flex-col rounded-md border border-white-light bg-white px-6 py-3.5 dark:border-dark dark:bg-[#1b2e4b] md:flex-row ltr:text-left rtl:text-right">
+                                                    <div class="ltr:sm:mr-4 rtl:sm:ml-4">
+                                                        <img
+                                                            alt="avatar"
+                                                            :src="`/images/users/avatar-${item.id + 5}.png`"
+                                                            class="h-11 w-11 rounded-full" />
+                                                    </div>
+                                                    <div class="flex flex-1 items-center justify-between">
+                                                        <div class="my-3 font-semibold md:my-0">
+                                                            <div
+                                                                class="text-base text-dark dark:text-[#bfc9d4]"
+                                                                x-text="item.text"></div>
+                                                            <div
+                                                                class="text-white-dark text-xs"
+                                                                x-text="item.name"></div>
+                                                        </div>
+                                                        <div class="text-white-dark">
+                                                            <svg
+                                                                width="24"
+                                                                height="24"
+                                                                viewBox="0 0 24 24"
+                                                                fill="none"
+                                                                xmlns="http://www.w3.org/2000/svg"
+                                                                class="feather-star h-6 w-6">
+                                                                <path
+                                                                    d="M9.15316 5.40838C10.4198 3.13613 11.0531 2 12 2C12.9469 2 13.5802 3.13612 14.8468 5.40837L15.1745 5.99623C15.5345 6.64193 15.7144 6.96479 15.9951 7.17781C16.2757 7.39083 16.6251 7.4699 17.3241 7.62805L17.9605 7.77203C20.4201 8.32856 21.65 8.60682 21.9426 9.54773C22.2352 10.4886 21.3968 11.4691 19.7199 13.4299L19.2861 13.9372C18.8096 14.4944 18.5713 14.773 18.4641 15.1177C18.357 15.4624 18.393 15.8341 18.465 16.5776L18.5306 17.2544C18.7841 19.8706 18.9109 21.1787 18.1449 21.7602C17.3788 22.3417 16.2273 21.8115 13.9243 20.7512L13.3285 20.4768C12.6741 20.1755 12.3469 20.0248 12 20.0248C11.6531 20.0248 11.3259 20.1755 10.6715 20.4768L10.0757 20.7512C7.77268 21.8115 6.62118 22.3417 5.85515 21.7602C5.08912 21.1787 5.21588 19.8706 5.4694 17.2544L5.53498 16.5776C5.60703 15.8341 5.64305 15.4624 5.53586 15.1177C5.42868 14.773 5.19043 14.4944 4.71392 13.9372L4.2801 13.4299C2.60325 11.4691 1.76482 10.4886 2.05742 9.54773C2.35002 8.60682 3.57986 8.32856 6.03954 7.77203L6.67589 7.62805C7.37485 7.4699 7.72433 7.39083 8.00494 7.17781C8.28555 6.96479 8.46553 6.64194 8.82547 5.99623L9.15316 5.40838Z"
+                                                                    stroke="currentColor"
+                                                                    stroke-width="1.5"></path>
+                                                            </svg>
+                                                            <svg
+                                                                width="24"
+                                                                height="24"
+                                                                viewBox="0 0 24 24"
+                                                                fill="none"
+                                                                xmlns="http://www.w3.org/2000/svg"
+                                                                class="feather-heart h-6 w-6">
+                                                                <path
+                                                                    d="M12 5.50063C7.50016 0.825464 2 4.27416 2 9.1371C2 14 6.01943 16.5914 8.96173 18.9109C10 19.7294 11 20.5 12 20.5"
+                                                                    stroke="currentColor"
+                                                                    stroke-width="1.5"
+                                                                    stroke-linecap="round"></path>
+                                                                <path
+                                                                    opacity="0.5"
+                                                                    d="M12 5.50063C16.4998 0.825464 22 4.27416 22 9.1371C22 14 17.9806 16.5914 15.0383 18.9109C14 19.7294 13 20.5 12 20.5"
+                                                                    stroke="currentColor"
+                                                                    stroke-width="1.5"
+                                                                    stroke-linecap="round"></path>
+                                                            </svg>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </template>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
 
-                        <!-- Disabling options -->
+                        <!-- Handler -->
                         <div class="card">
                             <div class="card-header">
-                                <h6>Disabling options</h6>
+                                <h6>Handler</h6>
                             </div>
-                            <div class="card-body">
-                                <select class="selectize">
-                                    <option selected="" value="orange">Orange</option>
-                                    <option disabled="" value="White">White</option>
-                                    <option value="Purple">Purple</option>
-                                </select>
+                            <div class="card-body grid grid-cols-1 gap-x-12 sm:grid-cols-2">
+                                <div>
+                                    <ul id="example5">
+                                        <template x-for="item in items">
+                                            <li class="mb-2.5 cursor-grab">
+                                                <div
+                                                    class="items-md-center flex flex-col rounded-md border border-white-light bg-white px-6 py-3.5 text-center dark:border-dark dark:bg-[#1b2e4b] md:flex-row ltr:md:text-left rtl:md:text-right">
+                                                    <div class="ltr:sm:mr-4 rtl:sm:ml-4">
+                                                        <img
+                                                            alt="avatar"
+                                                            :src="`/images/users/avatar-${item.id}.png`"
+                                                            class="mx-auto h-11 w-11 rounded-full" />
+                                                    </div>
+                                                    <div class="block flex-1 items-center justify-between sm:flex">
+                                                        <div class="my-3 font-semibold md:my-0">
+                                                            <div
+                                                                class="text-base text-dark dark:text-[#bfc9d4]"
+                                                                x-text="item.text"></div>
+                                                            <div
+                                                                class="text-white-dark text-xs"
+                                                                x-text="item.name"></div>
+                                                        </div>
+                                                        <div class="text-white-dark">
+                                                            <span
+                                                                class="handle cursor-move rounded bg-[#ebedf2] px-2 dark:bg-black ltr:mr-1 rtl:ml-1"
+                                                                >+</span
+                                                            >
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </template>
+                                    </ul>
+                                </div>
+
+                                <div>
+                                    <ul id="example6">
+                                        <template x-for="item in items">
+                                            <li class="mb-2.5 cursor-grab">
+                                                <div
+                                                    class="items-md-center flex flex-col rounded-md border border-white-light bg-white px-6 py-3.5 text-center dark:border-dark dark:bg-[#1b2e4b] md:flex-row ltr:md:text-left rtl:md:text-right">
+                                                    <div class="ltr:sm:mr-4 rtl:sm:ml-4">
+                                                        <img
+                                                            alt="avatar"
+                                                            :src="`/images/users/avatar-${item.id + 5}.png`"
+                                                            class="mx-auto h-11 w-11 rounded-full" />
+                                                    </div>
+                                                    <div class="block flex-1 items-center justify-between sm:flex">
+                                                        <div class="my-3 font-semibold md:my-0">
+                                                            <div
+                                                                class="text-base text-dark dark:text-[#bfc9d4]"
+                                                                x-text="item.text"></div>
+                                                            <div
+                                                                class="text-white-dark text-xs"
+                                                                x-text="item.name"></div>
+                                                        </div>
+                                                        <div class="text-white-dark">
+                                                            <span
+                                                                class="handle cursor-move rounded bg-[#ebedf2] px-2 dark:bg-black ltr:mr-1 rtl:ml-1"
+                                                                >+</span
+                                                            >
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </template>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
 
-                        <!-- Placeholder -->
-                        <div class="card lg:row-start-3">
+                        <!-- Multiple Drag -->
+                        <div class="card">
                             <div class="card-header">
-                                <h6>Placeholder</h6>
+                                <h6>Multiple Drag</h6>
                             </div>
-                            <div class="card-body">
-                                <select class="selectize" placeholder="Choose...">
-                                    <option value="orange">Orange</option>
-                                    <option value="White">White</option>
-                                    <option value="Purple">Purple</option>
-                                </select>
+                            <div class="card-body grid grid-cols-1 gap-x-12 sm:grid-cols-2">
+                                <div>
+                                    <ul id="example7">
+                                        <template x-for="item in items">
+                                            <li class="mb-2.5 cursor-grab">
+                                                <div
+                                                    class="items-md-center flex flex-col rounded-md border border-white-light bg-white px-6 py-3.5 text-center dark:border-dark dark:bg-[#1b2e4b] md:flex-row ltr:md:text-left rtl:md:text-right">
+                                                    <div class="ltr:sm:mr-4 rtl:sm:ml-4">
+                                                        <img
+                                                            alt="avatar"
+                                                            :src="`/images/users/avatar-${item.id}.png`"
+                                                            class="mx-auto h-11 w-11 rounded-full" />
+                                                    </div>
+                                                    <div
+                                                        class="flex flex-1 flex-col items-center justify-between md:flex-row">
+                                                        <div class="my-3 font-semibold md:my-0">
+                                                            <div
+                                                                class="text-base text-dark dark:text-[#bfc9d4]"
+                                                                x-text="item.text"></div>
+                                                            <div
+                                                                class="text-white-dark text-xs"
+                                                                x-text="item.name"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </template>
+                                    </ul>
+                                </div>
+
+                                <div>
+                                    <ul id="example8">
+                                        <template x-for="item in items">
+                                            <li class="mb-2.5 cursor-grab">
+                                                <div
+                                                    class="items-md-center flex flex-col rounded-md border border-white-light bg-white px-6 py-3.5 text-center dark:border-dark dark:bg-[#1b2e4b] md:flex-row ltr:md:text-left rtl:md:text-right">
+                                                    <div class="ltr:sm:mr-4 rtl:sm:ml-4">
+                                                        <img
+                                                            alt="avatar"
+                                                            :src="`/images/users/avatar-${item.id + 5}.png`"
+                                                            class="mx-auto h-11 w-11 rounded-full" />
+                                                    </div>
+                                                    <div
+                                                        class="flex flex-1 flex-col items-center justify-between md:flex-row">
+                                                        <div class="my-3 font-semibold md:my-0">
+                                                            <div
+                                                                class="text-base text-dark dark:text-[#bfc9d4]"
+                                                                x-text="item.text"></div>
+                                                            <div
+                                                                class="text-white-dark text-xs"
+                                                                x-text="item.name"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </template>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
 
-                        <!-- Searchable -->
+                        <!-- News feed -->
                         <div class="card">
                             <div class="card-header">
-                                <h6>Searchable</h6>
+                                <h6>News Feed</h6>
                             </div>
-                            <div class="card-body">
-                                <select class="selectize">
-                                    <option value="orange">Orange</option>
-                                    <option value="White">White</option>
-                                    <option value="Purple">Purple</option>
-                                </select>
+                            <div id="example12" class="card-body grid grid-cols-1 gap-x-12 sm:grid-cols-2">
+                                <template x-for="item in items">
+                                    <div class="mb-2.5" x-show="item.id <= 4">
+                                        <div
+                                            class="rounded-md border border-white-light bg-white px-6 py-3.5 dark:border-dark dark:bg-[#1b2e4b]">
+                                            <div
+                                                class="py-sm-2.5 items-md-center block text-center sm:flex ltr:md:text-left rtl:md:text-right">
+                                                <div class="ltr:sm:mr-4 rtl:sm:ml-4">
+                                                    <img
+                                                        alt="avatar"
+                                                        :src="`/images/users/avatar-${item.id +1}.png`"
+                                                        class="mx-auto h-11 w-11 rounded-lg" />
+                                                </div>
+                                                <div
+                                                    class="flex flex-1 flex-col items-center justify-between md:flex-row">
+                                                    <div class="my-3 font-semibold md:my-0">
+                                                        <div
+                                                            class="text-base text-dark dark:text-[#bfc9d4]"
+                                                            x-text="item.name"></div>
+                                                        <div class="text-white-dark text-xs">11 hours ago</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="mb-4 border-b border-b-[#f1f2f3] py-5 dark:border-b-dark">
+                                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+                                                veniam, quis nostrud exercitation.
+                                            </div>
+                                            <div class="flex-wrap items-center md:flex">
+                                                <div class="text-center xl:flex-1 ltr:md:text-left rtl:md:text-right">
+                                                    <div
+                                                        class="flex justify-center -space-x-2 text-white md:justify-start rtl:space-x-reverse">
+                                                        <img
+                                                            class="dark:ring-white-dark h-10 w-10 rounded-full object-cover ring-2 ring-white"
+                                                            src="/images/users/avatar-6.png"
+                                                            alt="image" />
+                                                        <img
+                                                            class="dark:ring-white-dark h-10 w-10 rounded-full object-cover ring-2 ring-white"
+                                                            src="/images/users/avatar-7.png"
+                                                            alt="image" />
+                                                        <img
+                                                            class="dark:ring-white-dark h-10 w-10 rounded-full object-cover ring-2 ring-white"
+                                                            src="/images/users/avatar-8.png"
+                                                            alt="image" />
+                                                        <img
+                                                            class="dark:ring-white-dark h-10 w-10 rounded-full object-cover ring-2 ring-white"
+                                                            src="/images/users/avatar-10.png"
+                                                            alt="image" />
+                                                    </div>
+                                                </div>
+                                                <div class="text-center ltr:md:text-right rtl:md:text-left">
+                                                    <span class="text-white-dark block pt-2 text-xs lg:pt-0"
+                                                        ><a
+                                                            href="javascript:;"
+                                                            class="text-sm font-semibold text-danger dark:text-primary"
+                                                            >Vincent, Mary</a
+                                                        >
+                                                        and 19 other like this</span
+                                                    >
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </template>
                             </div>
                         </div>
 
-                        <!-- Multiple -->
+                        <!-- Delete User -->
                         <div class="card">
                             <div class="card-header">
-                                <h6>Multiple select</h6>
+                                <h6>Delete User</h6>
                             </div>
-                            <div class="card-body">
-                                <select class="selectize-multiple" multiple="multiple">
-                                    <option value="orange" selected="true">Orange</option>
-                                    <option value="White">White</option>
-                                    <option value="Purple">Purple</option>
-                                </select>
+                            <div class="card-body grid grid-cols-1 gap-x-12 lg:grid-cols-2">
+                                <div>
+                                    <ul id="example13">
+                                        <template x-for="item in items">
+                                            <li class="mb-2.5 cursor-grab">
+                                                <div
+                                                    class="items-md-center flex flex-col rounded-md border border-white-light bg-white px-6 py-3.5 text-center dark:border-dark dark:bg-[#1b2e4b] md:flex-row ltr:md:text-left rtl:md:text-right">
+                                                    <div class="ltr:sm:mr-4 rtl:sm:ml-4">
+                                                        <img
+                                                            alt="avatar"
+                                                            :src="`/images/users/avatar-${item.id}.png`"
+                                                            class="mx-auto h-11 w-11 rounded-full" />
+                                                    </div>
+                                                    <div
+                                                        class="flex flex-1 flex-col items-center justify-between md:flex-row">
+                                                        <div class="my-3 font-semibold md:my-0">
+                                                            <div
+                                                                class="text-base text-dark dark:text-[#bfc9d4]"
+                                                                x-text="item.text"></div>
+                                                            <div
+                                                                class="text-white-dark text-xs"
+                                                                x-text="item.name"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </template>
+                                    </ul>
+                                </div>
+
+                                <div>
+                                    <ul id="example14">
+                                        <template x-for="item in items">
+                                            <li class="mb-2.5 cursor-grab">
+                                                <div
+                                                    class="items-md-center flex flex-col rounded-md border border-white-light bg-white px-6 py-3.5 text-center dark:border-dark dark:bg-[#1b2e4b] md:flex-row ltr:md:text-left rtl:md:text-right">
+                                                    <div class="ltr:sm:mr-4 rtl:sm:ml-4">
+                                                        <img
+                                                            alt="avatar"
+                                                            :src="`/images/users/avatar-${item.id + 5}.png`"
+                                                            class="mx-auto h-11 w-11 rounded-full" />
+                                                    </div>
+                                                    <div
+                                                        class="flex flex-1 flex-col items-center justify-between md:flex-row">
+                                                        <div class="my-3 font-semibold md:my-0">
+                                                            <div
+                                                                class="text-base text-dark dark:text-[#bfc9d4]"
+                                                                x-text="item.text"></div>
+                                                            <div
+                                                                class="text-white-dark text-xs"
+                                                                x-text="item.name"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </template>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Grid drag -->
+                        <div class="card">
+                            <div class="card-header">
+                                <h6>Grid drag</h6>
+                            </div>
+                            <div
+                                class="card-body grid grid-cols-2 place-items-center gap-8 sm:grid-cols-4 md:grid-cols-6 xl:grid-cols-8"
+                                id="example11">
+                                <template x-for="i in 12">
+                                    <div
+                                        class="flex h-24 w-24 cursor-grab items-center justify-center rounded-md border border-white-light font-semibold shadow dark:border-dark"
+                                        x-text="'Item ' + i"></div>
+                                </template>
+                            </div>
+                        </div>
+
+                        <!-- Swap -->
+                        <div class="card">
+                            <div class="card-header">
+                                <h6>Swap</h6>
+                            </div>
+                            <div class="card-body grid grid-cols-1 gap-x-12 lg:grid-cols-2">
+                                <div>
+                                    <ul id="example9">
+                                        <template x-for="item in items">
+                                            <li class="mb-2.5 cursor-grab">
+                                                <div
+                                                    class="items-md-center flex flex-col rounded-md border border-white-light bg-white px-6 py-3.5 text-center dark:border-dark dark:bg-[#1b2e4b] md:flex-row ltr:md:text-left rtl:md:text-right">
+                                                    <div class="ltr:sm:mr-4 rtl:sm:ml-4">
+                                                        <img
+                                                            alt="avatar"
+                                                            :src="`/images/users/avatar-${item.id}.png`"
+                                                            class="mx-auto h-11 w-11 rounded-full" />
+                                                    </div>
+                                                    <div
+                                                        class="flex flex-1 flex-col items-center justify-between md:flex-row">
+                                                        <div class="my-3 font-semibold md:my-0">
+                                                            <div
+                                                                class="text-base text-dark dark:text-[#bfc9d4]"
+                                                                x-text="item.text"></div>
+                                                            <div
+                                                                class="text-white-dark text-xs"
+                                                                x-text="item.name"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </template>
+                                    </ul>
+                                </div>
+
+                                <div>
+                                    <ul id="example10">
+                                        <template x-for="item in items">
+                                            <li class="mb-2.5 cursor-grab">
+                                                <div
+                                                    class="items-md-center flex flex-col rounded-md border border-white-light bg-white px-6 py-3.5 text-center dark:border-dark dark:bg-[#1b2e4b] md:flex-row ltr:md:text-left rtl:md:text-right">
+                                                    <div class="ltr:sm:mr-4 rtl:sm:ml-4">
+                                                        <img
+                                                            alt="avatar"
+                                                            :src="`/images/users/avatar-${item.id + 5}.png`"
+                                                            class="mx-auto h-11 w-11 rounded-full" />
+                                                    </div>
+                                                    <div
+                                                        class="flex flex-1 flex-col items-center justify-between md:flex-row">
+                                                        <div class="my-3 font-semibold md:my-0">
+                                                            <div
+                                                                class="text-base text-dark dark:text-[#bfc9d4]"
+                                                                x-text="item.text"></div>
+                                                            <div
+                                                                class="text-white-dark text-xs"
+                                                                x-text="item.name"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </template>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -1761,30 +2234,7 @@
                 </nav>
             </div>
         </div>
-        <script src="https://cdn.jsdelivr.net/npm/choices.js@9.0.1/public/assets/scripts/choices.min.js"></script>
-        <script>
-            document.addEventListener('DOMContentLoaded', function () {
-                const elements = document.querySelectorAll('.selectize');
-
-                elements.forEach(function (element) {
-                    new Choices(element, {
-                        searchEnabled: true,
-                        itemSelectText: 'Search...',
-                        classNames: {
-                            containerInner: 'form-input',
-                        },
-                    });
-                });
-                // multiple select
-                new Choices(document.querySelector('.selectize-multiple'), {
-                    searchEnabled: true,
-                    itemSelectText: 'Search...',
-                    classNames: {
-                        containerInner: 'form-input',
-                    },
-                    removeItemButton: true,
-                });
-            });
-        </script>
+        <script src="/assets/js/plugins.js" type="module"></script>
+        <script src="/features/dragndrop.js"></script>
     </body>
 </html>

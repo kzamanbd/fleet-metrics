@@ -3,17 +3,13 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Select2 - Admin Template</title>
+        <title>Invoice Create - Admin Template</title>
         <link rel="icon" href="/favicon.png" />
         <link rel="mask-icon" href="/favicon.png" color="#009EF7" />
         <meta name="theme-color" content="#009EF7" />
         <!-- start:Core Style and Script -->
         <link rel="stylesheet" href="/assets/css/app.css" />
         <script type="module" src="/assets/js/app.js"></script>
-
-        <link
-            rel="stylesheet"
-            href="https://cdn.jsdelivr.net/npm/choices.js@9.0.1/public/assets/styles/choices.min.css" />
     </head>
 
     <body>
@@ -1380,117 +1376,22 @@
                     <!-- Start Breadcrumb -->
                     <nav class="breadcrumb">
                         <div class="left-link">
-                            <h3>Choices.js</h3>
+                            <h3>Invoice Create</h3>
                         </div>
                         <ol class="breadcrumb-nav">
                             <li class="inline-flex items-center">
-                                <a href="/" class="breadcrumb-item"> Dashboard </a>
+                                <a href="/" class="breadcrumb-item"> Invoices </a>
                             </li>
 
                             <li aria-current="page">
                                 <div class="flex items-center">
                                     <span class="icon-[mdi--chevron-right]"></span>
-                                    <span class="breadcrumb-item-current"> Choices.js </span>
+                                    <span class="breadcrumb-item-current"> Invoice Create </span>
                                 </div>
                             </li>
                         </ol>
                     </nav>
                     <!-- End Breadcrumb -->
-
-                    <div class="grid grid-cols-1 gap-6 lg:grid-cols-2">
-                        <!-- Basic -->
-                        <div class="card">
-                            <div class="card-header">
-                                <h6>Basic</h6>
-                            </div>
-                            <div class="card-body">
-                                <select class="selectize">
-                                    <option selected="" value="orange">Orange</option>
-                                    <option value="White">White</option>
-                                    <option value="Purple">Purple</option>
-                                </select>
-                            </div>
-                        </div>
-
-                        <!-- Nested -->
-                        <div class="card">
-                            <div class="card-header">
-                                <h6>Nested</h6>
-                            </div>
-                            <div class="card-body">
-                                <select class="selectize">
-                                    <option disabled="">Group 1</option>
-                                    <option selected="" value="orange">Orange</option>
-                                    <option value="White">White</option>
-                                    <option value="Purple">Purple</option>
-                                    <option disabled="">Group 2</option>
-                                    <option>Yellow</option>
-                                    <option value="Red">Red</option>
-                                    <option value="Green">Green</option>
-                                    <option disabled="">Group 3</option>
-                                    <option>Aqua</option>
-                                    <option value="Black">Black</option>
-                                    <option value="Blue">Blue</option>
-                                </select>
-                            </div>
-                        </div>
-
-                        <!-- Disabling options -->
-                        <div class="card">
-                            <div class="card-header">
-                                <h6>Disabling options</h6>
-                            </div>
-                            <div class="card-body">
-                                <select class="selectize">
-                                    <option selected="" value="orange">Orange</option>
-                                    <option disabled="" value="White">White</option>
-                                    <option value="Purple">Purple</option>
-                                </select>
-                            </div>
-                        </div>
-
-                        <!-- Placeholder -->
-                        <div class="card lg:row-start-3">
-                            <div class="card-header">
-                                <h6>Placeholder</h6>
-                            </div>
-                            <div class="card-body">
-                                <select class="selectize" placeholder="Choose...">
-                                    <option value="orange">Orange</option>
-                                    <option value="White">White</option>
-                                    <option value="Purple">Purple</option>
-                                </select>
-                            </div>
-                        </div>
-
-                        <!-- Searchable -->
-                        <div class="card">
-                            <div class="card-header">
-                                <h6>Searchable</h6>
-                            </div>
-                            <div class="card-body">
-                                <select class="selectize">
-                                    <option value="orange">Orange</option>
-                                    <option value="White">White</option>
-                                    <option value="Purple">Purple</option>
-                                </select>
-                            </div>
-                        </div>
-
-                        <!-- Multiple -->
-                        <div class="card">
-                            <div class="card-header">
-                                <h6>Multiple select</h6>
-                            </div>
-                            <div class="card-body">
-                                <select class="selectize-multiple" multiple="multiple">
-                                    <option value="orange" selected="true">Orange</option>
-                                    <option value="White">White</option>
-                                    <option value="Purple">Purple</option>
-                                </select>
-                            </div>
-                        </div>
-                    </div>
                 </main>
 
                 <footer class="footer" :class="footerType">
@@ -1515,6 +1416,61 @@
                     </ul>
                 </footer>
             </div>
+
+            <!-- Start search box -->
+            <div id="global-search" class="hs-overlay tw-modal">
+                <div class="tw-modal-dialog">
+                    <div class="tw-modal-content">
+                        <header class="tw-modal-header border-b border-gray-300 dark:border-gray-700">
+                            <div class="flex w-full items-center justify-around">
+                                <!-- Modal title -->
+                                <svg
+                                    class="quick-search-svg"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="24"
+                                    height="24"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <circle cx="11" cy="11" r="8"></circle>
+                                    <path d="m21 21-4.3-4.3"></path>
+                                </svg>
+                                <input type="text" autofocus class="search-box-input" placeholder="Quick search..." />
+                                <button type="button" class="tw-modal-close" data-hs-overlay="#global-search">
+                                    <i class="icon-[mdi--close]"></i>
+                                </button>
+                            </div>
+                        </header>
+                        <main class="tw-modal-body">
+                            <div class="flex h-44 items-center justify-center">
+                                <p>No recent searches</p>
+                            </div>
+                        </main>
+                        <footer class="tw-modal-footer border-t border-gray-300 dark:border-gray-700">
+                            <div class="flex w-full items-center justify-between">
+                                <button
+                                    type="button"
+                                    data-hs-overlay="#global-search"
+                                    class="rounded border border-gray-300 p-0.5 text-xs dark:border-gray-700">
+                                    ESC
+                                </button>
+                                <a
+                                    href="https://www.algolia.com/docsearch"
+                                    class="flex items-center"
+                                    target="_blank"
+                                    rel="noopener noreferrer">
+                                    <span class="mr-4 text-xs">Search by</span>
+                                    <img src="/images/algolia.png" alt="Algolia" class="h-6" />
+                                </a>
+                            </div>
+                        </footer>
+                    </div>
+                </div>
+            </div>
+            <!-- End search box -->
 
             <!-- Theme customizer -->
             <div class="theme-customizer">
@@ -1761,30 +1717,5 @@
                 </nav>
             </div>
         </div>
-        <script src="https://cdn.jsdelivr.net/npm/choices.js@9.0.1/public/assets/scripts/choices.min.js"></script>
-        <script>
-            document.addEventListener('DOMContentLoaded', function () {
-                const elements = document.querySelectorAll('.selectize');
-
-                elements.forEach(function (element) {
-                    new Choices(element, {
-                        searchEnabled: true,
-                        itemSelectText: 'Search...',
-                        classNames: {
-                            containerInner: 'form-input',
-                        },
-                    });
-                });
-                // multiple select
-                new Choices(document.querySelector('.selectize-multiple'), {
-                    searchEnabled: true,
-                    itemSelectText: 'Search...',
-                    classNames: {
-                        containerInner: 'form-input',
-                    },
-                    removeItemButton: true,
-                });
-            });
-        </script>
     </body>
 </html>

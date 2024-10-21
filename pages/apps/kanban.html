@@ -3,17 +3,13 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Select2 - Admin Template</title>
+        <title>Kanban - Admin Template</title>
         <link rel="icon" href="/favicon.png" />
         <link rel="mask-icon" href="/favicon.png" color="#009EF7" />
         <meta name="theme-color" content="#009EF7" />
         <!-- start:Core Style and Script -->
         <link rel="stylesheet" href="/assets/css/app.css" />
         <script type="module" src="/assets/js/app.js"></script>
-
-        <link
-            rel="stylesheet"
-            href="https://cdn.jsdelivr.net/npm/choices.js@9.0.1/public/assets/styles/choices.min.css" />
     </head>
 
     <body>
@@ -1380,114 +1376,188 @@
                     <!-- Start Breadcrumb -->
                     <nav class="breadcrumb">
                         <div class="left-link">
-                            <h3>Choices.js</h3>
+                            <h3>Kanban</h3>
                         </div>
                         <ol class="breadcrumb-nav">
                             <li class="inline-flex items-center">
-                                <a href="/" class="breadcrumb-item"> Dashboard </a>
+                                <a href="/" class="breadcrumb-item"> Apps </a>
                             </li>
 
                             <li aria-current="page">
                                 <div class="flex items-center">
                                     <span class="icon-[mdi--chevron-right]"></span>
-                                    <span class="breadcrumb-item-current"> Choices.js </span>
+                                    <span class="breadcrumb-item-current"> Kanban </span>
                                 </div>
                             </li>
                         </ol>
                     </nav>
                     <!-- End Breadcrumb -->
 
-                    <div class="grid grid-cols-1 gap-6 lg:grid-cols-2">
-                        <!-- Basic -->
-                        <div class="card">
-                            <div class="card-header">
-                                <h6>Basic</h6>
-                            </div>
-                            <div class="card-body">
-                                <select class="selectize">
-                                    <option selected="" value="orange">Orange</option>
-                                    <option value="White">White</option>
-                                    <option value="Purple">Purple</option>
-                                </select>
-                            </div>
-                        </div>
-
-                        <!-- Nested -->
-                        <div class="card">
-                            <div class="card-header">
-                                <h6>Nested</h6>
-                            </div>
-                            <div class="card-body">
-                                <select class="selectize">
-                                    <option disabled="">Group 1</option>
-                                    <option selected="" value="orange">Orange</option>
-                                    <option value="White">White</option>
-                                    <option value="Purple">Purple</option>
-                                    <option disabled="">Group 2</option>
-                                    <option>Yellow</option>
-                                    <option value="Red">Red</option>
-                                    <option value="Green">Green</option>
-                                    <option disabled="">Group 3</option>
-                                    <option>Aqua</option>
-                                    <option value="Black">Black</option>
-                                    <option value="Blue">Blue</option>
-                                </select>
-                            </div>
-                        </div>
-
-                        <!-- Disabling options -->
-                        <div class="card">
-                            <div class="card-header">
-                                <h6>Disabling options</h6>
-                            </div>
-                            <div class="card-body">
-                                <select class="selectize">
-                                    <option selected="" value="orange">Orange</option>
-                                    <option disabled="" value="White">White</option>
-                                    <option value="Purple">Purple</option>
-                                </select>
-                            </div>
-                        </div>
-
-                        <!-- Placeholder -->
-                        <div class="card lg:row-start-3">
-                            <div class="card-header">
-                                <h6>Placeholder</h6>
-                            </div>
-                            <div class="card-body">
-                                <select class="selectize" placeholder="Choose...">
-                                    <option value="orange">Orange</option>
-                                    <option value="White">White</option>
-                                    <option value="Purple">Purple</option>
-                                </select>
-                            </div>
-                        </div>
-
-                        <!-- Searchable -->
-                        <div class="card">
-                            <div class="card-header">
-                                <h6>Searchable</h6>
-                            </div>
-                            <div class="card-body">
-                                <select class="selectize">
-                                    <option value="orange">Orange</option>
-                                    <option value="White">White</option>
-                                    <option value="Purple">Purple</option>
-                                </select>
-                            </div>
-                        </div>
-
-                        <!-- Multiple -->
-                        <div class="card">
-                            <div class="card-header">
-                                <h6>Multiple select</h6>
-                            </div>
-                            <div class="card-body">
-                                <select class="selectize-multiple" multiple="multiple">
-                                    <option value="orange" selected="true">Orange</option>
-                                    <option value="White">White</option>
-                                    <option value="Purple">Purple</option>
-                                </select>
+                    <div class="grid grid-cols-12 gap-x-6">
+                        <div class="col-span-12 xl:col-span-12">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="flex-wrap items-center justify-between gap-4 md:flex">
+                                        <div class="flex gap-2 md:w-[30%]">
+                                            <a
+                                                href="javascript:void(0);"
+                                                class="hs-dropdown-toggle btn btn-primary min-w-max"
+                                                data-hs-overlay="#add-board">
+                                                <i class="ri-add-line !text-[1rem]"></i>
+                                                New Board
+                                            </a>
+                                            <div class="relative inline-flex w-full" data-hs-combo-box="">
+                                                <div class="relative w-full">
+                                                    <input
+                                                        class="form-input"
+                                                        type="text"
+                                                        role="combobox"
+                                                        aria-expanded="false"
+                                                        placeholder="Sort By"
+                                                        data-hs-combo-box-input="" />
+                                                    <div
+                                                        class="absolute end-3 top-1/2 -translate-y-1/2"
+                                                        data-hs-combo-box-toggle="">
+                                                        <svg
+                                                            class="size-3.5 shrink-0 text-gray-500 dark:text-neutral-500"
+                                                            xmlns="http://www.w3.org/2000/svg"
+                                                            width="24"
+                                                            height="24"
+                                                            viewBox="0 0 24 24"
+                                                            fill="none"
+                                                            stroke="currentColor"
+                                                            stroke-width="2"
+                                                            stroke-linecap="round"
+                                                            stroke-linejoin="round">
+                                                            <path d="m7 15 5 5 5-5"></path>
+                                                            <path d="m7 9 5-5 5 5"></path>
+                                                        </svg>
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="absolute z-50 max-h-72 w-full space-y-0.5 overflow-hidden overflow-y-auto rounded-lg border border-gray-200 bg-white p-1 dark:border-neutral-700 dark:bg-neutral-900"
+                                                    style="display: none"
+                                                    data-hs-combo-box-output="">
+                                                    <div
+                                                        class="w-full cursor-pointer rounded-lg px-4 py-2 text-sm text-gray-800 hover:bg-gray-100 focus:bg-gray-100 focus:outline-none dark:bg-neutral-900 dark:text-neutral-200 dark:hover:bg-neutral-800 dark:focus:bg-neutral-800"
+                                                        tabindex="0"
+                                                        data-hs-combo-box-output-item="">
+                                                        <div class="flex w-full items-center justify-between">
+                                                            <span
+                                                                data-hs-combo-box-search-text="A-Z"
+                                                                data-hs-combo-box-value="">
+                                                                A-Z
+                                                            </span>
+                                                            <span class="hidden hs-combo-box-selected:block">
+                                                                <svg
+                                                                    class="size-3.5 shrink-0 text-blue-600 dark:text-blue-500"
+                                                                    xmlns="http://www.w3.org/2000/svg"
+                                                                    width="24"
+                                                                    height="24"
+                                                                    viewBox="0 0 24 24"
+                                                                    fill="none"
+                                                                    stroke="currentColor"
+                                                                    stroke-width="2"
+                                                                    stroke-linecap="round"
+                                                                    stroke-linejoin="round">
+                                                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                                                </svg>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                    <div
+                                                        class="w-full cursor-pointer rounded-lg px-4 py-2 text-sm text-gray-800 hover:bg-gray-100 focus:bg-gray-100 focus:outline-none dark:bg-neutral-900 dark:text-neutral-200 dark:hover:bg-neutral-800 dark:focus:bg-neutral-800"
+                                                        tabindex="1"
+                                                        data-hs-combo-box-output-item="">
+                                                        <div class="flex w-full items-center justify-between">
+                                                            <span
+                                                                data-hs-combo-box-search-text="Most Recent"
+                                                                data-hs-combo-box-value="">
+                                                                Most Recent
+                                                            </span>
+                                                            <span class="hidden hs-combo-box-selected:block">
+                                                                <svg
+                                                                    class="size-3.5 shrink-0 text-blue-600 dark:text-blue-500"
+                                                                    xmlns="http://www.w3.org/2000/svg"
+                                                                    width="24"
+                                                                    height="24"
+                                                                    viewBox="0 0 24 24"
+                                                                    fill="none"
+                                                                    stroke="currentColor"
+                                                                    stroke-width="2"
+                                                                    stroke-linecap="round"
+                                                                    stroke-linejoin="round">
+                                                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                                                </svg>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                    <div
+                                                        class="w-full cursor-pointer rounded-lg px-4 py-2 text-sm text-gray-800 hover:bg-gray-100 focus:bg-gray-100 focus:outline-none dark:bg-neutral-900 dark:text-neutral-200 dark:hover:bg-neutral-800 dark:focus:bg-neutral-800"
+                                                        tabindex="2"
+                                                        data-hs-combo-box-output-item="">
+                                                        <div class="flex w-full items-center justify-between">
+                                                            <span
+                                                                data-hs-combo-box-search-text="Type"
+                                                                data-hs-combo-box-value="">
+                                                                Type
+                                                            </span>
+                                                            <span class="hidden hs-combo-box-selected:block">
+                                                                <svg
+                                                                    class="size-3.5 shrink-0 text-blue-600 dark:text-blue-500"
+                                                                    xmlns="http://www.w3.org/2000/svg"
+                                                                    width="24"
+                                                                    height="24"
+                                                                    viewBox="0 0 24 24"
+                                                                    fill="none"
+                                                                    stroke="currentColor"
+                                                                    stroke-width="2"
+                                                                    stroke-linecap="round"
+                                                                    stroke-linejoin="round">
+                                                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                                                </svg>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="flex items-center justify-start -space-x-4">
+                                            <img
+                                                src="/images/users/avatar-2.png"
+                                                class="h-10 w-10 flex-none rounded-full object-cover ring-2 ring-white"
+                                                alt="avatar" />
+                                            <img
+                                                src="/images/users/avatar-3.png"
+                                                class="h-10 w-10 flex-none rounded-full object-cover ring-2 ring-white"
+                                                alt="avatar" />
+                                            <img
+                                                src="/images/users/avatar-5.png"
+                                                class="h-10 w-10 flex-none rounded-full object-cover ring-2 ring-white"
+                                                alt="avatar" />
+                                            <img
+                                                src="/images/users/avatar-6.png"
+                                                class="h-10 w-10 flex-none rounded-full object-cover ring-2 ring-white"
+                                                alt="avatar" />
+                                            <img
+                                                src="/images/users/avatar-8.png"
+                                                class="h-10 w-10 flex-none rounded-full object-cover ring-2 ring-white"
+                                                alt="avatar" />
+                                            <span
+                                                class="flex h-10 w-10 items-center justify-center rounded-full bg-purple-100 object-cover text-center text-xs ring-2 ring-white"
+                                                >+99</span
+                                            >
+                                        </div>
+                                        <div class="flex" role="search">
+                                            <input
+                                                class="form-input me-2"
+                                                type="search"
+                                                placeholder="Search"
+                                                aria-label="Search" />
+                                            <button class="btn btn-light !mb-0" type="submit">Search</button>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -1761,30 +1831,6 @@
                 </nav>
             </div>
         </div>
-        <script src="https://cdn.jsdelivr.net/npm/choices.js@9.0.1/public/assets/scripts/choices.min.js"></script>
-        <script>
-            document.addEventListener('DOMContentLoaded', function () {
-                const elements = document.querySelectorAll('.selectize');
-
-                elements.forEach(function (element) {
-                    new Choices(element, {
-                        searchEnabled: true,
-                        itemSelectText: 'Search...',
-                        classNames: {
-                            containerInner: 'form-input',
-                        },
-                    });
-                });
-                // multiple select
-                new Choices(document.querySelector('.selectize-multiple'), {
-                    searchEnabled: true,
-                    itemSelectText: 'Search...',
-                    classNames: {
-                        containerInner: 'form-input',
-                    },
-                    removeItemButton: true,
-                });
-            });
-        </script>
+        <script src="/assets/js/plugins.js" type="module"></script>
     </body>
 </html>

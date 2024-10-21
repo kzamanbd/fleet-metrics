@@ -3,6 +3,10 @@
         @apply relative z-10 overflow-hidden before:absolute before:start-1/2 before:top-0 before:-z-[1] before:size-full before:-translate-x-1/2 before:transform before:bg-[url('/images/polygon-bg-element.svg')] before:bg-cover before:bg-top before:bg-no-repeat dark:before:bg-[url('/images/dark-polygon-bg-element.svg')];
     }
 
+    .notification-container li .un-read {
+        @apply border-l-4 border-solid border-primary-300;
+    }
+
     /* todo list */
     .todo-list-wrapper {
         @apply card absolute z-10 hidden h-full w-[20rem] max-w-full flex-none space-y-4 rounded-r-none p-4 xl:relative xl:block xl:h-auto xl:rounded-r-md;

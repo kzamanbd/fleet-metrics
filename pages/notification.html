@@ -3,17 +3,13 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Select2 - Admin Template</title>
+        <title>Notifications - Admin Template</title>
         <link rel="icon" href="/favicon.png" />
         <link rel="mask-icon" href="/favicon.png" color="#009EF7" />
         <meta name="theme-color" content="#009EF7" />
         <!-- start:Core Style and Script -->
         <link rel="stylesheet" href="/assets/css/app.css" />
         <script type="module" src="/assets/js/app.js"></script>
-
-        <link
-            rel="stylesheet"
-            href="https://cdn.jsdelivr.net/npm/choices.js@9.0.1/public/assets/styles/choices.min.css" />
     </head>
 
     <body>
@@ -1380,116 +1376,275 @@
                     <!-- Start Breadcrumb -->
                     <nav class="breadcrumb">
                         <div class="left-link">
-                            <h3>Choices.js</h3>
+                            <h3>Notifications</h3>
                         </div>
                         <ol class="breadcrumb-nav">
                             <li class="inline-flex items-center">
-                                <a href="/" class="breadcrumb-item"> Dashboard </a>
+                                <a href="/" class="breadcrumb-item"> Pages </a>
                             </li>
 
                             <li aria-current="page">
                                 <div class="flex items-center">
                                     <span class="icon-[mdi--chevron-right]"></span>
-                                    <span class="breadcrumb-item-current"> Choices.js </span>
+                                    <span class="breadcrumb-item-current"> Notifications </span>
                                 </div>
                             </li>
                         </ol>
                     </nav>
                     <!-- End Breadcrumb -->
 
-                    <div class="grid grid-cols-1 gap-6 lg:grid-cols-2">
-                        <!-- Basic -->
-                        <div class="card">
-                            <div class="card-header">
-                                <h6>Basic</h6>
-                            </div>
-                            <div class="card-body">
-                                <select class="selectize">
-                                    <option selected="" value="orange">Orange</option>
-                                    <option value="White">White</option>
-                                    <option value="Purple">Purple</option>
-                                </select>
+                    <div class="!mx-auto grid grid-cols-12 gap-6">
+                        <div class="col-span-12 xxl:col-span-2"></div>
+                        <div
+                            class="col-span-12 sm:col-span-12 md:col-span-12 lg:col-span-12 xl:col-span-12 xxl:col-span-8">
+                            <ul class="notification-container mb-0 list-none space-y-4">
+                                <li>
+                                    <div class="card un-read">
+                                        <div class="card-body !p-4">
+                                            <a href="javascript:void(0);">
+                                                <div class="mt-0 flex flex-wrap items-start">
+                                                    <div class="leading-top">
+                                                        <span class="avatar avatar-md online avatar-rounded me-4">
+                                                            <img alt="avatar" src="/images/users/avatar-4.png" />
+                                                        </span>
+                                                    </div>
+                                                    <div class="flex-grow">
+                                                        <div class="items-center sm:flex">
+                                                            <div class="mt-2 sm:mt-0">
+                                                                <p class="mb-0 text-[.875rem] font-semibold">Emperio</p>
+                                                                <p class="mb-0 text-[#8c9097] dark:text-white/50">
+                                                                    Project assigned by the manager all<span
+                                                                        class="badge mx-1 bg-primary/10 font-semibold text-primary"
+                                                                        >files</span
+                                                                    >and<span
+                                                                        class="badge mx-1 bg-primary/10 font-semibold text-primary"
+                                                                        >folders</span
+                                                                    >were included
+                                                                </p>
+                                                                <span
+                                                                    class="mb-0 block text-[0.75rem] text-[#8c9097] dark:text-white/50"
+                                                                    >12 mins ago</span
+                                                                >
+                                                            </div>
+                                                            <div class="ms-auto">
+                                                                <span
+                                                                    class="badge whitespace-nowrap bg-light text-[#8c9097] dark:text-white/50 ltr:float-right rtl:float-left">
+                                                                    24,Oct 2022
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="card un-read">
+                                        <div class="card-body !p-4">
+                                            <a href="javascript:void(0);">
+                                                <div class="mt-0 flex flex-wrap items-start">
+                                                    <div class="leading-none">
+                                                        <span class="avatar avatar-md offline avatar-rounded me-4">
+                                                            <img alt="avatar" src="/images/users/avatar-15.png" />
+                                                        </span>
+                                                    </div>
+                                                    <div class="flex-grow">
+                                                        <div class="items-center sm:flex">
+                                                            <div class="mt-2 sm:mt-0">
+                                                                <p class="mb-0 text-[.875rem] font-semibold">
+                                                                    Dwayne Bero
+                                                                </p>
+                                                                <p class="mb-0 text-[#8c9097] dark:text-white/50">
+                                                                    Admin and other team accepted your work request
+                                                                </p>
+                                                                <span
+                                                                    class="mb-0 block text-[0.75rem] text-[#8c9097] dark:text-white/50"
+                                                                    >17 mins ago</span
+                                                                >
+                                                            </div>
+                                                            <div class="ms-auto">
+                                                                <span
+                                                                    class="badge whitespace-nowrap bg-light text-[#8c9097] dark:text-white/50 ltr:float-right rtl:float-left">
+                                                                    30,Sep 2022
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="card un-read">
+                                        <div class="card-body !p-4">
+                                            <a href="javascript:void(0);">
+                                                <div class="mt-0 flex flex-wrap items-start">
+                                                    <div class="leading-none">
+                                                        <span class="avatar avatar-md offline avatar-rounded me-4">
+                                                            <img alt="avatar" src="/images/users/avatar-11.png" />
+                                                        </span>
+                                                    </div>
+                                                    <div class="flex-grow">
+                                                        <div class="items-center sm:flex">
+                                                            <div class="mt-2 sm:mt-0">
+                                                                <p class="mb-0 text-[.875rem] font-semibold">
+                                                                    Alister Chuk
+                                                                </p>
+                                                                <p class="mb-0 text-[#8c9097] dark:text-white/50">
+                                                                    Temporary data will be
+                                                                    <span
+                                                                        class="badge mx-1 bg-danger/10 font-semibold text-danger"
+                                                                        >deleted</span
+                                                                    >
+                                                                    once dedicated time complated
+                                                                </p>
+                                                                <span
+                                                                    class="mb-0 block text-[0.75rem] text-[#8c9097] dark:text-white/50"
+                                                                    >4 hrs ago</span
+                                                                >
+                                                            </div>
+                                                            <div class="ms-auto">
+                                                                <span
+                                                                    class="badge whitespace-nowrap bg-light text-[#8c9097] dark:text-white/50 ltr:float-right rtl:float-left">
+                                                                    11,Sep 2021
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="card un-read">
+                                        <div class="card-body !p-4">
+                                            <a href="javascript:void(0);">
+                                                <div class="mt-0 flex flex-wrap items-start">
+                                                    <div class="leading-none">
+                                                        <span class="avatar avatar-md online avatar-rounded me-4">
+                                                            <img alt="avatar" src="/images/users/avatar-5.png" />
+                                                        </span>
+                                                    </div>
+                                                    <div class="flex-grow">
+                                                        <div class="items-center sm:flex">
+                                                            <div class="mt-2 sm:mt-0">
+                                                                <p class="mb-0 text-[.875rem] font-semibold">
+                                                                    Melissa Blue
+                                                                </p>
+                                                                <p class="mb-0 text-[#8c9097] dark:text-white/50">
+                                                                    Approved date for sanction of loan is verified
+                                                                    <i
+                                                                        class="ri-checkbox-circle-line ms-1 align-middle text-[1rem] text-success"></i>
+                                                                </p>
+                                                                <span
+                                                                    class="mb-0 block text-[0.75rem] text-[#8c9097] dark:text-white/50"
+                                                                    >5 hrs ago</span
+                                                                >
+                                                            </div>
+                                                            <div class="ms-auto">
+                                                                <span
+                                                                    class="badge whitespace-nowrap bg-light text-[#8c9097] dark:text-white/50 ltr:float-right rtl:float-left">
+                                                                    18,Sep 2021
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="card un-read">
+                                        <div class="card-body !p-4">
+                                            <a href="javascript:void(0);">
+                                                <div class="mt-0 flex flex-wrap items-start">
+                                                    <div
+                                                        class="avatar avatar-md online avatar-rounded me-4 bg-primary !text-white">
+                                                        ZS
+                                                    </div>
+                                                    <div class="flex-grow">
+                                                        <div class="items-center sm:flex">
+                                                            <div class="mt-2 sm:mt-0">
+                                                                <p class="mb-0 text-[.875rem] font-semibold">
+                                                                    Zack Slayer
+                                                                </p>
+                                                                <p class="mb-0 text-[#8c9097] dark:text-white/50">
+                                                                    Social network accounts are at risk check your
+                                                                    <span
+                                                                        class="badge mx-1 bg-success/10 font-semibold text-success"
+                                                                        >login</span
+                                                                    >
+                                                                    details
+                                                                </p>
+                                                                <span
+                                                                    class="mb-0 block text-[0.75rem] text-[#8c9097] dark:text-white/50"
+                                                                    >9 hrs ago</span
+                                                                >
+                                                            </div>
+                                                            <div class="ms-auto">
+                                                                <span
+                                                                    class="badge whitespace-nowrap bg-light text-[#8c9097] dark:text-white/50 ltr:float-right rtl:float-left">
+                                                                    15,Sep 2021
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="card un-read">
+                                        <div class="card-body !p-4">
+                                            <a href="javascript:void(0);">
+                                                <div class="mt-0 flex flex-wrap items-start">
+                                                    <div class="avatar avatar-md online avatar-rounded me-4">
+                                                        <img alt="avatar" src="/images/users/avatar-2.png" />
+                                                    </div>
+                                                    <div class="flex-grow">
+                                                        <div class="items-center sm:flex">
+                                                            <div class="mt-2 sm:mt-0">
+                                                                <p class="mb-0 text-[.875rem] font-semibold">
+                                                                    Monika Karen
+                                                                </p>
+                                                                <p class="mb-0 text-[#8c9097] dark:text-white/50">
+                                                                    Changed the password of gmail 4 hrs ago.
+                                                                    <span class="badge bg-secondary text-white"
+                                                                        >Update</span
+                                                                    >
+                                                                </p>
+                                                                <span
+                                                                    class="mb-0 block text-[0.75rem] text-[#8c9097] dark:text-white/50"
+                                                                    >12 hrs ago</span
+                                                                >
+                                                            </div>
+                                                            <div class="ms-auto">
+                                                                <span
+                                                                    class="badge whitespace-nowrap bg-light text-[#8c9097] dark:text-white/50 ltr:float-right rtl:float-left">
+                                                                    12,Sep 2021
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="mt-4 !text-center">
+                                <button type="button" class="btn btn-soft-info mx-auto">
+                                    Loading
+                                    <i class="icon-[mdi--progress-helper] mr-2 animate-spin"></i>
+                                </button>
                             </div>
                         </div>
-
-                        <!-- Nested -->
-                        <div class="card">
-                            <div class="card-header">
-                                <h6>Nested</h6>
-                            </div>
-                            <div class="card-body">
-                                <select class="selectize">
-                                    <option disabled="">Group 1</option>
-                                    <option selected="" value="orange">Orange</option>
-                                    <option value="White">White</option>
-                                    <option value="Purple">Purple</option>
-                                    <option disabled="">Group 2</option>
-                                    <option>Yellow</option>
-                                    <option value="Red">Red</option>
-                                    <option value="Green">Green</option>
-                                    <option disabled="">Group 3</option>
-                                    <option>Aqua</option>
-                                    <option value="Black">Black</option>
-                                    <option value="Blue">Blue</option>
-                                </select>
-                            </div>
-                        </div>
-
-                        <!-- Disabling options -->
-                        <div class="card">
-                            <div class="card-header">
-                                <h6>Disabling options</h6>
-                            </div>
-                            <div class="card-body">
-                                <select class="selectize">
-                                    <option selected="" value="orange">Orange</option>
-                                    <option disabled="" value="White">White</option>
-                                    <option value="Purple">Purple</option>
-                                </select>
-                            </div>
-                        </div>
-
-                        <!-- Placeholder -->
-                        <div class="card lg:row-start-3">
-                            <div class="card-header">
-                                <h6>Placeholder</h6>
-                            </div>
-                            <div class="card-body">
-                                <select class="selectize" placeholder="Choose...">
-                                    <option value="orange">Orange</option>
-                                    <option value="White">White</option>
-                                    <option value="Purple">Purple</option>
-                                </select>
-                            </div>
-                        </div>
-
-                        <!-- Searchable -->
-                        <div class="card">
-                            <div class="card-header">
-                                <h6>Searchable</h6>
-                            </div>
-                            <div class="card-body">
-                                <select class="selectize">
-                                    <option value="orange">Orange</option>
-                                    <option value="White">White</option>
-                                    <option value="Purple">Purple</option>
-                                </select>
-                            </div>
-                        </div>
-
-                        <!-- Multiple -->
-                        <div class="card">
-                            <div class="card-header">
-                                <h6>Multiple select</h6>
-                            </div>
-                            <div class="card-body">
-                                <select class="selectize-multiple" multiple="multiple">
-                                    <option value="orange" selected="true">Orange</option>
-                                    <option value="White">White</option>
-                                    <option value="Purple">Purple</option>
-                                </select>
-                            </div>
-                        </div>
+                        <div class="col-span-12 xxl:col-span-2"></div>
                     </div>
                 </main>
 
@@ -1761,30 +1916,5 @@
                 </nav>
             </div>
         </div>
-        <script src="https://cdn.jsdelivr.net/npm/choices.js@9.0.1/public/assets/scripts/choices.min.js"></script>
-        <script>
-            document.addEventListener('DOMContentLoaded', function () {
-                const elements = document.querySelectorAll('.selectize');
-
-                elements.forEach(function (element) {
-                    new Choices(element, {
-                        searchEnabled: true,
-                        itemSelectText: 'Search...',
-                        classNames: {
-                            containerInner: 'form-input',
-                        },
-                    });
-                });
-                // multiple select
-                new Choices(document.querySelector('.selectize-multiple'), {
-                    searchEnabled: true,
-                    itemSelectText: 'Search...',
-                    classNames: {
-                        containerInner: 'form-input',
-                    },
-                    removeItemButton: true,
-                });
-            });
-        </script>
     </body>
 </html>
