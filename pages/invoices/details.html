@@ -1,0 +1,1549 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth" dir="ltr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Invoice Details - Admin Template</title>
+        <link rel="icon" href="/favicon.png" />
+        <link rel="mask-icon" href="/favicon.png" color="#009EF7" />
+        <meta name="theme-color" content="#009EF7" />
+        <!-- start:Core Style and Script -->
+        <link rel="stylesheet" href="/assets/css/app.css" />
+        <script type="module" src="/assets/js/app.js"></script>
+    </head>
+
+    <body>
+        <div class="tw--wrapper" x-data="themeConfig" :class="appConfig">
+            <!-- Loading dialog -->
+            <div class="loading">
+                <div id="loader"></div>
+            </div>
+
+            <!-- menu shadow -->
+            <div class="menu-shadow hidden"></div>
+
+            <!-- start vertical-menu -->
+            <aside class="vertical-menu">
+                <div class="vertical-content" :class="semiDarkMenu">
+                    <!-- Menu Logo -->
+                    <div id="brand-logo" class="tw-brand-logo">
+                        <a href="/index.html" class="flex items-center">
+                            <img src="/logo.png" alt="App Logo" class="tw-logo" />
+                            <div class="app-name" x-html="appName"></div>
+                        </a>
+                        <button type="button" class="toggle-sidebar">
+                            <span class="collapsed-icon icon-[mdi--radiobox-blank]"></span>
+                            <span class="expanded-icon icon-[mdi--radiobox-marked]"></span>
+                            <span class="icon-[mdi--close] lg:hidden"></span>
+                        </button>
+                    </div>
+                    <!-- Menu Content -->
+                    <nav data-simplebar class="tw-menu-content hs-accordion-treeview-root no-scrollbar">
+                        <ul class="tw-nav-menu hs-accordion-group">
+                            <!-- dashboard start -->
+                            <li class="tw-menu-item hs-accordion">
+                                <button type="button" data-ripple class="tw-menu-link hs-accordion-toggle">
+                                    <span class="icon-[mdi--square-rounded-badge-outline]"></span>
+                                    <span class="tw-link-label">
+                                        Dashboard
+                                        <span class="tw-menu-badge rounded-lg"> 10 </span>
+                                    </span>
+                                    <span class="tw-arrow icon-[mdi--chevron-down]"></span>
+                                </button>
+
+                                <ul class="hs-accordion-content twd--menu">
+                                    <li class="twd--menu-item">
+                                        <a href="/index.html" class="twd--link"> Default </a>
+                                    </li>
+                                    <li class="twd--menu-item">
+                                        <a href="/pages/dashboard/crypto.html" class="twd--link"> Crypto </a>
+                                    </li>
+                                    <li class="twd--menu-item">
+                                        <a href="/pages/dashboard/crm.html" class="twd--link"> CRM </a>
+                                    </li>
+                                    <li class="twd--menu-item">
+                                        <a href="/pages/dashboard/hrm.html" class="twd--link"> HRM </a>
+                                    </li>
+                                    <li class="twd--menu-item">
+                                        <a href="/pages/dashboard/analytics.html" class="twd--link"> Analytics </a>
+                                    </li>
+                                    <li class="twd--menu-item">
+                                        <a href="/pages/dashboard/ecommerce.html" class="twd--link"> ECommerce </a>
+                                    </li>
+                                    <li class="twd--menu-item">
+                                        <a href="/pages/dashboard/jobs.html" class="twd--link"> Jobs </a>
+                                    </li>
+                                    <li class="twd--menu-item">
+                                        <a href="/pages/dashboard/personal.html" class="twd--link"> Personal </a>
+                                    </li>
+                                    <li class="twd--menu-item">
+                                        <a href="/pages/dashboard/courses.html" class="twd--link"> Courses </a>
+                                    </li>
+                                    <li class="twd--menu-item">
+                                        <a href="/pages/dashboard/projects.html" class="twd--link"> Projects </a>
+                                    </li>
+                                    <li class="twd--menu-item">
+                                        <a href="/pages/dashboard/stocks.html" class="twd--link"> Stocks </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <!-- dashboard end -->
+
+                            <!-- apps start -->
+                            <li class="tw-menu-item hs-accordion">
+                                <button type="button" data-ripple class="tw-menu-link hs-accordion-toggle">
+                                    <span class="icon-[mdi--apps]"></span>
+                                    <span class="tw-link-label">Apps</span>
+                                    <span class="tw-arrow icon-[mdi--chevron-down]"></span>
+                                </button>
+
+                                <ul class="twd--menu hs-accordion-content hs-accordion-group">
+                                    <li class="twd--menu-item">
+                                        <a href="/pages/apps/chats.html" class="twd--link"> Chats </a>
+                                    </li>
+                                    <li class="twd--menu-item">
+                                        <a href="/pages/apps/mailbox.html" class="twd--link"> Email </a>
+                                    </li>
+                                    <li class="twd--menu-item">
+                                        <a href="/pages/apps/calendars.html" class="twd--link"> Calendars </a>
+                                    </li>
+                                    <li class="twd--menu-item hs-accordion">
+                                        <button type="button" data-ripple class="twd--link hs-accordion-toggle">
+                                            Task
+                                            <span class="tw-arrow icon-[mdi--chevron-down]"></span>
+                                        </button>
+
+                                        <ul class="twd--menu hs-accordion-content">
+                                            <li class="twd--menu-item">
+                                                <a href="/pages/apps/todolist.html" class="twd--link"> Task List </a>
+                                            </li>
+                                            <li class="twd--menu-item">
+                                                <a href="/pages/apps/taks-details.html" class="twd--link">
+                                                    Task Details
+                                                </a>
+                                            </li>
+                                            <li class="twd--menu-item">
+                                                <a href="/pages/apps/kanban.html" class="twd--link"> Kanban Board </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="twd--menu-item">
+                                        <a href="/pages/apps/scrumboard.html" class="twd--link"> Scrum Board </a>
+                                    </li>
+                                    <li class="twd--menu-item">
+                                        <a href="/pages/dashboard/projects.html" class="twd--link"> Projects </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <!-- apps end -->
+
+                            <!-- page header -->
+                            <li class="tw-menu-header">
+                                <span class="minus icon-[mdi--minus]"></span>
+                                <span class="label">USER INTERFACE</span>
+                            </li>
+
+                            <!-- components start -->
+                            <li class="tw-menu-item hs-accordion">
+                                <button type="button" data-ripple class="tw-menu-link hs-accordion-toggle">
+                                    <span class="icon-[mdi--layers-outline]"></span>
+                                    <span class="tw-link-label">Components</span>
+                                    <span class="tw-arrow icon-[mdi--chevron-down]"></span>
+                                </button>
+
+                                <ul class="twd--menu hs-accordion-content">
+                                    <li class="twd--menu-item">
+                                        <a href="/pages/components/tabs.html" class="twd--link"> Tabs </a>
+                                    </li>
+                                    <li class="twd--menu-item">
+                                        <a href="/pages/components/accordions.html" class="twd--link"> Accordion </a>
+                                    </li>
+                                    <li class="twd--menu-item">
+                                        <a href="/pages/components/modals.html" class="twd--link"> Modals </a>
+                                    </li>
+                                    <li class="twd--menu-item">
+                                        <a href="/pages/components/toasts.html" class="twd--link"> Toasts </a>
+                                    </li>
+                                    <li class="twd--menu-item">
+                                        <a href="/pages/components/cards.html" class="twd--link"> Cards </a>
+                                    </li>
+                                    <li class="twd--menu-item">
+                                        <a href="/pages/components/carousel.html" class="twd--link"> Carousel </a>
+                                    </li>
+                                    <li class="twd--menu-item">
+                                        <a href="/pages/components/lightbox.html" class="twd--link"> Lightbox </a>
+                                    </li>
+                                    <li class="twd--menu-item">
+                                        <a href="/pages/components/progress.html" class="twd--link"> Progress </a>
+                                    </li>
+                                    <li class="twd--menu-item">
+                                        <a href="/pages/components/sweetalert.html" class="twd--link"> SweetAlert2 </a>
+                                    </li>
+                                    <li class="twd--menu-item">
+                                        <a href="/pages/components/dragndrop.html" class="twd--link"> Drag & Drop </a>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <!-- ui-elements start -->
+                            <li class="tw-menu-item hs-accordion">
+                                <button type="button" data-ripple class="tw-menu-link hs-accordion-toggle">
+                                    <span class="icon-[mdi--hexagon-outline]"></span>
+                                    <span class="tw-link-label">UI Elements</span>
+                                    <span class="tw-arrow icon-[mdi--chevron-down]"></span>
+                                </button>
+
+                                <ul class="twd--menu hs-accordion-content">
+                                    <li class="twd--menu-item">
+                                        <a href="/pages/ui-elements/alerts.html" class="twd--link"> Alerts </a>
+                                    </li>
+                                    <li class="twd--menu-item">
+                                        <a href="/pages/ui-elements/avatars.html" class="twd--link"> Avatars </a>
+                                    </li>
+                                    <li class="twd--menu-item">
+                                        <a href="/pages/ui-elements/badges.html" class="twd--link"> Badges </a>
+                                    </li>
+                                    <li class="twd--menu-item">
+                                        <a href="/pages/ui-elements/breadcrumbs.html" class="twd--link"> Breadcrumb </a>
+                                    </li>
+                                    <li class="twd--menu-item">
+                                        <a href="/pages/ui-elements/buttons.html" class="twd--link"> Button </a>
+                                    </li>
+                                    <li class="twd--menu-item">
+                                        <a href="/pages/ui-elements/countdown.html" class="twd--link"> Countdown </a>
+                                    </li>
+                                    <li class="twd--menu-item">
+                                        <a href="/pages/ui-elements/dropdowns.html" class="twd--link"> Dropdown </a>
+                                    </li>
+                                    <li class="twd--menu-item">
+                                        <a href="/pages/ui-elements/pagination.html" class="twd--link"> Pagination </a>
+                                    </li>
+                                    <li class="twd--menu-item">
+                                        <a href="/pages/ui-elements/drawer.html" class="twd--link"> Drawers </a>
+                                    </li>
+                                    <li class="twd--menu-item">
+                                        <a href="/pages/ui-elements/tooltips.html" class="twd--link"> Tooltips </a>
+                                    </li>
+                                    <li class="twd--menu-item">
+                                        <a href="/pages/ui-elements/treeview.html" class="twd--link"> Treeview </a>
+                                    </li>
+                                    <li class="twd--menu-item">
+                                        <a href="/pages/ui-elements/typography.html" class="twd--link"> Typography </a>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <!-- start chart -->
+                            <li class="tw-menu-item hs-accordion">
+                                <button type="button" data-ripple class="tw-menu-link hs-accordion-toggle">
+                                    <span class="icon-[mdi--poll]"></span>
+                                    <span class="tw-link-label">Charts</span>
+                                    <span class="tw-arrow icon-[mdi--chevron-down]"></span>
+                                </button>
+
+                                <ul class="twd--menu hs-accordion-content">
+                                    <li class="twd--menu-item">
+                                        <a href="/pages/charts/apexcharts.html" class="twd--link"> ApexCharts </a>
+                                    </li>
+                                    <li class="twd--menu-item">
+                                        <a href="/pages/charts/chartjs.html" class="twd--link"> ChartJs </a>
+                                    </li>
+                                    <li class="twd--menu-item">
+                                        <a href="/pages/charts/echarts.html" class="twd--link"> E Charts </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <!-- end chart -->
+                            <!-- page header -->
+                            <li class="tw-menu-header">
+                                <span class="minus icon-[mdi--minus]"></span>
+                                <span class="label">TABLES AND FORMS</span>
+                            </li>
+                            <!-- page header end -->
+
+                            <!-- start data table -->
+                            <li class="tw-menu-item hs-accordion">
+                                <button type="button" data-ripple class="tw-menu-link hs-accordion-toggle">
+                                    <span class="icon-[mdi--table-large-plus]"></span>
+                                    <span class="tw-link-label">Tables</span>
+                                    <span class="tw-arrow icon-[mdi--chevron-down]"></span>
+                                </button>
+
+                                <ul class="twd--menu hs-accordion-content">
+                                    <li class="twd--menu-item">
+                                        <a href="/pages/tables/basic.html" class="twd--link"> Tables </a>
+                                    </li>
+                                    <li class="twd--menu-item">
+                                        <a href="/pages/tables/datatable.html" class="twd--link"> Data Tables </a>
+                                    </li>
+                                    <li class="twd--menu-item">
+                                        <a href="/pages/tables/advanced.html" class="twd--link"> Advanced Tables </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <!-- end data table -->
+
+                            <!-- form elements start -->
+                            <li class="tw-menu-item hs-accordion">
+                                <button type="button" data-ripple class="tw-menu-link hs-accordion-toggle">
+                                    <span class="icon-[mdi--format-textbox]"></span>
+                                    <span class="tw-link-label">Form Elements</span>
+                                    <span class="tw-arrow icon-[mdi--chevron-down]"></span>
+                                </button>
+
+                                <ul class="twd--menu hs-accordion-content">
+                                    <li class="twd--menu-item">
+                                        <a href="/pages/forms/basic.html" class="twd--link"> Basic Elements </a>
+                                    </li>
+                                    <li class="twd--menu-item">
+                                        <a href="/pages/forms/input-group.html" class="twd--link"> Input Group </a>
+                                    </li>
+                                    <li class="twd--menu-item">
+                                        <a href="/pages/forms/select.html" class="twd--link"> Select </a>
+                                    </li>
+                                    <li class="twd--menu-item">
+                                        <a href="/pages/forms/layouts.html" class="twd--link"> Layouts </a>
+                                    </li>
+                                    <li class="twd--menu-item">
+                                        <a href="/pages/forms/validation.html" class="twd--link"> Validation </a>
+                                    </li>
+                                    <li class="twd--menu-item">
+                                        <a href="/pages/forms/input-mask.html" class="twd--link"> Input Mask </a>
+                                    </li>
+                                    <li class="twd--menu-item">
+                                        <a href="/pages/forms/checkbox-radio.html" class="twd--link">
+                                            Checkbox & Radio
+                                        </a>
+                                    </li>
+                                    <li class="twd--menu-item">
+                                        <a href="/pages/forms/switches.html" class="twd--link"> Switches </a>
+                                    </li>
+                                    <li class="twd--menu-item">
+                                        <a href="/pages/forms/wizards.html" class="twd--link"> Wizards </a>
+                                    </li>
+                                    <li class="twd--menu-item">
+                                        <a href="/pages/forms/uploads.html" class="twd--link"> File Upload </a>
+                                    </li>
+                                    <li class="twd--menu-item">
+                                        <a href="/pages/forms/editors.html" class="twd--link"> Editors </a>
+                                    </li>
+                                    <li class="twd--menu-item">
+                                        <a href="/pages/forms/datepicker.html" class="twd--link"> Date Picker </a>
+                                    </li>
+                                    <li class="twd--menu-item">
+                                        <a href="/pages/forms/clipboard.html" class="twd--link"> Clipboard </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <!-- form elements end -->
+
+                            <!-- page header -->
+                            <li class="tw-menu-header">
+                                <span class="minus icon-[mdi--minus]"></span>
+                                <span class="label">USER AND PAGES</span>
+                            </li>
+
+                            <!-- pages start -->
+                            <li class="tw-menu-item hs-accordion">
+                                <button type="button" data-ripple class="tw-menu-link hs-accordion-toggle">
+                                    <span class="icon-[mdi--file-chart-outline]"></span>
+                                    <span class="tw-link-label">
+                                        Pages
+                                        <span class="tw-menu-badge rounded-lg"> New </span>
+                                    </span>
+                                    <span class="tw-arrow icon-[mdi--chevron-down]"></span>
+                                </button>
+
+                                <ul class="twd--menu hs-accordion-content hs-accordion-group">
+                                    <li class="twd--menu-item">
+                                        <a href="/pages/about.html" class="twd--link"> About Us </a>
+                                    </li>
+                                    <li class="twd--menu-item">
+                                        <a href="/pages/landing.html" class="twd--link"> Landing </a>
+                                    </li>
+                                    <li class="twd--menu-item">
+                                        <a href="/pages/jobs-landing.html" class="twd--link"> Jobs Landing </a>
+                                    </li>
+                                    <li class="twd--menu-item">
+                                        <a href="/pages/notification.html" class="twd--link"> Notification </a>
+                                    </li>
+                                    <li class="twd--menu-item hs-accordion">
+                                        <button type="button" data-ripple class="twd--link hs-accordion-toggle">
+                                            Invoices
+                                            <span class="tw-arrow icon-[mdi--chevron-down]"></span>
+                                        </button>
+
+                                        <ul class="twd--menu hs-accordion-content">
+                                            <li class="twd--menu-item">
+                                                <a href="/pages/invoices/create.html" class="twd--link">
+                                                    Create Invoice
+                                                </a>
+                                            </li>
+                                            <li class="twd--menu-item">
+                                                <a href="/pages/invoices/details.html" class="twd--link">
+                                                    Invoice Details
+                                                </a>
+                                            </li>
+                                            <li class="twd--menu-item">
+                                                <a href="/pages/invoices/invoice-list.html" class="twd--link">
+                                                    Invoice List
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="twd--menu-item hs-accordion">
+                                        <button type="button" data-ripple class="twd--link hs-accordion-toggle">
+                                            ECommerce
+                                            <span class="tw-arrow icon-[mdi--chevron-down]"></span>
+                                        </button>
+
+                                        <ul class="twd--menu hs-accordion-content hs-accordion-group">
+                                            <li class="twd--menu-item">
+                                                <a href="/pages/ecommerce/cart.html" class="twd--link"> Cart </a>
+                                            </li>
+                                            <li class="twd--menu-item">
+                                                <a href="/pages/ecommerce/checkout.html" class="twd--link">
+                                                    Checkout
+                                                </a>
+                                            </li>
+                                            <li class="twd--menu-item hs-accordion">
+                                                <button type="button" data-ripple class="twd--link hs-accordion-toggle">
+                                                    Products
+                                                    <span class="tw-arrow icon-[mdi--chevron-down]"></span>
+                                                </button>
+
+                                                <ul class="twd--menu hs-accordion-content">
+                                                    <li class="twd--menu-item">
+                                                        <a href="/pages/products/create.html" class="twd--link">
+                                                            Add Product
+                                                        </a>
+                                                    </li>
+                                                    <li class="twd--menu-item">
+                                                        <a href="/pages/products/details.html" class="twd--link">
+                                                            Product Details
+                                                        </a>
+                                                    </li>
+                                                    <li class="twd--menu-item">
+                                                        <a href="/pages/products/invoice-edit.html" class="twd--link">
+                                                            Product Edit
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li class="twd--menu-item hs-accordion">
+                                                <button type="button" data-ripple class="twd--link hs-accordion-toggle">
+                                                    Orders
+                                                    <span class="tw-arrow icon-[mdi--chevron-down]"></span>
+                                                </button>
+
+                                                <ul class="twd--menu hs-accordion-content">
+                                                    <li class="twd--menu-item">
+                                                        <a href="/pages/orders/overview.html" class="twd--link">
+                                                            Overview
+                                                        </a>
+                                                    </li>
+                                                    <li class="twd--menu-item">
+                                                        <a href="/pages/orders/order-details.html" class="twd--link">
+                                                            Order Details
+                                                        </a>
+                                                    </li>
+                                                    <li class="twd--menu-item">
+                                                        <a href="/pages/orders/purchase-order.html" class="twd--link">
+                                                            Purchase Orders
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li class="twd--menu-item">
+                                                <a href="/pages/ecommerce/wishlist.html" class="twd--link">
+                                                    Wishlist
+                                                </a>
+                                            </li>
+                                            <li class="twd--menu-item">
+                                                <a href="/pages/ecommerce/customers.html" class="twd--link">
+                                                    Customers
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="twd--menu-item">
+                                        <a href="/pages/ecommerce/reports.html" class="twd--link"> Reports </a>
+                                    </li>
+                                    <li class="twd--menu-item">
+                                        <a href="/pages/blank.html" class="twd--link"> Empty </a>
+                                    </li>
+                                    <li class="twd--menu-item">
+                                        <a href="/pages/file-manager.html" class="twd--link"> File Manager </a>
+                                    </li>
+                                    <li class="twd--menu-item">
+                                        <a href="/pages/account/profile.html" class="twd--link"> Profile </a>
+                                    </li>
+                                    <li class="twd--menu-item">
+                                        <a href="/pages/api.html" class="twd--link"> API's </a>
+                                    </li>
+                                    <li class="twd--menu-item">
+                                        <a href="/pages/teams.html" class="twd--link"> Teams </a>
+                                    </li>
+                                    <li class="twd--menu-item">
+                                        <a href="/pages/terms-conditions.html" class="twd--link">
+                                            Terms & Conditions
+                                        </a>
+                                    </li>
+                                    <li class="twd--menu-item">
+                                        <a href="/pages/timeline.html" class="twd--link"> Timeline </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <!-- pages end -->
+
+                            <!-- page header end -->
+                            <li class="tw-menu-item">
+                                <a href="/pages/icons.html" class="tw-menu-link">
+                                    <span class="icon-[mdi--shape-outline]"></span>
+                                    <span class="tw-link-label">Icons</span>
+                                </a>
+                            </li>
+
+                            <li class="tw-menu-item">
+                                <a href="/pages/pricing-table.html" class="tw-menu-link">
+                                    <span class="icon-[mdi--file-table-outline]"></span>
+                                    <span class="tw-link-label">Pricing</span>
+                                </a>
+                            </li>
+
+                            <li class="tw-menu-item">
+                                <a href="/pages/widgets.html" class="tw-menu-link">
+                                    <span class="icon-[mdi--widgets-outline]"></span>
+                                    <span class="tw-link-label">
+                                        Widgets
+                                        <span class="tw-menu-badge rounded-lg bg-danger"> Hot </span>
+                                    </span>
+                                </a>
+                            </li>
+
+                            <!-- user profile start -->
+                            <li class="tw-menu-item hs-accordion">
+                                <button type="button" data-ripple class="tw-menu-link hs-accordion-toggle">
+                                    <span class="icon-[mdi--account-switch]"></span>
+                                    <span class="tw-link-label">Account</span>
+                                    <span class="tw-arrow icon-[mdi--chevron-down]"></span>
+                                </button>
+
+                                <ul class="twd--menu hs-accordion-content">
+                                    <li class="twd--menu-item">
+                                        <a href="/pages/account/overview.html" class="twd--link"> Overview </a>
+                                    </li>
+                                    <li class="twd--menu-item">
+                                        <a href="/pages/account/preferences.html" class="twd--link"> Notification </a>
+                                    </li>
+                                    <li class="twd--menu-item">
+                                        <a href="/pages/account/workspaces.html" class="twd--link"> Workspaces </a>
+                                    </li>
+                                    <li class="twd--menu-item">
+                                        <a href="/pages/account/plan-and-billing.html" class="twd--link">
+                                            Plan & Billing
+                                        </a>
+                                    </li>
+                                    <li class="twd--menu-item">
+                                        <a href="/pages/account/activities.html" class="twd--link"> Activities </a>
+                                    </li>
+                                    <li class="twd--menu-item">
+                                        <a href="/pages/account/members.html" class="twd--link"> Members </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <!-- user profile end -->
+
+                            <!-- authentication start -->
+                            <li class="tw-menu-item hs-accordion">
+                                <button type="button" data-ripple class="tw-menu-link hs-accordion-toggle">
+                                    <span class="icon-[mdi--logout-variant]"></span>
+                                    <span class="tw-link-label">Authentication</span>
+                                    <span class="tw-arrow icon-[mdi--chevron-down]"></span>
+                                </button>
+
+                                <ul class="twd--menu hs-accordion-content">
+                                    <li class="twd--menu-item">
+                                        <a href="/pages/login.html" class="twd--link" target="_blank"> Login </a>
+                                    </li>
+                                    <li class="twd--menu-item">
+                                        <a href="/pages/auth/register.html" class="twd--link" target="_blank">
+                                            Register
+                                        </a>
+                                    </li>
+                                    <li class="twd--menu-item">
+                                        <a href="/pages/auth/reset-password.html" class="twd--link" target="_blank">
+                                            Reset Password
+                                        </a>
+                                    </li>
+                                    <li class="twd--menu-item">
+                                        <a href="/pages/auth/pin-input.html" class="twd--link" target="_blank">
+                                            Input Pin
+                                        </a>
+                                    </li>
+                                    <li class="twd--menu-item">
+                                        <a href="/pages/auth/toggle-password.html" class="twd--link" target="_blank">
+                                            Toggle Password
+                                        </a>
+                                    </li>
+                                    <li class="twd--menu-item">
+                                        <a href="/pages/auth/strong-password.html" class="twd--link" target="_blank">
+                                            Strong Password
+                                        </a>
+                                    </li>
+                                    <li class="twd--menu-item">
+                                        <a href="/pages/auth/forget-password.html" class="twd--link" target="_blank">
+                                            Forget Password
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <!-- authentication end -->
+
+                            <!-- user management start -->
+                            <li class="tw-menu-item hs-accordion">
+                                <button type="button" data-ripple class="tw-menu-link hs-accordion-toggle">
+                                    <span class="icon-[mdi--security]"></span>
+                                    <span class="tw-link-label">Access Control</span>
+                                    <span class="tw-arrow icon-[mdi--chevron-down]"></span>
+                                </button>
+
+                                <ul class="twd--menu hs-accordion-content">
+                                    <li class="twd--menu-item">
+                                        <a href="/pages/user-management/users.html" class="twd--link"> Users </a>
+                                    </li>
+                                    <li class="twd--menu-item">
+                                        <a href="/pages/user-management/roles.html" class="twd--link"> Roles </a>
+                                    </li>
+                                    <li class="twd--menu-item">
+                                        <a href="/pages/user-management/permissions.html" class="twd--link">
+                                            Permissions
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <!-- user management end -->
+
+                            <!-- error start -->
+                            <li class="tw-menu-item hs-accordion">
+                                <button type="button" data-ripple class="tw-menu-link hs-accordion-toggle">
+                                    <span class="icon-[mdi--alert-circle-outline]"></span>
+                                    <span class="tw-link-label">Error Pages</span>
+                                    <span class="tw-arrow icon-[mdi--chevron-down]"></span>
+                                </button>
+
+                                <ul class="twd--menu hs-accordion-content">
+                                    <li class="twd--menu-item">
+                                        <a href="/pages/errors/401.html" class="twd--link" target="_blank"> 401 </a>
+                                    </li>
+                                    <li class="twd--menu-item">
+                                        <a href="/pages/errors/404.html" class="twd--link" target="_blank"> 404 </a>
+                                    </li>
+                                    <li class="twd--menu-item">
+                                        <a href="/pages/errors/500.html" class="twd--link" target="_blank"> 500 </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <!-- error end -->
+
+                            <!-- nested menu start -->
+                            <li class="tw-menu-item hs-accordion">
+                                <button type="button" data-ripple class="tw-menu-link hs-accordion-toggle">
+                                    <span class="icon-[mdi--layers-triple-outline]"></span>
+                                    <span class="tw-link-label">Nested Menu</span>
+                                    <span class="tw-arrow icon-[mdi--chevron-down]"></span>
+                                </button>
+
+                                <!-- nested menu -->
+                                <ul class="twd--menu hs-accordion-content hs-accordion-group">
+                                    <li class="twd--menu-item hs-accordion">
+                                        <button type="button" data-ripple class="twd--link hs-accordion-toggle">
+                                            Level 1
+                                            <span class="tw-arrow icon-[mdi--chevron-down]"></span>
+                                        </button>
+
+                                        <ul class="twd--menu hs-accordion-content">
+                                            <li class="twd--menu-item">
+                                                <a href="/pages/nested/lvl2.html" class="twd--link"> Level 2 </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <!-- end nested menu -->
+
+                            <!-- documentation -->
+                            <li>
+                                <div class="documents-button">
+                                    <a :href="themeDocs" target="_blank" class="documents-link">
+                                        <span class="icon-[mdi--text-box-search-outline]">description</span>
+                                        <span class="btn-label ml-2">Documentation</span>
+                                    </a>
+                                </div>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </aside>
+            <!-- end vertical-menu -->
+
+            <!-- start main content -->
+            <div class="tw--container">
+                <header class="navbar-nav" :class="navbarType">
+                    <div class="primary-header">
+                        <!-- sidebar toggle button -->
+                        <div class="flex items-center">
+                            <button type="button" class="toggle-sidebar" aria-label="Menu">
+                                <svg
+                                    stroke="currentColor"
+                                    fill="none"
+                                    stroke-width="0"
+                                    viewBox="0 0 24 24"
+                                    height="22"
+                                    width="22"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        stroke-width="2"
+                                        d="M4 6h16M4 12h8m-8 6h16"></path>
+                                </svg>
+                            </button>
+                            <a href="/index.html" class="horizontal-logo">
+                                <img src="/logo.png" alt="App Logo" class="tw-logo" />
+                                <div class="app-name" x-html="appName"></div>
+                            </a>
+                        </div>
+
+                        <div class="group relative ml-auto transition md:mx-4" data-hs-overlay="#global-search">
+                            <form action="#">
+                                <div class="relative">
+                                    <label for="quick-search-orig" class="m-0 block text-sm font-medium">
+                                        <span class="sr-only">Quick search</span>
+                                    </label>
+                                    <input
+                                        type="text"
+                                        name="quick-search"
+                                        id="quick-search-orig"
+                                        class="quick-search-input"
+                                        placeholder="Quick search..." />
+                                    <div class="absolute inset-y-0 end-0 hidden items-center p-2 md:flex">
+                                        <span class="dark--text flex rounded-md text-xs font-medium !text-gray-400">
+                                            <svg
+                                                class="size-4"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                width="24"
+                                                height="24"
+                                                viewBox="0 0 24 24"
+                                                fill="none"
+                                                stroke="currentColor"
+                                                stroke-width="2"
+                                                stroke-linecap="round"
+                                                stroke-linejoin="round">
+                                                <path
+                                                    d="M15 6v12a3 3 0 1 0 3-3H6a3 3 0 1 0 3 3V6a3 3 0 1 0-3 3h12a3 3 0 1 0-3-3"></path>
+                                            </svg>
+                                            <span>+ /</span>
+                                        </span>
+                                    </div>
+                                    <button type="button" class="quick-search-btn">
+                                        <svg
+                                            class="quick-search-svg"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            width="24"
+                                            height="24"
+                                            viewBox="0 0 24 24"
+                                            fill="none"
+                                            stroke="currentColor"
+                                            stroke-width="2"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round">
+                                            <circle cx="11" cy="11" r="8"></circle>
+                                            <path d="m21 21-4.3-4.3"></path>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </form>
+                            <div id="quick-search" class="quick-search-icon"></div>
+                        </div>
+
+                        <div class="flex items-center space-x-3">
+                            <button
+                                type="button"
+                                class="header-icon hidden md:flex"
+                                @click="toggleTheme('toggle')"
+                                aria-label="Themes">
+                                <span :class="brightnessIcon"></span>
+                            </button>
+
+                            <button type="button" class="header-icon" @click="toggleFullscreen" aria-label="Fullscreen">
+                                <span :class="fullScreenIcon"></span>
+                            </button>
+
+                            <div class="hs-dropdown">
+                                <button type="button" class="header-icon hs-dropdown-toggle" aria-label="Message">
+                                    <span class="icon-[mdi--email-outline]"></span>
+                                    <span class="tw-bell-icon">
+                                        <span class="tw-icon-badge"></span>
+                                        <span class="tw-badge-dot"></span>
+                                    </span>
+                                </button>
+                                <div class="hs-dropdown-menu dropdown-menu" role="none">
+                                    <div
+                                        class="flex justify-between border-b border-slate-100 px-4 py-4 dark:border-slate-600"
+                                        role="none">
+                                        <div
+                                            class="text-sm font-medium leading-6 text-slate-800 dark:text-slate-200"
+                                            role="none">
+                                            Messages
+                                        </div>
+                                        <div
+                                            class="text-xs text-slate-800 dark:text-slate-200 md:text-right"
+                                            role="none">
+                                            <a class="underline" href="/chat" role="none">View all</a>
+                                        </div>
+                                    </div>
+                                    <div class="divide-y divide-slate-100 dark:divide-slate-800" role="none">
+                                        <div
+                                            class="block w-full cursor-pointer px-4 py-2 text-sm text-slate-600 dark:text-slate-300"
+                                            id="headlessui-menu-item-:rj:"
+                                            role="menuitem">
+                                            <div
+                                                class="flex space-x-3 ltr:text-left rtl:space-x-reverse rtl:text-right">
+                                                <div class="flex-none">
+                                                    <div
+                                                        class="relative h-8 w-8 rounded-full bg-white dark:bg-slate-700">
+                                                        <span
+                                                            class="absolute right-0 top-0 inline-block h-[10px] w-[10px] rounded-full border border-white bg-secondary-500 dark:border-slate-700"></span>
+                                                        <img
+                                                            src="/images/users/avatar-1.png"
+                                                            alt=""
+                                                            class="block h-full w-full rounded-full border border-transparent object-cover hover:border-white" />
+                                                    </div>
+                                                </div>
+                                                <div class="flex-1">
+                                                    <div
+                                                        class="mb-1` text-sm font-medium text-slate-800 dark:text-slate-300">
+                                                        Wade Warren
+                                                    </div>
+                                                    <div
+                                                        class="mb-1 text-xs text-slate-600 hover:text-[#68768A] dark:text-slate-300">
+                                                        Hi! How are you doing?.....
+                                                    </div>
+                                                    <div class="text-xs text-slate-400 dark:text-slate-400">
+                                                        3 min ago
+                                                    </div>
+                                                </div>
+                                                <div class="flex-0">
+                                                    <span
+                                                        class="flex h-4 w-4 items-center justify-center rounded-full border border-white bg-danger-500 text-[10px] text-white">
+                                                        1
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div
+                                            class="block w-full cursor-pointer px-4 py-2 text-sm text-slate-600 dark:text-slate-300"
+                                            id="headlessui-menu-item-:rk:"
+                                            role="menuitem">
+                                            <div
+                                                class="flex space-x-3 ltr:text-left rtl:space-x-reverse rtl:text-right">
+                                                <div class="flex-none">
+                                                    <div
+                                                        class="relative h-8 w-8 rounded-full bg-white dark:bg-slate-700">
+                                                        <span
+                                                            class="absolute right-0 top-0 inline-block h-[10px] w-[10px] rounded-full border border-white bg-green-500 dark:border-slate-700"></span>
+                                                        <img
+                                                            src="/images/users/avatar-2.png"
+                                                            alt=""
+                                                            class="block h-full w-full rounded-full border border-transparent object-cover hover:border-white" />
+                                                    </div>
+                                                </div>
+                                                <div class="flex-1">
+                                                    <div
+                                                        class="mb-1` text-sm font-medium text-slate-800 dark:text-slate-300">
+                                                        Savannah Nguyen
+                                                    </div>
+                                                    <div
+                                                        class="mb-1 text-xs text-slate-600 hover:text-[#68768A] dark:text-slate-300">
+                                                        Hi! How are you doing?.....
+                                                    </div>
+                                                    <div class="text-xs text-slate-400 dark:text-slate-400">
+                                                        3 min ago
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div
+                                            class="block w-full cursor-pointer px-4 py-2 text-sm text-slate-600 dark:text-slate-300"
+                                            id="headlessui-menu-item-:rl:"
+                                            role="menuitem">
+                                            <div
+                                                class="flex space-x-3 ltr:text-left rtl:space-x-reverse rtl:text-right">
+                                                <div class="flex-none">
+                                                    <div
+                                                        class="relative h-8 w-8 rounded-full bg-white dark:bg-slate-700">
+                                                        <span
+                                                            class="absolute right-0 top-0 inline-block h-[10px] w-[10px] rounded-full border border-white bg-green-500 dark:border-slate-700"></span>
+                                                        <img
+                                                            src="/images/users/avatar-3.png"
+                                                            alt=""
+                                                            class="block h-full w-full rounded-full border border-transparent object-cover hover:border-white" />
+                                                    </div>
+                                                </div>
+                                                <div class="flex-1">
+                                                    <div
+                                                        class="mb-1` text-sm font-medium text-slate-800 dark:text-slate-300">
+                                                        Ralph Edwards
+                                                    </div>
+                                                    <div
+                                                        class="mb-1 text-xs text-slate-600 hover:text-[#68768A] dark:text-slate-300">
+                                                        Hi! How are you doing?.....
+                                                    </div>
+                                                    <div class="text-xs text-slate-400 dark:text-slate-400">
+                                                        3 min ago
+                                                    </div>
+                                                </div>
+                                                <div class="flex-0">
+                                                    <span
+                                                        class="flex h-4 w-4 items-center justify-center rounded-full border border-white bg-danger-500 text-[10px] text-white"
+                                                        >8</span
+                                                    >
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div
+                                            class="block w-full cursor-pointer px-4 py-2 text-sm text-slate-600 dark:text-slate-300"
+                                            id="headlessui-menu-item-:rm:"
+                                            role="menuitem">
+                                            <div
+                                                class="flex space-x-3 ltr:text-left rtl:space-x-reverse rtl:text-right">
+                                                <div class="flex-none">
+                                                    <div
+                                                        class="relative h-8 w-8 rounded-full bg-white dark:bg-slate-700">
+                                                        <span
+                                                            class="absolute right-0 top-0 inline-block h-[10px] w-[10px] rounded-full border border-white bg-secondary-500 dark:border-slate-700"></span>
+                                                        <img
+                                                            src="/images/users/avatar-4.png"
+                                                            alt=""
+                                                            class="block h-full w-full rounded-full border border-transparent object-cover hover:border-white" />
+                                                    </div>
+                                                </div>
+                                                <div class="flex-1">
+                                                    <div
+                                                        class="mb-1` text-sm font-medium text-slate-800 dark:text-slate-300">
+                                                        Cody Fisher
+                                                    </div>
+                                                    <div
+                                                        class="mb-1 text-xs text-slate-600 hover:text-[#68768A] dark:text-slate-300">
+                                                        Hi! How are you doing?.....
+                                                    </div>
+                                                    <div class="text-xs text-slate-400 dark:text-slate-400">
+                                                        3 min ago
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="hs-dropdown">
+                                <button type="button" class="header-icon hs-dropdown-toggle" aria-label="Notification">
+                                    <span class="icon-[mdi--bell-outline]"></span>
+                                    <span class="tw-bell-icon count">
+                                        <span class="tw-icon-badge"></span>
+                                        <span class="tw-badge-dot">5</span>
+                                    </span>
+                                </button>
+                                <div class="hs-dropdown-menu dropdown-menu" role="none">
+                                    <div
+                                        class="flex justify-between border-b border-slate-100 px-4 py-4 dark:border-slate-600"
+                                        role="none">
+                                        <div
+                                            class="text-sm font-medium leading-6 text-slate-800 dark:text-slate-200"
+                                            role="none">
+                                            Notifications
+                                        </div>
+                                        <div
+                                            class="text-xs text-slate-800 dark:text-slate-200 md:text-right"
+                                            role="none">
+                                            <a class="underline" href="/notifications" role="none">View all</a>
+                                        </div>
+                                    </div>
+                                    <div class="divide-y divide-slate-100 dark:divide-slate-800" role="none">
+                                        <div
+                                            class="block w-full cursor-pointer px-4 py-2 text-sm text-slate-600 dark:text-slate-300"
+                                            id="headlessui-menu-item-:r12:"
+                                            role="menuitem">
+                                            <div class="flex ltr:text-left rtl:text-right">
+                                                <div class="flex-none ltr:mr-3 rtl:ml-3">
+                                                    <div class="h-8 w-8 rounded-full bg-white">
+                                                        <img
+                                                            src="/images/users/avatar-1.png"
+                                                            alt="user"
+                                                            class="block h-full w-full rounded-full border border-transparent object-cover" />
+                                                    </div>
+                                                </div>
+                                                <div class="flex-1">
+                                                    <div class="text-sm text-slate-600 dark:text-slate-300">
+                                                        Your order is placed
+                                                    </div>
+                                                    <div class="text-xs leading-4 text-slate-600 dark:text-slate-300">
+                                                        Amet minim mollit non deser unt ullamco est sit aliqua.
+                                                    </div>
+                                                    <div class="mt-1 text-xs text-slate-400 dark:text-slate-400">
+                                                        3 min ago
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div
+                                            class="block w-full cursor-pointer px-4 py-2 text-sm text-slate-600 dark:text-slate-300"
+                                            id="headlessui-menu-item-:r13:"
+                                            role="menuitem">
+                                            <div class="flex ltr:text-left rtl:text-right">
+                                                <div class="flex-none ltr:mr-3 rtl:ml-3">
+                                                    <div class="h-8 w-8 rounded-full bg-white">
+                                                        <img
+                                                            src="/images/users/avatar-2.png"
+                                                            alt="user"
+                                                            class="block h-full w-full rounded-full border border-transparent object-cover" />
+                                                    </div>
+                                                </div>
+                                                <div class="flex-1">
+                                                    <div class="text-sm text-slate-600 dark:text-slate-300">
+                                                        Congratulations Darlene 🎉
+                                                    </div>
+                                                    <div class="text-xs leading-4 text-slate-600 dark:text-slate-300">
+                                                        Won the monthly best seller badge
+                                                    </div>
+                                                    <div class="mt-1 text-xs text-slate-400 dark:text-slate-400">
+                                                        3 min ago
+                                                    </div>
+                                                </div>
+                                                <div class="flex-0">
+                                                    <span
+                                                        class="inline-block h-[10px] w-[10px] rounded-full border border-white bg-danger-500 dark:border-slate-400"></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div
+                                            class="block w-full cursor-pointer px-4 py-2 text-sm text-slate-600 dark:text-slate-300"
+                                            id="headlessui-menu-item-:r14:"
+                                            role="menuitem">
+                                            <div class="flex ltr:text-left rtl:text-right">
+                                                <div class="flex-none ltr:mr-3 rtl:ml-3">
+                                                    <div class="h-8 w-8 rounded-full bg-white">
+                                                        <img
+                                                            src="/images/users/avatar-3.png"
+                                                            alt="user"
+                                                            class="block h-full w-full rounded-full border border-transparent object-cover" />
+                                                    </div>
+                                                </div>
+                                                <div class="flex-1">
+                                                    <div class="text-sm text-slate-600 dark:text-slate-300">
+                                                        Revised Order 👋
+                                                    </div>
+                                                    <div class="text-xs leading-4 text-slate-600 dark:text-slate-300">
+                                                        Won the monthly best seller badge
+                                                    </div>
+                                                    <div class="mt-1 text-xs text-slate-400 dark:text-slate-400">
+                                                        3 min ago
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div
+                                            class="block w-full cursor-pointer px-4 py-2 text-sm text-slate-600 dark:text-slate-300"
+                                            id="headlessui-menu-item-:r15:"
+                                            role="menuitem">
+                                            <div class="flex ltr:text-left rtl:text-right">
+                                                <div class="flex-none ltr:mr-3 rtl:ml-3">
+                                                    <div class="h-8 w-8 rounded-full bg-white">
+                                                        <img
+                                                            src="/images/users/avatar-4.png"
+                                                            alt="user"
+                                                            class="block h-full w-full rounded-full border border-transparent object-cover" />
+                                                    </div>
+                                                </div>
+                                                <div class="flex-1">
+                                                    <div class="text-sm text-slate-600 dark:text-slate-300">
+                                                        Brooklyn Simmons
+                                                    </div>
+                                                    <div class="text-xs leading-4 text-slate-600 dark:text-slate-300">
+                                                        Added you to Top Secret Project group...
+                                                    </div>
+                                                    <div class="mt-1 text-xs text-slate-400 dark:text-slate-400">
+                                                        3 min ago
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="hs-dropdown">
+                                <button
+                                    type="button"
+                                    aria-label="User Profile"
+                                    class="hs-dropdown-toggle flex items-center gap-2">
+                                    <img
+                                        class="h-8 w-8 rounded-md object-cover"
+                                        src="/images/author.png"
+                                        alt="Author" />
+                                </button>
+
+                                <ul class="hs-dropdown-menu dropdown-menu w-60">
+                                    <li class="user-menu-item">
+                                        <a href="#" class="user-menu-link mb-2">
+                                            <div class="flex-shrink-0">
+                                                <img
+                                                    class="h-8 w-8 rounded-full object-cover"
+                                                    src="/images/author.png"
+                                                    alt="Author" />
+                                            </div>
+                                            <div class="px-1">
+                                                <p class="font-medium leading-5 text-gray-900 dark:text-gray-300">
+                                                    Jon Michael
+                                                </p>
+                                                <p class="text-xs leading-5 text-gray-500 dark:text-gray-300">
+                                                    Computer Scientist
+                                                </p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="user-group-divider"></li>
+                                    <li class="user-menu-item">
+                                        <a href="#" class="user-menu-link">
+                                            <span class="icon-[mdi--wallet]"></span>
+                                            <span>Billing</span>
+                                        </a>
+                                    </li>
+                                    <li class="user-menu-item">
+                                        <a href="#" class="user-menu-link">
+                                            <span class="icon-[mdi--cog]"></span>
+                                            <span>Settings</span>
+                                        </a>
+                                    </li>
+                                    <li class="user-menu-item">
+                                        <a href="#" class="user-menu-link">
+                                            <span class="icon-[mdi--user]"></span>
+                                            <span>My Account</span>
+                                        </a>
+                                    </li>
+                                    <li class="user-group-divider"></li>
+                                    <li class="user-menu-item">
+                                        <div class="user-menu-link justify-between">
+                                            <span>Dark Mode</span>
+                                            <label class="relative mb-0 h-6 w-12">
+                                                <input
+                                                    type="checkbox"
+                                                    @change="toggleTheme('toggle')"
+                                                    :checked="appTheme == 'dark'"
+                                                    class="custom_switch peer absolute z-10 h-full w-full cursor-pointer opacity-0"
+                                                    id="custom_switch_checkbox4" />
+                                                <span
+                                                    class="dark:before:bg-white-dark block h-full rounded-full bg-[#ebedf2] before:absolute before:bottom-1 before:left-1 before:h-4 before:w-4 before:rounded-full before:bg-white before:transition-all before:duration-300 peer-checked:bg-primary peer-checked:before:left-7 dark:bg-dark dark:peer-checked:before:bg-white"></span>
+                                            </label>
+                                        </div>
+                                    </li>
+                                    <li class="user-group-divider"></li>
+                                    <li class="user-menu-item">
+                                        <a href="#" class="user-menu-link">
+                                            My Projects
+                                            <span
+                                                class="ml-1 inline-flex items-center justify-center rounded-full bg-primary px-2 py-1 text-xs font-bold leading-none text-white">
+                                                9
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li class="user-menu-item">
+                                        <a href="#" class="user-menu-link"> My Subscription </a>
+                                    </li>
+                                    <li class="user-menu-item group">
+                                        <div class="user-menu-link justify-between">
+                                            <span>Language</span>
+                                            <div class="flex items-center text-xs font-bold">
+                                                <img
+                                                    src="/images/flags/united-states.svg"
+                                                    class="mr-2 h-4 w-4 rounded-full"
+                                                    alt="English" />
+                                                English
+                                            </div>
+                                            <!-- language dropdown -->
+                                            <div class="language-dropdown">
+                                                <div class="language-dropdown-item">
+                                                    <img
+                                                        src="/images/flags/united-states.svg"
+                                                        class="mr-2 h-4 w-4 rounded-full"
+                                                        alt="English" />
+                                                    <span class="text-xs leading-none">English</span>
+                                                </div>
+                                                <div class="language-dropdown-item">
+                                                    <img
+                                                        src="/images/flags/france.svg"
+                                                        class="mr-2 h-4 w-4 rounded-full"
+                                                        alt="france" />
+                                                    <span class="text-xs leading-none">France</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="user-menu-item">
+                                        <a href="/pages/login.html" class="user-menu-link"> Sign out </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </header>
+
+                <main class="tw--content">
+                    <!-- Start Breadcrumb -->
+                    <nav class="breadcrumb">
+                        <div class="left-link">
+                            <h3>Invoice Details</h3>
+                        </div>
+                        <ol class="breadcrumb-nav">
+                            <li class="inline-flex items-center">
+                                <a href="/" class="breadcrumb-item"> Invoices </a>
+                            </li>
+
+                            <li aria-current="page">
+                                <div class="flex items-center">
+                                    <span class="icon-[mdi--chevron-right]"></span>
+                                    <span class="breadcrumb-item-current"> Invoice Details </span>
+                                </div>
+                            </li>
+                        </ol>
+                    </nav>
+                    <!-- End Breadcrumb -->
+                </main>
+
+                <footer class="footer" :class="footerType">
+                    <span class="footer-text">
+                        <span id="footer-year"></span>
+                        <a :href="appLink" class="hover:underline" x-html="appName">UI</a>
+                        <span class="hidden md:flex"> All Rights Reserved.</span>
+                    </span>
+                    <ul class="footer-button">
+                        <li>
+                            <a href="#" class="mr-4 hover:underline md:mr-6">About</a>
+                        </li>
+                        <li>
+                            <a href="#" class="mr-4 hover:underline md:mr-6">Privacy Policy</a>
+                        </li>
+                        <li>
+                            <a href="#" class="mr-4 hover:underline md:mr-6">Licensing</a>
+                        </li>
+                        <li>
+                            <a :href="repoLink" class="hover:underline" target="_blank"> Github </a>
+                        </li>
+                    </ul>
+                </footer>
+            </div>
+
+            <!-- Start search box -->
+            <div id="global-search" class="hs-overlay tw-modal">
+                <div class="tw-modal-dialog">
+                    <div class="tw-modal-content">
+                        <header class="tw-modal-header border-b border-gray-300 dark:border-gray-700">
+                            <div class="flex w-full items-center justify-around">
+                                <!-- Modal title -->
+                                <svg
+                                    class="quick-search-svg"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="24"
+                                    height="24"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <circle cx="11" cy="11" r="8"></circle>
+                                    <path d="m21 21-4.3-4.3"></path>
+                                </svg>
+                                <input type="text" autofocus class="search-box-input" placeholder="Quick search..." />
+                                <button type="button" class="tw-modal-close" data-hs-overlay="#global-search">
+                                    <i class="icon-[mdi--close]"></i>
+                                </button>
+                            </div>
+                        </header>
+                        <main class="tw-modal-body">
+                            <div class="flex h-44 items-center justify-center">
+                                <p>No recent searches</p>
+                            </div>
+                        </main>
+                        <footer class="tw-modal-footer border-t border-gray-300 dark:border-gray-700">
+                            <div class="flex w-full items-center justify-between">
+                                <button
+                                    type="button"
+                                    data-hs-overlay="#global-search"
+                                    class="rounded border border-gray-300 p-0.5 text-xs dark:border-gray-700">
+                                    ESC
+                                </button>
+                                <a
+                                    href="https://www.algolia.com/docsearch"
+                                    class="flex items-center"
+                                    target="_blank"
+                                    rel="noopener noreferrer">
+                                    <span class="mr-4 text-xs">Search by</span>
+                                    <img src="/images/algolia.png" alt="Algolia" class="h-6" />
+                                </a>
+                            </div>
+                        </footer>
+                    </div>
+                </div>
+            </div>
+            <!-- End search box -->
+
+            <!-- Theme customizer -->
+            <div class="theme-customizer">
+                <div x-show="showCustomizer" @click="toggleCustomizer" class="customizer-shadow"></div>
+
+                <div class="customizer-icon" @click="toggleCustomizer">
+                    <span class="icon-[mdi--cog]"></span>
+                </div>
+
+                <nav class="app-drawers theme" :class="{'!right-0' : showCustomizer}">
+                    <div class="p-4 text-center">
+                        <button type="button" class="customizer-close" @click="toggleCustomizer">
+                            <span class="icon-[mdi--close]"></span>
+                        </button>
+                        <h4 class="mb-1 dark:text-white">TEMPLATE CUSTOMIZER</h4>
+                        <p class="text-white-dark">
+                            Set preferences that will be cookies for your live preview demonstration.
+                        </p>
+                    </div>
+                    <div data-simplebar class="h-[calc(100%_-_110px)] overflow-y-auto overflow-x-hidden p-4">
+                        <div class="customizer-card">
+                            <h5 class="customizer-header">Color Scheme</h5>
+                            <p class="text-white-dark text-xs">Overall light or dark presentation.</p>
+                            <div class="mt-3 grid grid-cols-3 gap-2">
+                                <button
+                                    type="button"
+                                    class="btn flex items-center px-4"
+                                    :class="[$store.app.theme === 'light' ? 'btn-primary' :'btn-outline-primary']"
+                                    @click="toggleTheme('light')">
+                                    <span class="icon-[mdi--brightness-6]"></span>
+                                    Light
+                                </button>
+                                <button
+                                    type="button"
+                                    class="btn flex items-center px-4"
+                                    :class="[$store.app.theme === 'dark' ? 'btn-primary' :'btn-outline-primary']"
+                                    @click="toggleTheme('dark')">
+                                    <span class="icon-[mdi--brightness-2]"></span>
+                                    Dark
+                                </button>
+                                <button
+                                    type="button"
+                                    class="btn flex items-center px-4"
+                                    :class="[$store.app.theme === 'system' ? 'btn-primary' :'btn-outline-primary']"
+                                    @click="toggleTheme('system')">
+                                    <span class="icon-[mdi--brightness-auto]"></span>
+                                    System
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="customizer-card">
+                            <h5 class="customizer-header">Navigation Position</h5>
+                            <p class="text-white-dark text-xs">Select the primary navigation paradigm for your app.</p>
+                            <div class="mt-3 grid grid-cols-3 gap-2">
+                                <button
+                                    type="button"
+                                    class="btn flex items-center px-4"
+                                    :class="[$store.app.menu === 'horizontal' ? 'btn-primary' :'btn-outline-primary']"
+                                    @click="$store.app.toggleMenu('horizontal')">
+                                    Horizontal
+                                </button>
+                                <button
+                                    type="button"
+                                    class="btn flex items-center px-4 text-center"
+                                    :class="[$store.app.menu === 'vertical' ? 'btn-primary' :'btn-outline-primary']"
+                                    @click="$store.app.toggleMenu('vertical')">
+                                    Vertical
+                                </button>
+                                <button
+                                    type="button"
+                                    class="btn flex items-center px-4 text-center"
+                                    :class="[$store.app.menu === 'collapsible' ? 'btn-primary' :'btn-outline-primary']"
+                                    @click="$store.app.toggleMenu('collapsible')">
+                                    Collapsible
+                                </button>
+                            </div>
+                            <div class="mt-5 text-primary">
+                                <label class="mb-0 inline-flex items-center">
+                                    <input
+                                        x-model="$store.app.semiDark"
+                                        type="checkbox"
+                                        :value="true"
+                                        class="form-checkbox"
+                                        @change="$store.app.toggleSemiDark()" />
+                                    <span>Semi Dark (Sidebar &amp; Header)</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="customizer-card">
+                            <h5 class="customizer-header">Layout Style</h5>
+                            <p class="text-white-dark text-xs">Select the primary layout style for your app.</p>
+                            <div class="mt-3 flex gap-2">
+                                <button
+                                    type="button"
+                                    class="btn flex-auto"
+                                    :class="[$store.app.layout === 'boxed-layout' ? 'btn-primary' :'btn-outline-primary']"
+                                    @click="$store.app.toggleLayout('boxed-layout')">
+                                    Box
+                                </button>
+                                <button
+                                    type="button"
+                                    class="btn flex-auto"
+                                    :class="[$store.app.layout === 'full' ? 'btn-primary' :'btn-outline-primary']"
+                                    @click="$store.app.toggleLayout('full')">
+                                    Full
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="customizer-card">
+                            <h5 class="customizer-header">Direction</h5>
+                            <p class="text-white-dark text-xs">Select the direction for your app.</p>
+                            <div class="mt-3 flex gap-2">
+                                <button
+                                    type="button"
+                                    class="btn flex-auto"
+                                    :class="[$store.app.rtlClass === 'ltr' ? 'btn-primary' :'btn-outline-primary']"
+                                    @click="$store.app.toggleRTL('ltr')">
+                                    LTR
+                                </button>
+                                <button
+                                    type="button"
+                                    class="btn flex-auto"
+                                    :class="[$store.app.rtlClass === 'rtl' ? 'btn-primary' :'btn-outline-primary']"
+                                    @click="$store.app.toggleRTL('rtl')">
+                                    RTL
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="customizer-card">
+                            <h5 class="customizer-header">Navbar Type</h5>
+                            <p class="text-white-dark text-xs">FIxed or Static.</p>
+                            <div class="mt-3 flex items-center gap-3 text-primary">
+                                <label class="mb-0 inline-flex items-center">
+                                    <input
+                                        x-model="$store.app.navbar"
+                                        type="radio"
+                                        value="navbar-static"
+                                        class="form-radio"
+                                        @change="$store.app.toggleNavbar()"
+                                        name="$store.app.navbar" />
+                                    <span>Static</span>
+                                </label>
+                                <label class="mb-0 inline-flex items-center">
+                                    <input
+                                        x-model="$store.app.navbar"
+                                        type="radio"
+                                        value="navbar-fixed"
+                                        class="form-radio"
+                                        @change="$store.app.toggleNavbar()"
+                                        name="$store.app.navbar" />
+                                    <span>Fixed</span>
+                                </label>
+                                <label class="mb-0 inline-flex items-center">
+                                    <input
+                                        x-model="$store.app.navbar"
+                                        type="radio"
+                                        value="navbar-hidden"
+                                        class="form-radio"
+                                        @change="$store.app.toggleNavbar()"
+                                        name="$store.app.navbar" />
+                                    <span>Hidden</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="customizer-card">
+                            <h5 class="customizer-header">Footer Type</h5>
+                            <p class="text-white-dark text-xs">FIxed or Static.</p>
+                            <div class="mt-3 flex items-center gap-3 text-primary">
+                                <label class="mb-0 inline-flex items-center">
+                                    <input
+                                        x-model="$store.app.footer"
+                                        type="radio"
+                                        value="footer-static"
+                                        class="form-radio"
+                                        @change="$store.app.toggleFooter()"
+                                        name="footerType" />
+                                    <span>Static</span>
+                                </label>
+                                <label class="mb-0 inline-flex items-center">
+                                    <input
+                                        x-model="$store.app.footer"
+                                        type="radio"
+                                        value="footer-fixed"
+                                        class="form-radio"
+                                        @change="$store.app.toggleFooter()"
+                                        name="footerType" />
+                                    <span>Fixed</span>
+                                </label>
+                                <label class="mb-0 inline-flex items-center">
+                                    <input
+                                        x-model="$store.app.footer"
+                                        type="radio"
+                                        value="footer-hidden"
+                                        class="form-radio"
+                                        @change="$store.app.toggleFooter()"
+                                        name="footerType" />
+                                    <span>Hidden</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="customizer-card flex items-center justify-between">
+                            <h5 class="customizer-header">Menu Hidden</h5>
+                            <div class="mt-3 flex items-center gap-3 text-primary">
+                                <label class="relative h-6 w-12">
+                                    <input
+                                        x-model="$store.app.navbar"
+                                        type="checkbox"
+                                        class="hidden-checkbox peer"
+                                        id="hidden-switch"
+                                        @change="$store.app.toggleVMenu()" />
+                                    <span for="hidden-switch" class="hidden-switch"></span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="customizer-card">
+                            <h5 class="customizer-header">Router Transition</h5>
+                            <p class="text-white-dark text-xs">Animation of main content.</p>
+                            <div class="mt-3">
+                                <select
+                                    x-model="$store.app.animation"
+                                    class="form-select w-full border-primary text-primary"
+                                    @change="$store.app.toggleAnimation()">
+                                    <option value>Select Animation</option>
+                                    <option value="animate__fadeIn">Fade</option>
+                                    <option value="animate__fadeInDown">Fade Down</option>
+                                    <option value="animate__fadeInUp">Fade Up</option>
+                                    <option value="animate__fadeInLeft">Fade Left</option>
+                                    <option value="animate__fadeInRight">Fade Right</option>
+                                    <option value="animate__slideInDown">Slide Down</option>
+                                    <option value="animate__slideInLeft">Slide Left</option>
+                                    <option value="animate__slideInRight">Slide Right</option>
+                                    <option value="animate__zoomIn">Zoom In</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </body>
+</html>
