@@ -1,7 +1,7 @@
 @layer components {
     .vertical .horizontal-menu,
-    .collapsible .horizontal-logo,
-    .vertical .horizontal-logo {
+    .vertical .horizontal-logo,
+    .collapsible .horizontal-logo {
         @apply hidden;
     }
     .horizontal .vertical-menu,
@@ -11,10 +11,12 @@
     .horizontal-menu {
         @apply hidden items-center border-t border-gray-200 px-6 py-1.5 font-semibold dark:border-gray-600 lg:flex lg:space-x-1.5 xl:space-x-8 rtl:space-x-reverse;
     }
-
-    .horizontal .horizontal-logo,
-    .vertical.toggle-menu .horizontal-logo {
-        @apply flex;
+    .horizontal-logo {
+        @apply flex items-center ml-2 md:ml-0;
+    }
+    .horizontal .horizontal-logo .app-name,
+    .vertical.toggle-menu .horizontal-logo .app-name {
+        @apply hidden md:flex;
     }
     .vertical.toggle-menu .horizontal-logo {
         @apply ml-4;
@@ -57,10 +59,5 @@
     .horizontal-menu > li.nav-item:hover > ul.twd--menu,
     .horizontal-menu > li.nav-item > ul.twd--menu > li:hover > ul {
         @apply block;
-    }
-
-    .vertical.toggle-sidebar .collapse-icon,
-    .vertical.toggle-sidebar .horizontal-logo {
-        @apply flex;
     }
 }
