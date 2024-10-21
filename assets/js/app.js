@@ -63,21 +63,30 @@ window.tippy = tippy;
     const menuItem = document.querySelector(`.tw-nav-menu a[href="${currentPath}"]`);
 
     if (menuItem) {
+        // Add 'active' class to the selected menu item
         menuItem.classList.add('active');
-        const dropdownMenu = menuItem.closest('.twd--menu');
-        if (dropdownMenu) {
-            const targetElement = dropdownMenu.closest('.tw-menu-item')?.querySelector('.tw-menu-link');
-            const targetSubmenu = dropdownMenu.closest('.twd--menu-item')?.querySelector('.twd--link');
-            if (targetElement) {
-                targetElement.parentElement.classList.add('active');
-                targetElement.nextElementSibling.classList.add('!block');
 
-                if (targetSubmenu) {
-                    targetSubmenu.classList.add('active');
-                    targetSubmenu.parentElement.classList.add('active');
-                    targetSubmenu.nextElementSibling.classList.add('!block');
+        // Traverse upwards to expand parent accordions
+        let parentMenu = menuItem.closest('.twd--menu-item.hs-accordion'); // Start with the closest accordion
+
+        while (parentMenu) {
+            // Find the associated accordion toggle button
+            const toggleButton = parentMenu.querySelector('.hs-accordion-toggle');
+
+            if (toggleButton) {
+                // Add 'active' class to the parent accordion button
+                toggleButton.classList.add('active');
+                parentMenu.classList.add('active');
+
+                // Expand the associated submenu by adding the class to make it visible
+                const submenu = parentMenu.querySelector('.hs-accordion-content');
+                if (submenu) {
+                    submenu.classList.add('!block'); // Ensure the submenu is visible
                 }
             }
+
+            // Move up to the next parent accordion if present
+            parentMenu = parentMenu.closest('.twd--menu-item.hs-accordion')?.parentElement.closest('.hs-accordion');
         }
     }
 
