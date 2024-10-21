@@ -65,7 +65,11 @@ window.tippy = tippy;
     if (menuItem) {
         // Add 'active' class to the selected menu item
         menuItem.classList.add('active');
-
+        const targetElement = menuItem.closest('.twd--menu')?.closest('.tw-menu-item')?.querySelector('.tw-menu-link');
+        if (targetElement) {
+            targetElement.parentElement.classList.add('active');
+            targetElement.nextElementSibling.classList.add('!block');
+        }
         // Traverse upwards to expand parent accordions
         let parentMenu = menuItem.closest('.twd--menu-item.hs-accordion'); // Start with the closest accordion
 
