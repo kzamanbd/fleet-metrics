@@ -89,7 +89,7 @@
         @apply fixed inset-0 z-50 bg-[black]/60 px-4 transition-[display] supports-[backdrop-filter]:bg-light/20 supports-[backdrop-filter]:backdrop-blur;
     }
     .customizer-icon {
-        @apply fixed right-0 top-[calc(50%_-_18px)] flex cursor-pointer items-center justify-center rounded-md bg-primary p-2 text-white;
+        @apply fixed right-0 top-[calc(50%_-_18px)] z-20 flex cursor-pointer items-center justify-center rounded-md bg-primary p-2 text-white;
     }
     .customizer-card {
         @apply mb-3 rounded-md border border-dashed border-[#e0e6ed] p-3 dark:border-[#1b2e4b];

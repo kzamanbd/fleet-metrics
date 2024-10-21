@@ -68,6 +68,9 @@
     .vertical-menu .twd--link.active {
         @apply text-primary after:bg-primary;
     }
+    .tw-badge {
+        @apply badge rounded bg-yellow-400 px-1 py-0.5 text-[10px] font-medium leading-3 text-white;
+    }
     /* semi dark */
     .semi-dark .app-name {
         @apply text-gray-300;
