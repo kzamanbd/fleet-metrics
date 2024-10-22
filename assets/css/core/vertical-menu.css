@@ -94,7 +94,11 @@
     }
     .collapsed-icon,
     .expanded-icon {
-        @apply hidden dark:bg-white lg:block;
+        @apply hidden opacity-0 transition-opacity duration-300 ease-in-out dark:bg-white lg:block;
+    }
+    .vertical-menu:hover .collapsed-icon,
+    .vertical-menu:hover .expanded-icon {
+        @apply opacity-100;
     }
     .collapsed.vertical-menu {
         @apply translate-x-0 hover:w-64 lg:w-[70px];

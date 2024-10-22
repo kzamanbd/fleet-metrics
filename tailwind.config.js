@@ -24,8 +24,8 @@ export default {
                     DEFAULT: primary[500],
                 },
                 info: {
-                    ...colors.indigo,
-                    DEFAULT: colors.indigo[500],
+                    ...colors.blue,
+                    DEFAULT: colors.blue[500],
                 },
                 danger: {
                     ...colors.rose,
