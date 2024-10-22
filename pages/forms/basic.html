@@ -174,7 +174,9 @@
                                         <a href="/pages/components/lightbox.html" class="twd--link"> Lightbox </a>
                                     </li>
                                     <li class="twd--menu-item">
-                                        <a href="/pages/components/progress.html" class="twd--link"> Progress </a>
+                                        <a href="/pages/components/progress-bar.html" class="twd--link">
+                                            Progress Bar
+                                        </a>
                                     </li>
                                     <li class="twd--menu-item">
                                         <a href="/pages/components/sweetalert.html" class="twd--link"> SweetAlert2 </a>
@@ -341,6 +343,9 @@
                                         <a href="/pages/about.html" class="twd--link"> About </a>
                                     </li>
                                     <li class="twd--menu-item">
+                                        <a href="/pages/pricing.html" class="twd--link"> Pricing </a>
+                                    </li>
+                                    <li class="twd--menu-item">
                                         <a href="/pages/notification.html" class="twd--link"> Notification </a>
                                     </li>
                                     <li class="twd--menu-item hs-accordion">
@@ -446,7 +451,7 @@
                                         <a href="/pages/ecommerce/reports.html" class="twd--link"> Reports </a>
                                     </li>
                                     <li class="twd--menu-item">
-                                        <a href="/pages/blank.html" class="twd--link"> Empty </a>
+                                        <a href="/pages/empty-state.html" class="twd--link"> Empty State </a>
                                     </li>
                                     <li class="twd--menu-item">
                                         <a href="/pages/file-manager.html" class="twd--link"> File Manager </a>
@@ -455,7 +460,7 @@
                                         <a href="/pages/account/profile.html" class="twd--link"> Profile </a>
                                     </li>
                                     <li class="twd--menu-item">
-                                        <a href="/pages/api.html" class="twd--link"> API's </a>
+                                        <a href="/pages/api-keys.html" class="twd--link"> API Keys </a>
                                     </li>
                                     <li class="twd--menu-item">
                                         <a href="/pages/teams.html" class="twd--link"> Teams </a>
@@ -499,13 +504,6 @@
                                 <a href="/pages/icons.html" class="tw-menu-link">
                                     <span class="icon-[mdi--shape-outline]"></span>
                                     <span class="tw-link-label">Icons</span>
-                                </a>
-                            </li>
-
-                            <li class="tw-menu-item">
-                                <a href="/pages/pricing-table.html" class="tw-menu-link">
-                                    <span class="icon-[mdi--file-table-outline]"></span>
-                                    <span class="tw-link-label">Pricing</span>
                                 </a>
                             </li>
 
@@ -602,7 +600,7 @@
                             <li class="tw-menu-item hs-accordion">
                                 <button type="button" data-ripple class="tw-menu-link hs-accordion-toggle">
                                     <span class="icon-[mdi--support]"></span>
-                                    <span class="tw-link-label">Support</span>
+                                    <span class="tw-link-label">Help & Support</span>
                                     <span class="tw-arrow icon-[mdi--chevron-down]"></span>
                                 </button>
 
@@ -952,7 +950,7 @@
                                 <span :class="fullScreenIcon"></span>
                             </button>
 
-                            <div class="hs-dropdown">
+                            <div class="hs-dropdown [--auto-close:inside]">
                                 <button type="button" class="header-icon hs-dropdown-toggle" aria-label="Message">
                                     <span class="icon-[mdi--email-outline]"></span>
                                     <span class="tw-bell-icon">
@@ -960,7 +958,7 @@
                                         <span class="tw-badge-dot"></span>
                                     </span>
                                 </button>
-                                <div class="hs-dropdown-menu dropdown-menu" role="none">
+                                <div class="hs-dropdown-menu dropdown-menu w-full sm:w-96" role="none">
                                     <div
                                         class="flex justify-between border-b border-slate-100 px-4 py-4 dark:border-slate-600"
                                         role="none">
@@ -1120,7 +1118,7 @@
                                 </div>
                             </div>
 
-                            <div class="hs-dropdown">
+                            <div class="hs-dropdown [--auto-close:inside]">
                                 <button type="button" class="header-icon hs-dropdown-toggle" aria-label="Notification">
                                     <span class="icon-[mdi--bell-outline]"></span>
                                     <span class="tw-bell-icon count">
@@ -1128,7 +1126,7 @@
                                         <span class="tw-badge-dot">5</span>
                                     </span>
                                 </button>
-                                <div class="hs-dropdown-menu dropdown-menu" role="none">
+                                <div class="hs-dropdown-menu dropdown-menu w-full sm:w-96" role="none">
                                     <div
                                         class="flex justify-between border-b border-slate-100 px-4 py-4 dark:border-slate-600"
                                         role="none">
@@ -1256,7 +1254,7 @@
                                 </div>
                             </div>
 
-                            <div class="hs-dropdown">
+                            <div class="hs-dropdown [--auto-close:inside]">
                                 <button
                                     type="button"
                                     aria-label="User Profile"
@@ -1376,7 +1374,7 @@
                     <!-- Start Breadcrumb -->
                     <nav class="breadcrumb">
                         <div class="left-link">
-                            <h3>Basic</h3>
+                            <h4 class="breadcrumb-title">Basic</h4>
                         </div>
                         <ol class="breadcrumb-nav">
                             <li class="inline-flex items-center">
