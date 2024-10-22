@@ -133,4 +133,15 @@ document.addEventListener('DOMContentLoaded', function () {
     window.Sortable.create(example11, {
         animation: 200,
     });
+    // nested
+    const sortables = document.querySelectorAll('#hs-nested-sortable .nested-sortable');
+
+    for (var i = 0; i < sortables.length; i++) {
+        window.Sortable.create(sortables[i], {
+            group: 'nested',
+            animation: 150,
+            fallbackOnBody: true,
+            swapThreshold: 0.65,
+        });
+    }
 });
