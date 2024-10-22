@@ -723,7 +723,7 @@
                         </ul>
                     </nav>
                     <!-- project dropdown -->
-                    <div class="hs-dropdown footer-menu-dropdown [--placement:top-right]">
+                    <div class="hs-dropdown footer-menu-dropdown [--auto-close:inside] [--placement:top-right]">
                         <button
                             type="button"
                             class="hs-dropdown-toggle group inline-flex w-full items-center text-start dark:text-white">
@@ -1412,7 +1412,7 @@
                                     <template x-for="project in projectList" :key="project.id">
                                         <div class="card w-80 flex-none">
                                             <div class="card-header flex justify-between">
-                                                <h4 x-text="project.title" class="text-base font-semibold"></h4>
+                                                <h5 x-text="project.title" class="text-base font-semibold"></h5>
 
                                                 <div class="flex">
                                                     <button

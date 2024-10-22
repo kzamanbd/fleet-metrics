@@ -723,7 +723,7 @@
                         </ul>
                     </nav>
                     <!-- project dropdown -->
-                    <div class="hs-dropdown footer-menu-dropdown [--placement:top-right]">
+                    <div class="hs-dropdown footer-menu-dropdown [--auto-close:inside] [--placement:top-right]">
                         <button
                             type="button"
                             class="hs-dropdown-toggle group inline-flex w-full items-center text-start dark:text-white">
@@ -1394,582 +1394,428 @@
                     <!-- End Breadcrumb -->
 
                     <div class="space-y-4">
-                        <div class="grid grid-cols-1">
-                            <div class="card dark:border-zinc-600 dark:bg-zinc-800">
-                                <div class="card-header">Default Alerts</div>
-                                <div class="card-body text-sm">
-                                    <div class="grid grid-cols-1 gap-5 lg:grid-cols-2">
+                        <div class="card">
+                            <h5 class="card-header">Default Alerts</h5>
+                            <div class="card-body text-sm">
+                                <div class="grid grid-cols-1 gap-5 lg:grid-cols-2">
+                                    <div>
+                                        <div
+                                            class="relative mb-3 rounded border-2 border-primary-100 bg-primary-100 px-5 py-3 text-primary-700">
+                                            <p>A simple primary alert—check it out!</p>
+                                        </div>
+                                        <div
+                                            class="relative mb-3 rounded border-2 border-gray-100 bg-gray-50 px-5 py-3 text-gray-700">
+                                            <p>A simple primary alert—check it out!</p>
+                                        </div>
+                                        <div
+                                            class="relative mb-3 rounded border-2 border-green-100 bg-green-50 px-5 py-3 text-green-700">
+                                            <p>A simple primary alert—check it out!</p>
+                                        </div>
+                                        <div
+                                            class="relative rounded border-2 border-red-100 bg-red-50 px-5 py-3 text-red-700">
+                                            <p>A simple primary alert—check it out!</p>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div
+                                            class="relative mb-3 rounded border-2 border-yellow-100 bg-yellow-50 px-5 py-3 text-yellow-700">
+                                            <p>A simple primary alert—check it out!</p>
+                                        </div>
+                                        <div
+                                            class="relative mb-3 rounded border-2 border-sky-100 bg-sky-50 px-5 py-3 text-sky-700">
+                                            <p>A simple primary alert—check it out!</p>
+                                        </div>
+                                        <div
+                                            class="relative mb-3 rounded border-2 border-gray-50 bg-gray-50 px-5 py-3 text-gray-400">
+                                            <p>A simple primary alert—check it out!</p>
+                                        </div>
+                                        <div
+                                            class="relative rounded border-2 border-neutral-400 bg-neutral-300 px-5 py-3 text-neutral-800">
+                                            <p>A simple primary alert—check it out!</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <h5 class="card-header">Border Alerts</h5>
+                            <div class="card-body text-sm">
+                                <div class="grid grid-cols-1 gap-5 lg:grid-cols-2">
+                                    <div class="space-y-4">
+                                        <div
+                                            class="alert-dismissible relative flex items-center rounded border-2 border-primary-200 px-5 py-2 text-primary-500">
+                                            <p>A simple primary alert—check it out!</p>
+                                            <button class="alert-dismiss ml-auto text-lg text-primary-400">
+                                                <span class="icon-[mdi--close]"></span>
+                                            </button>
+                                        </div>
+                                        <div
+                                            class="alert-dismissible relative flex items-center rounded border-2 border-gray-200 px-5 py-2 text-gray-500 dark:text-zinc-100">
+                                            <p>A simple primary alert—check it out!</p>
+                                            <button class="alert-dismiss ml-auto text-lg text-gray-400">
+                                                <span class="icon-[mdi--close]"></span>
+                                            </button>
+                                        </div>
+                                        <div
+                                            class="alert-dismissible relative flex items-center rounded border-2 border-green-200 px-5 py-2 text-green-500">
+                                            <p>A simple primary alert—check it out!</p>
+                                            <button class="alert-dismiss ml-auto text-lg text-green-400">
+                                                <span class="icon-[mdi--close]"></span>
+                                            </button>
+                                        </div>
+                                        <div
+                                            class="alert-dismissible relative flex items-center rounded border-2 border-red-200 px-5 py-2 text-red-500">
+                                            <p>A simple primary alert—check it out!</p>
+                                            <button class="alert-dismiss ml-auto text-lg text-red-400">
+                                                <span class="icon-[mdi--close]"></span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="space-y-4">
+                                        <div
+                                            class="alert-dismissible relative flex items-center rounded border-2 border-yellow-200 px-5 py-2 text-yellow-500">
+                                            <p>A simple primary alert—check it out!</p>
+                                            <button class="alert-dismiss ml-auto text-lg text-yellow-400">
+                                                <span class="icon-[mdi--close]"></span>
+                                            </button>
+                                        </div>
+                                        <div
+                                            class="alert-dismissible relative flex items-center rounded border-2 border-sky-200 px-5 py-2 text-sky-500">
+                                            <p>A simple primary alert—check it out!</p>
+                                            <button class="alert-dismiss ml-auto text-lg text-sky-400">
+                                                <span class="icon-[mdi--close]"></span>
+                                            </button>
+                                        </div>
+                                        <div
+                                            class="alert-dismissible relative flex items-center rounded border-2 border-gray-50 px-5 py-2 text-gray-500 dark:text-zinc-100">
+                                            <p>A simple primary alert—check it out!</p>
+                                            <button class="alert-dismiss ml-auto text-lg text-gray-400">
+                                                <span class="icon-[mdi--close]"></span>
+                                            </button>
+                                        </div>
+                                        <div
+                                            class="alert-dismissible relative flex items-center rounded border-2 border-neutral-200 px-5 py-2 text-neutral-500 dark:text-zinc-100">
+                                            <p>A simple primary alert—check it out!</p>
+                                            <button class="alert-dismiss ml-auto text-lg text-neutral-400">
+                                                <span class="icon-[mdi--close]"></span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <h5 class="card-header">With description</h5>
+                            <div class="card-body text-sm">
+                                <div class="grid grid-cols-1 gap-4">
+                                    <div
+                                        class="flex rounded border-2 border-primary-100 bg-primary-100 px-5 py-3 text-primary-700">
+                                        <span class="icon-[mdi--face-agent] mr-2 text-xl"> </span>
                                         <div>
-                                            <div
-                                                class="relative mb-3 rounded border-2 border-primary-100 bg-primary-100 px-5 py-3 text-primary-700">
-                                                <p>A simple primary alert—check it out!</p>
-                                            </div>
-                                            <div
-                                                class="relative mb-3 rounded border-2 border-gray-100 bg-gray-50 px-5 py-3 text-gray-700">
-                                                <p>A simple primary alert—check it out!</p>
-                                            </div>
-                                            <div
-                                                class="relative mb-3 rounded border-2 border-green-100 bg-green-50 px-5 py-3 text-green-700">
-                                                <p>A simple primary alert—check it out!</p>
-                                            </div>
-                                            <div
-                                                class="relative rounded border-2 border-red-100 bg-red-50 px-5 py-3 text-red-700">
-                                                <p>A simple primary alert—check it out!</p>
-                                            </div>
+                                            <h6 class=" ">Primary Alert</h6>
+                                            <p class="mt-2">
+                                                More info about this info alert goes here. This example text is going to
+                                                run a bit longer so that you can see how spacing within an alert works
+                                                with this kind of content.
+                                            </p>
                                         </div>
+                                    </div>
+                                    <div
+                                        class="flex rounded border-2 border-green-100 bg-green-50 px-5 py-3 text-green-700">
+                                        <span class="icon-[mdi--check-outline] mr-2 text-xl"> </span>
                                         <div>
-                                            <div
-                                                class="relative mb-3 rounded border-2 border-yellow-100 bg-yellow-50 px-5 py-3 text-yellow-700">
-                                                <p>A simple primary alert—check it out!</p>
-                                            </div>
-                                            <div
-                                                class="relative mb-3 rounded border-2 border-sky-100 bg-sky-50 px-5 py-3 text-sky-700">
-                                                <p>A simple primary alert—check it out!</p>
-                                            </div>
-                                            <div
-                                                class="relative mb-3 rounded border-2 border-gray-50 bg-gray-50 px-5 py-3 text-gray-400">
-                                                <p>A simple primary alert—check it out!</p>
-                                            </div>
-                                            <div
-                                                class="relative rounded border-2 border-neutral-400 bg-neutral-300 px-5 py-3 text-neutral-800">
-                                                <p>A simple primary alert—check it out!</p>
-                                            </div>
+                                            <h6 class=" ">Success Alert</h6>
+                                            <p class="mt-2">
+                                                More info about this info alert goes here. This example text is going to
+                                                run a bit longer so that you can see how spacing within an alert works
+                                                with this kind of content.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="flex rounded border-2 border-red-100 bg-red-50 px-5 py-3 text-red-700">
+                                        <span class="icon-[mdi--cancel] mr-2 text-xl"> </span>
+                                        <div>
+                                            <h6 class=" ">Danger Alert</h6>
+                                            <p class="mt-2">
+                                                More info about this info alert goes here. This example text is going to
+                                                run a bit longer so that you can see how spacing within an alert works
+                                                with this kind of content.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="flex rounded border-2 border-yellow-100 bg-yellow-50 px-5 py-3 text-yellow-700">
+                                        <span class="icon-[mdi--alert] mr-2 text-xl"> </span>
+                                        <div>
+                                            <h6 class=" ">Warning Alert</h6>
+                                            <p class="mt-2">
+                                                More info about this info alert goes here. This example text is going to
+                                                run a bit longer so that you can see how spacing within an alert works
+                                                with this kind of content.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="flex rounded border-2 border-sky-100 bg-sky-50 px-5 py-3 text-sky-700">
+                                        <span class="icon-[mdi--timer-sand] mr-2 text-xl"> </span>
+                                        <div>
+                                            <h6 class=" ">Info Alert</h6>
+                                            <p class="mt-2">
+                                                More info about this info alert goes here. This example text is going to
+                                                run a bit longer so that you can see how spacing within an alert works
+                                                with this kind of content.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="flex rounded border-2 border-gray-100 bg-gray-50 px-5 py-3 text-gray-700">
+                                        <span class="icon-[mdi--check-all] mr-2 text-xl"> </span>
+                                        <div>
+                                            <h6 class=" ">Light Alert</h6>
+                                            <p class="mt-2">
+                                                More info about this info alert goes here. This example text is going to
+                                                run a bit longer so that you can see how spacing within an alert works
+                                                with this kind of content.
+                                            </p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="grid grid-cols-1">
-                            <div class="card dark:border-zinc-600 dark:bg-zinc-800">
-                                <div class="card-header">Border Alerts</div>
-                                <div class="card-body text-sm">
-                                    <div class="grid grid-cols-1 gap-5 lg:grid-cols-2">
-                                        <div class="space-y-4">
-                                            <div
-                                                class="alert-dismissible relative flex items-center rounded border-2 border-primary-200 px-5 py-2 text-primary-500">
-                                                <p>A simple primary alert—check it out!</p>
-                                                <button class="alert-dismiss ml-auto text-lg text-primary-400">
-                                                    <span class="icon-[mdi--close]"></span>
-                                                </button>
-                                            </div>
-                                            <div
-                                                class="alert-dismissible relative flex items-center rounded border-2 border-gray-200 px-5 py-2 text-gray-500 dark:text-zinc-100">
-                                                <p>A simple primary alert—check it out!</p>
-                                                <button class="alert-dismiss ml-auto text-lg text-gray-400">
-                                                    <span class="icon-[mdi--close]"></span>
-                                                </button>
-                                            </div>
-                                            <div
-                                                class="alert-dismissible relative flex items-center rounded border-2 border-green-200 px-5 py-2 text-green-500">
-                                                <p>A simple primary alert—check it out!</p>
-                                                <button class="alert-dismiss ml-auto text-lg text-green-400">
-                                                    <span class="icon-[mdi--close]"></span>
-                                                </button>
-                                            </div>
-                                            <div
-                                                class="alert-dismissible relative flex items-center rounded border-2 border-red-200 px-5 py-2 text-red-500">
-                                                <p>A simple primary alert—check it out!</p>
-                                                <button class="alert-dismiss ml-auto text-lg text-red-400">
-                                                    <span class="icon-[mdi--close]"></span>
-                                                </button>
-                                            </div>
+                        <div class="card">
+                            <h5 class="card-header">With List Alerts</h5>
+                            <div class="card-body text-sm">
+                                <div class="grid grid-cols-1 gap-5">
+                                    <div class="flex rounded bg-primary-100 p-4 text-sm text-primary-700" role="alert">
+                                        <span class="icon-[mdi--face-agent] -mt-1 mr-3 text-xl"> </span>
+                                        <span class="sr-only">Info</span>
+                                        <div>
+                                            <span class="font-medium">
+                                                There were 2 warnings with your submission
+                                            </span>
+                                            <ul class="ml-4 mt-1.5 list-inside list-disc">
+                                                <li>Could not load content for this code..</li>
+                                                <li>Failed to load resource..</li>
+                                            </ul>
                                         </div>
-                                        <div class="space-y-4">
-                                            <div
-                                                class="alert-dismissible relative flex items-center rounded border-2 border-yellow-200 px-5 py-2 text-yellow-500">
-                                                <p>A simple primary alert—check it out!</p>
-                                                <button class="alert-dismiss ml-auto text-lg text-yellow-400">
-                                                    <span class="icon-[mdi--close]"></span>
-                                                </button>
-                                            </div>
-                                            <div
-                                                class="alert-dismissible relative flex items-center rounded border-2 border-sky-200 px-5 py-2 text-sky-500">
-                                                <p>A simple primary alert—check it out!</p>
-                                                <button class="alert-dismiss ml-auto text-lg text-sky-400">
-                                                    <span class="icon-[mdi--close]"></span>
-                                                </button>
-                                            </div>
-                                            <div
-                                                class="alert-dismissible relative flex items-center rounded border-2 border-gray-50 px-5 py-2 text-gray-500 dark:text-zinc-100">
-                                                <p>A simple primary alert—check it out!</p>
-                                                <button class="alert-dismiss ml-auto text-lg text-gray-400">
-                                                    <span class="icon-[mdi--close]"></span>
-                                                </button>
-                                            </div>
-                                            <div
-                                                class="alert-dismissible relative flex items-center rounded border-2 border-neutral-200 px-5 py-2 text-neutral-500 dark:text-zinc-100">
-                                                <p>A simple primary alert—check it out!</p>
-                                                <button class="alert-dismiss ml-auto text-lg text-neutral-400">
-                                                    <span class="icon-[mdi--close]"></span>
-                                                </button>
-                                            </div>
+                                    </div>
+                                    <div class="flex rounded bg-green-50 p-4 text-sm text-green-700" role="alert">
+                                        <span class="icon-[mdi--check-outline] -mt-1 mr-3 text-xl"></span>
+                                        <span class="sr-only">Info</span>
+                                        <div>
+                                            <span class="font-medium">
+                                                There were 2 warnings with your submission
+                                            </span>
+                                            <ul class="ml-4 mt-1.5 list-inside list-disc">
+                                                <li>Could not load content for this code..</li>
+                                                <li>Failed to load resource..</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="flex rounded bg-red-50 p-4 text-sm text-red-700" role="alert">
+                                        <span class="icon-[mdi--cancel] -mt-1 mr-3 text-xl"> </span>
+                                        <span class="sr-only">Info</span>
+                                        <div>
+                                            <span class="font-medium"> There were 2 errors with your submission </span>
+                                            <ul class="ml-4 mt-1.5 list-inside list-disc">
+                                                <li>Your password must be at least 8 characters</li>
+                                                <li>
+                                                    Your password must include at least one pro wrestlling finishing
+                                                    move
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="flex rounded bg-yellow-50 p-4 text-sm text-yellow-700" role="alert">
+                                        <span class="icon-[mdi--alert] -mt-1 mr-3 text-xl"> </span>
+                                        <span class="sr-only">Info</span>
+                                        <div>
+                                            <span class="font-medium">
+                                                There were 2 warnings with your submission
+                                            </span>
+                                            <ul class="ml-4 mt-1.5 list-inside list-disc">
+                                                <li>Could not load content for this code..</li>
+                                                <li>Failed to load resource..</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="flex rounded bg-sky-50 p-4 text-sm text-sky-700" role="alert">
+                                        <span class="icon-[mdi--timer-sand] -mt-1 mr-3 text-xl"></span>
+                                        <span class="sr-only">Info</span>
+                                        <div>
+                                            <span class="font-medium">
+                                                There were 2 warnings with your submission
+                                            </span>
+                                            <ul class="ml-4 mt-1.5 list-inside list-disc">
+                                                <li>Could not load content for this code..</li>
+                                                <li>Failed to load resource..</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="flex rounded bg-gray-50 p-4 text-sm text-gray-700" role="alert">
+                                        <span class="icon-[mdi--check-all] -mt-1 mr-3 text-xl"> </span>
+                                        <span class="sr-only">Info</span>
+                                        <div>
+                                            <span class="font-medium">
+                                                There were 2 warnings with your submission
+                                            </span>
+                                            <ul class="ml-4 mt-1.5 list-inside list-disc">
+                                                <li>Could not load content for this code..</li>
+                                                <li>Failed to load resource..</li>
+                                            </ul>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="grid grid-cols-1">
-                            <div class="card dark:border-zinc-600 dark:bg-zinc-800">
-                                <div class="card-header">With description</div>
-                                <div class="card-body text-sm">
-                                    <div class="grid grid-cols-1 gap-4">
-                                        <div
-                                            class="flex rounded border-2 border-primary-100 bg-primary-100 px-5 py-3 text-primary-700">
-                                            <span class="icon-[mdi--face-agent] mr-2 text-xl"> </span>
-                                            <div>
-                                                <h6 class=" ">Primary Alert</h6>
-                                                <p class="mt-2">
-                                                    More info about this info alert goes here. This example text is
-                                                    going to run a bit longer so that you can see how spacing within an
-                                                    alert works with this kind of content.
-                                                </p>
-                                            </div>
-                                        </div>
-                                        <div
-                                            class="flex rounded border-2 border-green-100 bg-green-50 px-5 py-3 text-green-700">
-                                            <span class="icon-[mdi--check-outline] mr-2 text-xl"> </span>
-                                            <div>
-                                                <h6 class=" ">Success Alert</h6>
-                                                <p class="mt-2">
-                                                    More info about this info alert goes here. This example text is
-                                                    going to run a bit longer so that you can see how spacing within an
-                                                    alert works with this kind of content.
-                                                </p>
-                                            </div>
-                                        </div>
-                                        <div
-                                            class="flex rounded border-2 border-red-100 bg-red-50 px-5 py-3 text-red-700">
-                                            <span class="icon-[mdi--cancel] mr-2 text-xl"> </span>
-                                            <div>
-                                                <h6 class=" ">Danger Alert</h6>
-                                                <p class="mt-2">
-                                                    More info about this info alert goes here. This example text is
-                                                    going to run a bit longer so that you can see how spacing within an
-                                                    alert works with this kind of content.
-                                                </p>
-                                            </div>
-                                        </div>
-                                        <div
-                                            class="flex rounded border-2 border-yellow-100 bg-yellow-50 px-5 py-3 text-yellow-700">
-                                            <span class="icon-[mdi--alert] mr-2 text-xl"> </span>
-                                            <div>
-                                                <h6 class=" ">Warning Alert</h6>
-                                                <p class="mt-2">
-                                                    More info about this info alert goes here. This example text is
-                                                    going to run a bit longer so that you can see how spacing within an
-                                                    alert works with this kind of content.
-                                                </p>
-                                            </div>
-                                        </div>
-                                        <div
-                                            class="flex rounded border-2 border-sky-100 bg-sky-50 px-5 py-3 text-sky-700">
-                                            <span class="icon-[mdi--timer-sand] mr-2 text-xl"> </span>
-                                            <div>
-                                                <h6 class=" ">Info Alert</h6>
-                                                <p class="mt-2">
-                                                    More info about this info alert goes here. This example text is
-                                                    going to run a bit longer so that you can see how spacing within an
-                                                    alert works with this kind of content.
-                                                </p>
-                                            </div>
-                                        </div>
-                                        <div
-                                            class="flex rounded border-2 border-gray-100 bg-gray-50 px-5 py-3 text-gray-700">
-                                            <span class="icon-[mdi--check-all] mr-2 text-xl"> </span>
-                                            <div>
-                                                <h6 class=" ">Light Alert</h6>
-                                                <p class="mt-2">
-                                                    More info about this info alert goes here. This example text is
-                                                    going to run a bit longer so that you can see how spacing within an
-                                                    alert works with this kind of content.
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        <div class="card">
+                            <h5 class="card-header">With Actions</h5>
+                            <div class="card-body text-sm">
+                                <div class="grid grid-cols-1 gap-5">
+                                    <div class="flex rounded bg-primary-100 p-4 text-sm text-primary-700" role="alert">
+                                        <span class="icon-[mdi--face-agent] -mt-1 mr-3 text-xl"> </span>
+                                        <span class="sr-only">Info</span>
+                                        <div>
+                                            <span class="font-semibold">Order Completed</span>
+                                            <p class="mt-1">
+                                                More info about this info warning goes here. This example text is going
+                                                to run a bit longer so that you can see how spacing within an alert
+                                                works with this kind of content.
+                                            </p>
 
-                        <div class="grid grid-cols-1">
-                            <div class="card dark:border-zinc-600 dark:bg-zinc-800">
-                                <div class="card-header">With List Alerts</div>
-                                <div class="card-body text-sm">
-                                    <div class="grid grid-cols-1 gap-5">
-                                        <div
-                                            class="flex rounded bg-primary-100 p-4 text-sm text-primary-700"
-                                            role="alert">
-                                            <span class="icon-[mdi--face-agent] -mt-1 mr-3 text-xl"> </span>
-                                            <span class="sr-only">Info</span>
-                                            <div>
-                                                <span class="font-medium">
-                                                    There were 2 warnings with your submission
-                                                </span>
-                                                <ul class="ml-4 mt-1.5 list-inside list-disc">
-                                                    <li>Could not load content for this code..</li>
-                                                    <li>Failed to load resource..</li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                        <div class="flex rounded bg-green-50 p-4 text-sm text-green-700" role="alert">
-                                            <span class="icon-[mdi--check-outline] -mt-1 mr-3 text-xl"></span>
-                                            <span class="sr-only">Info</span>
-                                            <div>
-                                                <span class="font-medium">
-                                                    There were 2 warnings with your submission
-                                                </span>
-                                                <ul class="ml-4 mt-1.5 list-inside list-disc">
-                                                    <li>Could not load content for this code..</li>
-                                                    <li>Failed to load resource..</li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                        <div class="flex rounded bg-red-50 p-4 text-sm text-red-700" role="alert">
-                                            <span class="icon-[mdi--cancel] -mt-1 mr-3 text-xl"> </span>
-                                            <span class="sr-only">Info</span>
-                                            <div>
-                                                <span class="font-medium">
-                                                    There were 2 errors with your submission
-                                                </span>
-                                                <ul class="ml-4 mt-1.5 list-inside list-disc">
-                                                    <li>Your password must be at least 8 characters</li>
-                                                    <li>
-                                                        Your password must include at least one pro wrestlling finishing
-                                                        move
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                        <div class="flex rounded bg-yellow-50 p-4 text-sm text-yellow-700" role="alert">
-                                            <span class="icon-[mdi--alert] -mt-1 mr-3 text-xl"> </span>
-                                            <span class="sr-only">Info</span>
-                                            <div>
-                                                <span class="font-medium">
-                                                    There were 2 warnings with your submission
-                                                </span>
-                                                <ul class="ml-4 mt-1.5 list-inside list-disc">
-                                                    <li>Could not load content for this code..</li>
-                                                    <li>Failed to load resource..</li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                        <div class="flex rounded bg-sky-50 p-4 text-sm text-sky-700" role="alert">
-                                            <span class="icon-[mdi--timer-sand] -mt-1 mr-3 text-xl"></span>
-                                            <span class="sr-only">Info</span>
-                                            <div>
-                                                <span class="font-medium">
-                                                    There were 2 warnings with your submission
-                                                </span>
-                                                <ul class="ml-4 mt-1.5 list-inside list-disc">
-                                                    <li>Could not load content for this code..</li>
-                                                    <li>Failed to load resource..</li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                        <div class="flex rounded bg-gray-50 p-4 text-sm text-gray-700" role="alert">
-                                            <span class="icon-[mdi--check-all] -mt-1 mr-3 text-xl"> </span>
-                                            <span class="sr-only">Info</span>
-                                            <div>
-                                                <span class="font-medium">
-                                                    There were 2 warnings with your submission
-                                                </span>
-                                                <ul class="ml-4 mt-1.5 list-inside list-disc">
-                                                    <li>Could not load content for this code..</li>
-                                                    <li>Failed to load resource..</li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="grid grid-cols-1">
-                            <div class="card dark:border-zinc-600 dark:bg-zinc-800">
-                                <div class="card-header">With Actions</div>
-                                <div class="card-body text-sm">
-                                    <div class="grid grid-cols-1 gap-5">
-                                        <div
-                                            class="flex rounded bg-primary-100 p-4 text-sm text-primary-700"
-                                            role="alert">
-                                            <span class="icon-[mdi--face-agent] -mt-1 mr-3 text-xl"> </span>
-                                            <span class="sr-only">Info</span>
-                                            <div>
-                                                <span class="font-semibold">Order Completed</span>
-                                                <p class="mt-1">
-                                                    More info about this info warning goes here. This example text is
-                                                    going to run a bit longer so that you can see how spacing within an
-                                                    alert works with this kind of content.
-                                                </p>
-
-                                                <div class="mt-4 flex gap-3">
-                                                    <button
-                                                        type="button"
-                                                        class="btn border-primary-500 font-semibold hover:bg-primary-500 hover:text-white">
-                                                        View Status
-                                                    </button>
-                                                    <button
-                                                        type="button"
-                                                        class="btn border-transparent font-semibold text-gray-400 hover:border hover:border-gray-400">
-                                                        Dismiss
-                                                    </button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="flex rounded bg-green-50 p-4 text-sm text-green-700" role="alert">
-                                            <span class="icon-[mdi--check-outline] -mt-1 mr-3 text-xl"></span>
-                                            <span class="sr-only">Info</span>
-                                            <div>
-                                                <span class="font-semibold">Order Completed</span>
-                                                <p class="mt-1">
-                                                    More info about this info warning goes here. This example text is
-                                                    going to run a bit longer so that you can see how spacing within an
-                                                    alert works with this kind of content.
-                                                </p>
-                                                <div class="mt-4 flex gap-3">
-                                                    <button
-                                                        type="button"
-                                                        class="btn border-green-700 font-semibold hover:bg-green-700 hover:text-white">
-                                                        View Status
-                                                    </button>
-                                                    <button
-                                                        type="button"
-                                                        class="btn border-transparent font-semibold text-gray-400 hover:border hover:border-gray-400">
-                                                        Dismiss
-                                                    </button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="flex rounded bg-red-50 p-4 text-sm text-red-700" role="alert">
-                                            <span class="icon-[mdi--cancel] -mt-1 mr-3 text-xl"> </span>
-                                            <span class="sr-only">Info</span>
-                                            <div>
-                                                <span class="font-semibold">Order Completed</span>
-                                                <p class="mt-1">
-                                                    More info about this info warning goes here. This example text is
-                                                    going to run a bit longer so that you can see how spacing within an
-                                                    alert works with this kind of content.
-                                                </p>
-                                                <div class="mt-4 flex gap-3">
-                                                    <button
-                                                        type="button"
-                                                        class="btn border-red-700 font-semibold hover:bg-red-700 hover:text-white">
-                                                        View Status
-                                                    </button>
-                                                    <button
-                                                        type="button"
-                                                        class="btn border-transparent font-semibold text-gray-400 hover:border hover:border-gray-400">
-                                                        Dismiss
-                                                    </button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="flex rounded bg-yellow-50 p-4 text-sm text-yellow-700" role="alert">
-                                            <span class="icon-[mdi--alert] -mt-1 mr-3 text-xl"> </span>
-                                            <span class="sr-only">Info</span>
-                                            <div>
-                                                <span class="font-semibold">Order Completed</span>
-                                                <p class="mt-1">
-                                                    More info about this info warning goes here. This example text is
-                                                    going to run a bit longer so that you can see how spacing within an
-                                                    alert works with this kind of content.
-                                                </p>
-                                                <div class="mt-4 flex gap-3">
-                                                    <button
-                                                        type="button"
-                                                        class="btn border-yellow-700 font-semibold hover:bg-yellow-700 hover:text-white">
-                                                        View Status
-                                                    </button>
-                                                    <button
-                                                        type="button"
-                                                        class="btn border-transparent font-semibold text-gray-400 hover:border hover:border-gray-400">
-                                                        Dismiss
-                                                    </button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="flex rounded bg-sky-50 p-4 text-sm text-sky-700" role="alert">
-                                            <span class="icon-[mdi--timer-sand] -mt-1 mr-3 text-xl"></span>
-                                            <span class="sr-only">Info</span>
-                                            <div>
-                                                <span class="font-semibold">Order Completed</span>
-                                                <p class="mt-1">
-                                                    More info about this info warning goes here. This example text is
-                                                    going to run a bit longer so that you can see how spacing within an
-                                                    alert works with this kind of content.
-                                                </p>
-                                                <div class="mt-4 flex gap-3">
-                                                    <button
-                                                        type="button"
-                                                        class="btn border-sky-700 font-semibold hover:bg-sky-700 hover:text-white">
-                                                        View Status
-                                                    </button>
-                                                    <button
-                                                        type="button"
-                                                        class="btn border-transparent font-semibold text-gray-400 hover:border hover:border-gray-400">
-                                                        Dismiss
-                                                    </button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="flex rounded bg-gray-50 p-4 text-sm text-gray-700" role="alert">
-                                            <span class="icon-[mdi--check-all] -mt-1 mr-3 text-xl"> </span>
-                                            <span class="sr-only">Info</span>
-                                            <div>
-                                                <span class="font-semibold">Order Completed</span>
-                                                <p class="mt-1">
-                                                    More info about this info warning goes here. This example text is
-                                                    going to run a bit longer so that you can see how spacing within an
-                                                    alert works with this kind of content.
-                                                </p>
-                                                <div class="mt-4 flex gap-3">
-                                                    <button
-                                                        type="button"
-                                                        class="btn border-gray-700 font-semibold hover:bg-gray-700 hover:text-white">
-                                                        View Status
-                                                    </button>
-                                                    <button
-                                                        type="button"
-                                                        class="btn border-transparent font-semibold text-gray-400 hover:border hover:border-gray-400">
-                                                        Dismiss
-                                                    </button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="grid grid-cols-1">
-                            <div class="card dark:border-zinc-600 dark:bg-zinc-800">
-                                <div class="card-header">With link on right</div>
-                                <div class="card-body text-sm">
-                                    <div class="grid grid-cols-1 gap-5 lg:grid-cols-2">
-                                        <div class="space-y-4">
-                                            <div
-                                                class="alert-dismissible flex items-center rounded bg-primary-100 px-5 py-2">
-                                                <p class="text-primary-600">
-                                                    <span
-                                                        class="icon-[mdi--check-circle-outline] mr-2 align-middle text-xl"></span>
-                                                    <span class="align-middle">
-                                                        A new software update is available.
-                                                    </span>
-                                                </p>
+                                            <div class="mt-4 flex gap-3">
                                                 <button
-                                                    class="ml-auto mt-1 align-middle font-semibold text-primary-600">
-                                                    Details
-                                                    <span
-                                                        class="icon-[mdi--arrow-right-thin] ml-1 align-middle text-lg"></span>
+                                                    type="button"
+                                                    class="btn border-primary-500 font-semibold hover:bg-primary-500 hover:text-white">
+                                                    View Status
                                                 </button>
-                                            </div>
-                                            <div
-                                                class="alert-dismissible flex items-center rounded bg-gray-50 px-5 py-2">
-                                                <p class="text-gray-600">
-                                                    <span
-                                                        class="icon-[mdi--check-circle-outline] mr-2 align-middle text-xl"></span>
-                                                    <span class="align-middle">
-                                                        A new software update is available.
-                                                    </span>
-                                                </p>
-                                                <button class="ml-auto mt-1 align-middle font-semibold text-gray-600">
-                                                    Details
-                                                    <span
-                                                        class="icon-[mdi--arrow-right-thin] ml-1 align-middle text-lg"></span>
-                                                </button>
-                                            </div>
-                                            <div
-                                                class="alert-dismissible flex items-center rounded bg-green-50 px-5 py-2">
-                                                <p class="text-green-600">
-                                                    <span
-                                                        class="icon-[mdi--check-circle-outline] mr-2 align-middle text-xl"></span>
-                                                    <span class="align-middle">
-                                                        A new software update is available.
-                                                    </span>
-                                                </p>
-                                                <button class="ml-auto mt-1 align-middle font-semibold text-green-600">
-                                                    Details
-                                                    <span
-                                                        class="icon-[mdi--arrow-right-thin] ml-1 align-middle text-lg"></span>
-                                                </button>
-                                            </div>
-                                            <div
-                                                class="alert-dismissible flex items-center rounded bg-red-50 px-5 py-2">
-                                                <p class="text-red-600">
-                                                    <span
-                                                        class="icon-[mdi--check-circle-outline] mr-2 align-middle text-xl"></span>
-                                                    <span class="align-middle">
-                                                        A new software update is available.
-                                                    </span>
-                                                </p>
-                                                <button class="ml-auto mt-1 align-middle font-semibold text-red-600">
-                                                    Details
-                                                    <span
-                                                        class="icon-[mdi--arrow-right-thin] ml-1 align-middle text-lg"></span>
+                                                <button
+                                                    type="button"
+                                                    class="btn border-transparent font-semibold text-gray-400 hover:border hover:border-gray-400">
+                                                    Dismiss
                                                 </button>
                                             </div>
                                         </div>
-                                        <div class="space-y-4">
-                                            <div
-                                                class="alert-dismissible flex items-center rounded bg-yellow-50 px-5 py-2">
-                                                <p class="text-yellow-600">
-                                                    <span
-                                                        class="icon-[mdi--check-circle-outline] mr-2 align-middle text-xl"></span>
-                                                    <span class="align-middle">
-                                                        A new software update is available.
-                                                    </span>
-                                                </p>
-                                                <button class="ml-auto mt-1 align-middle font-semibold text-yellow-600">
-                                                    Details
-                                                    <span
-                                                        class="icon-[mdi--arrow-right-thin] ml-1 align-middle text-lg"></span>
-                                                </button>
-                                            </div>
-                                            <div
-                                                class="alert-dismissible flex items-center rounded bg-sky-50 px-5 py-2">
-                                                <p class="text-sky-600">
-                                                    <span
-                                                        class="icon-[mdi--check-circle-outline] mr-2 align-middle text-xl"></span>
-                                                    <span class="align-middle">
-                                                        A new software update is available.
-                                                    </span>
-                                                </p>
-                                                <button class="ml-auto mt-1 align-middle font-semibold text-sky-600">
-                                                    Details
-                                                    <span
-                                                        class="icon-[mdi--arrow-right-thin] ml-1 align-middle text-lg"></span>
-                                                </button>
-                                            </div>
-                                            <div
-                                                class="alert-dismissible flex items-center rounded bg-gray-50/50 px-5 py-2">
-                                                <p class="text-gray-600">
-                                                    <span
-                                                        class="icon-[mdi--check-circle-outline] mr-2 align-middle text-xl"></span>
-                                                    <span class="align-middle">
-                                                        A new software update is available.
-                                                    </span>
-                                                </p>
-                                                <button class="ml-auto mt-1 align-middle font-semibold text-gray-600">
-                                                    Details
-                                                    <span
-                                                        class="icon-[mdi--arrow-right-thin] ml-1 align-middle text-lg"></span>
-                                                </button>
-                                            </div>
-                                            <div
-                                                class="alert-dismissible flex items-center rounded bg-neutral-300 px-5 py-2">
-                                                <p class="text-neutral-700">
-                                                    <span
-                                                        class="icon-[mdi--check-circle-outline] mr-2 align-middle text-xl"></span>
-                                                    <span class="align-middle">
-                                                        A new software update is available.
-                                                    </span>
-                                                </p>
+                                    </div>
+                                    <div class="flex rounded bg-green-50 p-4 text-sm text-green-700" role="alert">
+                                        <span class="icon-[mdi--check-outline] -mt-1 mr-3 text-xl"></span>
+                                        <span class="sr-only">Info</span>
+                                        <div>
+                                            <span class="font-semibold">Order Completed</span>
+                                            <p class="mt-1">
+                                                More info about this info warning goes here. This example text is going
+                                                to run a bit longer so that you can see how spacing within an alert
+                                                works with this kind of content.
+                                            </p>
+                                            <div class="mt-4 flex gap-3">
                                                 <button
-                                                    class="ml-auto mt-1 align-middle font-semibold text-neutral-700">
-                                                    Details
-                                                    <span
-                                                        class="icon-[mdi--arrow-right-thin] ml-1 align-middle text-lg"></span>
+                                                    type="button"
+                                                    class="btn border-green-700 font-semibold hover:bg-green-700 hover:text-white">
+                                                    View Status
+                                                </button>
+                                                <button
+                                                    type="button"
+                                                    class="btn border-transparent font-semibold text-gray-400 hover:border hover:border-gray-400">
+                                                    Dismiss
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="flex rounded bg-red-50 p-4 text-sm text-red-700" role="alert">
+                                        <span class="icon-[mdi--cancel] -mt-1 mr-3 text-xl"> </span>
+                                        <span class="sr-only">Info</span>
+                                        <div>
+                                            <span class="font-semibold">Order Completed</span>
+                                            <p class="mt-1">
+                                                More info about this info warning goes here. This example text is going
+                                                to run a bit longer so that you can see how spacing within an alert
+                                                works with this kind of content.
+                                            </p>
+                                            <div class="mt-4 flex gap-3">
+                                                <button
+                                                    type="button"
+                                                    class="btn border-red-700 font-semibold hover:bg-red-700 hover:text-white">
+                                                    View Status
+                                                </button>
+                                                <button
+                                                    type="button"
+                                                    class="btn border-transparent font-semibold text-gray-400 hover:border hover:border-gray-400">
+                                                    Dismiss
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="flex rounded bg-yellow-50 p-4 text-sm text-yellow-700" role="alert">
+                                        <span class="icon-[mdi--alert] -mt-1 mr-3 text-xl"> </span>
+                                        <span class="sr-only">Info</span>
+                                        <div>
+                                            <span class="font-semibold">Order Completed</span>
+                                            <p class="mt-1">
+                                                More info about this info warning goes here. This example text is going
+                                                to run a bit longer so that you can see how spacing within an alert
+                                                works with this kind of content.
+                                            </p>
+                                            <div class="mt-4 flex gap-3">
+                                                <button
+                                                    type="button"
+                                                    class="btn border-yellow-700 font-semibold hover:bg-yellow-700 hover:text-white">
+                                                    View Status
+                                                </button>
+                                                <button
+                                                    type="button"
+                                                    class="btn border-transparent font-semibold text-gray-400 hover:border hover:border-gray-400">
+                                                    Dismiss
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="flex rounded bg-sky-50 p-4 text-sm text-sky-700" role="alert">
+                                        <span class="icon-[mdi--timer-sand] -mt-1 mr-3 text-xl"></span>
+                                        <span class="sr-only">Info</span>
+                                        <div>
+                                            <span class="font-semibold">Order Completed</span>
+                                            <p class="mt-1">
+                                                More info about this info warning goes here. This example text is going
+                                                to run a bit longer so that you can see how spacing within an alert
+                                                works with this kind of content.
+                                            </p>
+                                            <div class="mt-4 flex gap-3">
+                                                <button
+                                                    type="button"
+                                                    class="btn border-sky-700 font-semibold hover:bg-sky-700 hover:text-white">
+                                                    View Status
+                                                </button>
+                                                <button
+                                                    type="button"
+                                                    class="btn border-transparent font-semibold text-gray-400 hover:border hover:border-gray-400">
+                                                    Dismiss
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="flex rounded bg-gray-50 p-4 text-sm text-gray-700" role="alert">
+                                        <span class="icon-[mdi--check-all] -mt-1 mr-3 text-xl"> </span>
+                                        <span class="sr-only">Info</span>
+                                        <div>
+                                            <span class="font-semibold">Order Completed</span>
+                                            <p class="mt-1">
+                                                More info about this info warning goes here. This example text is going
+                                                to run a bit longer so that you can see how spacing within an alert
+                                                works with this kind of content.
+                                            </p>
+                                            <div class="mt-4 flex gap-3">
+                                                <button
+                                                    type="button"
+                                                    class="btn border-gray-700 font-semibold hover:bg-gray-700 hover:text-white">
+                                                    View Status
+                                                </button>
+                                                <button
+                                                    type="button"
+                                                    class="btn border-transparent font-semibold text-gray-400 hover:border hover:border-gray-400">
+                                                    Dismiss
                                                 </button>
                                             </div>
                                         </div>
@@ -1978,305 +1824,398 @@
                             </div>
                         </div>
 
-                        <div class="grid grid-cols-1">
-                            <div class="card dark:border-zinc-600 dark:bg-zinc-800">
-                                <div class="card-header">With dismiss button</div>
-                                <div class="card-body text-sm">
-                                    <div class="grid grid-cols-1 gap-5 lg:grid-cols-2">
-                                        <div class="space-y-4">
-                                            <div
-                                                class="alert-dismissible flex items-center rounded border border-primary-100 bg-primary-100 px-5 py-3">
+                        <div class="card">
+                            <h5 class="card-header">With link on right</h5>
+                            <div class="card-body text-sm">
+                                <div class="grid grid-cols-1 gap-5 lg:grid-cols-2">
+                                    <div class="space-y-4">
+                                        <div
+                                            class="alert-dismissible flex items-center rounded bg-primary-100 px-5 py-2">
+                                            <p class="text-primary-600">
                                                 <span
-                                                    class="icon-[mdi--check-all] mr-2 align-middle text-lg text-primary-700">
-                                                </span>
-                                                <p class="text-primary-700">A simple success alert—check it out!</p>
-                                                <button class="alert-dismiss ml-auto text-lg text-primary-400">
-                                                    <span class="icon-[mdi--close]"></span>
-                                                </button>
-                                            </div>
-                                            <div
-                                                class="alert-dismissible flex items-center rounded border border-gray-200 bg-gray-100 px-5 py-3">
+                                                    class="icon-[mdi--check-circle-outline] mr-2 align-middle text-xl"></span>
+                                                <span class="align-middle"> A new software update is available. </span>
+                                            </p>
+                                            <button class="ml-auto mt-1 align-middle font-semibold text-primary-600">
+                                                Details
                                                 <span
-                                                    class="icon-[mdi--cursor-move] mr-2 align-middle text-lg text-gray-700">
-                                                    open_with
-                                                </span>
-                                                <p class="text-gray-700">A simple success alert—check it out!</p>
-                                                <button class="alert-dismiss ml-auto text-lg text-gray-400">
-                                                    <span class="icon-[mdi--close]"></span>
-                                                </button>
-                                            </div>
-                                            <div
-                                                class="alert-dismissible flex items-center rounded border border-green-100 bg-green-50 px-5 py-3">
-                                                <span
-                                                    class="text-greed-700 icon-[mdi--face-agent] mr-2 align-middle text-lg">
-                                                </span>
-                                                <p class="text-green-700">A simple success alert—check it out!</p>
-                                                <button class="alert-dismiss ml-auto text-lg text-green-400">
-                                                    <span class="icon-[mdi--close]"></span>
-                                                </button>
-                                            </div>
-                                            <div
-                                                class="alert-dismissible flex items-center rounded border border-red-100 bg-red-50 px-5 py-3">
-                                                <span
-                                                    class="icon-[mdi--cancel] mr-2 align-middle text-lg text-red-700"></span>
-                                                <p class="text-red-700">A simple success alert—check it out!</p>
-                                                <button class="alert-dismiss ml-auto text-lg text-red-400">
-                                                    <span class="icon-[mdi--close]"></span>
-                                                </button>
-                                            </div>
+                                                    class="icon-[mdi--arrow-right-thin] ml-1 align-middle text-lg"></span>
+                                            </button>
                                         </div>
-                                        <div class="space-y-4">
-                                            <div
-                                                class="alert-dismissible flex items-center rounded border border-yellow-100 bg-yellow-50 px-5 py-3">
+                                        <div class="alert-dismissible flex items-center rounded bg-gray-50 px-5 py-2">
+                                            <p class="text-gray-600">
                                                 <span
-                                                    class="icon-[mdi--alert] mr-2 align-middle text-lg text-yellow-700"></span>
-                                                <p class="text-yellow-700">A simple success alert—check it out!</p>
-                                                <button class="alert-dismiss ml-auto text-lg text-yellow-400">
-                                                    <span class="icon-[mdi--close]"></span>
-                                                </button>
+                                                    class="icon-[mdi--check-circle-outline] mr-2 align-middle text-xl"></span>
+                                                <span class="align-middle"> A new software update is available. </span>
+                                            </p>
+                                            <button class="ml-auto mt-1 align-middle font-semibold text-gray-600">
+                                                Details
+                                                <span
+                                                    class="icon-[mdi--arrow-right-thin] ml-1 align-middle text-lg"></span>
+                                            </button>
+                                        </div>
+                                        <div class="alert-dismissible flex items-center rounded bg-green-50 px-5 py-2">
+                                            <p class="text-green-600">
+                                                <span
+                                                    class="icon-[mdi--check-circle-outline] mr-2 align-middle text-xl"></span>
+                                                <span class="align-middle"> A new software update is available. </span>
+                                            </p>
+                                            <button class="ml-auto mt-1 align-middle font-semibold text-green-600">
+                                                Details
+                                                <span
+                                                    class="icon-[mdi--arrow-right-thin] ml-1 align-middle text-lg"></span>
+                                            </button>
+                                        </div>
+                                        <div class="alert-dismissible flex items-center rounded bg-red-50 px-5 py-2">
+                                            <p class="text-red-600">
+                                                <span
+                                                    class="icon-[mdi--check-circle-outline] mr-2 align-middle text-xl"></span>
+                                                <span class="align-middle"> A new software update is available. </span>
+                                            </p>
+                                            <button class="ml-auto mt-1 align-middle font-semibold text-red-600">
+                                                Details
+                                                <span
+                                                    class="icon-[mdi--arrow-right-thin] ml-1 align-middle text-lg"></span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="space-y-4">
+                                        <div class="alert-dismissible flex items-center rounded bg-yellow-50 px-5 py-2">
+                                            <p class="text-yellow-600">
+                                                <span
+                                                    class="icon-[mdi--check-circle-outline] mr-2 align-middle text-xl"></span>
+                                                <span class="align-middle"> A new software update is available. </span>
+                                            </p>
+                                            <button class="ml-auto mt-1 align-middle font-semibold text-yellow-600">
+                                                Details
+                                                <span
+                                                    class="icon-[mdi--arrow-right-thin] ml-1 align-middle text-lg"></span>
+                                            </button>
+                                        </div>
+                                        <div class="alert-dismissible flex items-center rounded bg-sky-50 px-5 py-2">
+                                            <p class="text-sky-600">
+                                                <span
+                                                    class="icon-[mdi--check-circle-outline] mr-2 align-middle text-xl"></span>
+                                                <span class="align-middle"> A new software update is available. </span>
+                                            </p>
+                                            <button class="ml-auto mt-1 align-middle font-semibold text-sky-600">
+                                                Details
+                                                <span
+                                                    class="icon-[mdi--arrow-right-thin] ml-1 align-middle text-lg"></span>
+                                            </button>
+                                        </div>
+                                        <div
+                                            class="alert-dismissible flex items-center rounded bg-gray-50/50 px-5 py-2">
+                                            <p class="text-gray-600">
+                                                <span
+                                                    class="icon-[mdi--check-circle-outline] mr-2 align-middle text-xl"></span>
+                                                <span class="align-middle"> A new software update is available. </span>
+                                            </p>
+                                            <button class="ml-auto mt-1 align-middle font-semibold text-gray-600">
+                                                Details
+                                                <span
+                                                    class="icon-[mdi--arrow-right-thin] ml-1 align-middle text-lg"></span>
+                                            </button>
+                                        </div>
+                                        <div
+                                            class="alert-dismissible flex items-center rounded bg-neutral-300 px-5 py-2">
+                                            <p class="text-neutral-700">
+                                                <span
+                                                    class="icon-[mdi--check-circle-outline] mr-2 align-middle text-xl"></span>
+                                                <span class="align-middle"> A new software update is available. </span>
+                                            </p>
+                                            <button class="ml-auto mt-1 align-middle font-semibold text-neutral-700">
+                                                Details
+                                                <span
+                                                    class="icon-[mdi--arrow-right-thin] ml-1 align-middle text-lg"></span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <h5 class="card-header">With dismiss button</h5>
+                            <div class="card-body text-sm">
+                                <div class="grid grid-cols-1 gap-5 lg:grid-cols-2">
+                                    <div class="space-y-4">
+                                        <div
+                                            class="alert-dismissible flex items-center rounded border border-primary-100 bg-primary-100 px-5 py-3">
+                                            <span
+                                                class="icon-[mdi--check-all] mr-2 align-middle text-lg text-primary-700">
+                                            </span>
+                                            <p class="text-primary-700">A simple success alert—check it out!</p>
+                                            <button class="alert-dismiss ml-auto text-lg text-primary-400">
+                                                <span class="icon-[mdi--close]"></span>
+                                            </button>
+                                        </div>
+                                        <div
+                                            class="alert-dismissible flex items-center rounded border border-gray-200 bg-gray-100 px-5 py-3">
+                                            <span
+                                                class="icon-[mdi--cursor-move] mr-2 align-middle text-lg text-gray-700">
+                                                open_with
+                                            </span>
+                                            <p class="text-gray-700">A simple success alert—check it out!</p>
+                                            <button class="alert-dismiss ml-auto text-lg text-gray-400">
+                                                <span class="icon-[mdi--close]"></span>
+                                            </button>
+                                        </div>
+                                        <div
+                                            class="alert-dismissible flex items-center rounded border border-green-100 bg-green-50 px-5 py-3">
+                                            <span
+                                                class="text-greed-700 icon-[mdi--face-agent] mr-2 align-middle text-lg">
+                                            </span>
+                                            <p class="text-green-700">A simple success alert—check it out!</p>
+                                            <button class="alert-dismiss ml-auto text-lg text-green-400">
+                                                <span class="icon-[mdi--close]"></span>
+                                            </button>
+                                        </div>
+                                        <div
+                                            class="alert-dismissible flex items-center rounded border border-red-100 bg-red-50 px-5 py-3">
+                                            <span
+                                                class="icon-[mdi--cancel] mr-2 align-middle text-lg text-red-700"></span>
+                                            <p class="text-red-700">A simple success alert—check it out!</p>
+                                            <button class="alert-dismiss ml-auto text-lg text-red-400">
+                                                <span class="icon-[mdi--close]"></span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="space-y-4">
+                                        <div
+                                            class="alert-dismissible flex items-center rounded border border-yellow-100 bg-yellow-50 px-5 py-3">
+                                            <span
+                                                class="icon-[mdi--alert] mr-2 align-middle text-lg text-yellow-700"></span>
+                                            <p class="text-yellow-700">A simple success alert—check it out!</p>
+                                            <button class="alert-dismiss ml-auto text-lg text-yellow-400">
+                                                <span class="icon-[mdi--close]"></span>
+                                            </button>
+                                        </div>
+                                        <div
+                                            class="alert-dismissible flex items-center rounded border border-sky-100 bg-sky-50 px-5 py-3">
+                                            <span
+                                                class="icon-[mdi--information-outline] mr-2 align-middle text-lg text-sky-700">
+                                                info
+                                            </span>
+                                            <p class="text-sky-700">A simple success alert—check it out!</p>
+                                            <button class="alert-dismiss ml-auto text-lg text-sky-400">
+                                                <span class="icon-[mdi--close]"></span>
+                                            </button>
+                                        </div>
+                                        <div
+                                            class="alert-dismissible flex items-center rounded border border-gray-50 bg-gray-50/50 px-5 py-3 dark:border-zinc-600 dark:bg-zinc-600">
+                                            <span
+                                                class="icon-[mdi--face-agent] mr-2 align-middle text-lg text-gray-400">
+                                            </span>
+                                            <p class="text-gray-400">A simple success alert—check it out!</p>
+                                            <button class="alert-dismiss ml-auto text-lg text-gray-400">
+                                                <span class="icon-[mdi--close]"></span>
+                                            </button>
+                                        </div>
+                                        <div
+                                            class="alert-dismissible flex items-center rounded border border-neutral-300 bg-neutral-200 px-5 py-3">
+                                            <span
+                                                class="icon-[mdi--check-circle-outline] mr-2 align-middle text-lg text-neutral-700"></span>
+                                            <p class="text-neutral-700">A simple success alert—check it out!</p>
+                                            <button class="alert-dismiss ml-auto text-lg text-neutral-700">
+                                                <span class="icon-[mdi--close]"></span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <h5 class="card-header">With accent border</h5>
+                            <div class="card-body text-sm">
+                                <div class="grid grid-cols-1 gap-5 lg:grid-cols-2">
+                                    <div class="space-y-4">
+                                        <div
+                                            class="alert-dismissible flex items-center rounded rounded-l-none border-l-4 border-primary-500 bg-primary-100 px-5 py-2.5">
+                                            <span
+                                                class="icon-[mdi--check-all] mr-2 align-middle text-lg text-primary-700">
+                                            </span>
+                                            <p class="text-primary-700">A simple success alert—check it out!</p>
+                                            <button class="alert-dismiss ml-auto text-lg text-primary-400">
+                                                <span class="icon-[mdi--close]"></span>
+                                            </button>
+                                        </div>
+                                        <div
+                                            class="alert-dismissible flex items-center rounded rounded-l-none border-l-4 border-gray-500 bg-gray-100 px-5 py-2.5">
+                                            <span
+                                                class="icon-[mdi--cursor-move] mr-2 align-middle text-lg text-gray-700">
+                                                open_with
+                                            </span>
+                                            <p class="text-gray-700">A simple success alert—check it out!</p>
+                                            <button class="alert-dismiss ml-auto text-lg text-gray-400">
+                                                <span class="icon-[mdi--close]"></span>
+                                            </button>
+                                        </div>
+                                        <div
+                                            class="alert-dismissible flex items-center rounded rounded-l-none border-l-4 border-green-500 bg-green-50 px-5 py-2.5">
+                                            <span
+                                                class="text-greed-700 icon-[mdi--face-agent] mr-2 align-middle text-lg">
+                                            </span>
+                                            <p class="text-green-700">A simple success alert—check it out!</p>
+                                            <button class="alert-dismiss ml-auto text-lg text-green-400">
+                                                <span class="icon-[mdi--close]"></span>
+                                            </button>
+                                        </div>
+                                        <div
+                                            class="alert-dismissible flex items-center rounded rounded-l-none border-l-4 border-red-500 bg-red-50 px-5 py-2.5">
+                                            <span
+                                                class="icon-[mdi--cancel] mr-2 align-middle text-lg text-red-700"></span>
+                                            <p class="text-red-700">A simple success alert—check it out!</p>
+                                            <button class="alert-dismiss ml-auto text-lg text-red-400">
+                                                <span class="icon-[mdi--close]"></span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="space-y-4">
+                                        <div
+                                            class="alert-dismissible flex items-center rounded rounded-l-none border-l-4 border-yellow-500 bg-yellow-50 px-5 py-2.5">
+                                            <span
+                                                class="icon-[mdi--alert] mr-2 align-middle text-lg text-yellow-700"></span>
+                                            <p class="text-yellow-700">A simple success alert—check it out!</p>
+                                            <button class="alert-dismiss ml-auto text-lg text-yellow-400">
+                                                <span class="icon-[mdi--close]"></span>
+                                            </button>
+                                        </div>
+                                        <div
+                                            class="alert-dismissible flex items-center rounded rounded-l-none border-l-4 border-sky-500 bg-sky-50 px-5 py-2.5">
+                                            <span
+                                                class="icon-[mdi--information-outline] mr-2 align-middle text-lg text-sky-700">
+                                                info
+                                            </span>
+                                            <p class="text-sky-700">A simple success alert—check it out!</p>
+                                            <button class="alert-dismiss ml-auto text-lg text-sky-400">
+                                                <span class="icon-[mdi--close]"></span>
+                                            </button>
+                                        </div>
+                                        <div
+                                            class="alert-dismissible flex items-center rounded rounded-l-none border-l-4 border-gray-300 bg-gray-50/50 px-5 py-2.5 dark:border-zinc-500 dark:bg-zinc-700">
+                                            <span
+                                                class="icon-[mdi--face-agent] mr-2 align-middle text-lg text-gray-400">
+                                            </span>
+                                            <p class="text-gray-400">A simple success alert—check it out!</p>
+                                            <button class="alert-dismiss ml-auto text-lg text-gray-400">
+                                                <span class="icon-[mdi--close]"></span>
+                                            </button>
+                                        </div>
+                                        <div
+                                            class="alert-dismissible flex items-center rounded rounded-l-none border-l-4 border-neutral-400 bg-neutral-200 px-5 py-2.5">
+                                            <span
+                                                class="icon-[mdi--check-circle-outline] mr-2 align-middle text-lg text-neutral-700">
+                                            </span>
+                                            <p class="text-neutral-700">A simple success alert—check it out!</p>
+                                            <button class="alert-dismiss ml-auto text-lg text-neutral-700">
+                                                <span class="icon-[mdi--close]"></span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 lg:grid-cols-2">
+                            <div class="card">
+                                <h5 class="card-header">Label Icon Arrow Alerts</h5>
+                                <div class="card-body text-sm">
+                                    <div class="space-y-4">
+                                        <div class="alert-dismissible flex items-center rounded bg-green-50">
+                                            <div
+                                                class="relative flex h-12 w-12 items-center justify-center rounded-l bg-green-400 text-center">
+                                                <div
+                                                    class="after:absolute after:-right-3 after:top-[1.15rem] after:border-[6px] after:border-transparent after:border-l-green-400 after:content-['']"></div>
+
+                                                <span class="icon-[mdi--check-all] align-middle text-white"></span>
                                             </div>
+                                            <p class="ml-4 text-green-700">A simple success alert—check it out!</p>
+                                            <button class="alert-dismiss ml-auto pr-5 text-lg text-zinc-500">
+                                                <span class="icon-[mdi--close]"></span>
+                                            </button>
+                                        </div>
+                                        <div class="alert-dismissible flex items-center rounded bg-red-50">
                                             <div
-                                                class="alert-dismissible flex items-center rounded border border-sky-100 bg-sky-50 px-5 py-3">
-                                                <span
-                                                    class="icon-[mdi--information-outline] mr-2 align-middle text-lg text-sky-700">
+                                                class="relative flex h-12 w-12 items-center justify-center rounded-l bg-red-400 text-center">
+                                                <div
+                                                    class="after:absolute after:-right-3 after:top-[1.15rem] after:border-[6px] after:border-transparent after:border-l-red-400 after:content-['']"></div>
+                                                <span class="icon-[mdi--cancel] align-middle text-white"></span>
+                                            </div>
+                                            <p class="ml-4 text-red-700">A simple success alert—check it out!</p>
+                                            <button class="alert-dismiss ml-auto pr-5 text-lg text-zinc-500">
+                                                <span class="icon-[mdi--close]"></span>
+                                            </button>
+                                        </div>
+                                        <div class="alert-dismissible flex items-center rounded bg-yellow-50">
+                                            <div
+                                                class="relative flex h-12 w-12 items-center justify-center rounded-l bg-yellow-400 text-center">
+                                                <div
+                                                    class="after:absolute after:-right-3 after:top-[1.15rem] after:border-[6px] after:border-transparent after:border-l-yellow-400 after:content-['']"></div>
+                                                <span class="icon-[mdi--alert] align-middle text-white"></span>
+                                            </div>
+                                            <p class="ml-4 text-yellow-700">A simple success alert—check it out!</p>
+                                            <button class="alert-dismiss ml-auto pr-5 text-lg text-zinc-500">
+                                                <span class="icon-[mdi--close]"></span>
+                                            </button>
+                                        </div>
+                                        <div class="alert-dismissible flex items-center rounded bg-sky-50">
+                                            <div
+                                                class="relative flex h-12 w-12 items-center justify-center rounded-l bg-sky-400 text-center">
+                                                <div
+                                                    class="after:absolute after:-right-3 after:top-[1.15rem] after:border-[6px] after:border-transparent after:border-l-sky-400 after:content-['']"></div>
+                                                <span class="icon-[mdi--information-outline] align-middle text-white">
                                                     info
                                                 </span>
-                                                <p class="text-sky-700">A simple success alert—check it out!</p>
-                                                <button class="alert-dismiss ml-auto text-lg text-sky-400">
-                                                    <span class="icon-[mdi--close]"></span>
-                                                </button>
                                             </div>
-                                            <div
-                                                class="alert-dismissible flex items-center rounded border border-gray-50 bg-gray-50/50 px-5 py-3 dark:border-zinc-600 dark:bg-zinc-600">
-                                                <span
-                                                    class="icon-[mdi--face-agent] mr-2 align-middle text-lg text-gray-400">
-                                                </span>
-                                                <p class="text-gray-400">A simple success alert—check it out!</p>
-                                                <button class="alert-dismiss ml-auto text-lg text-gray-400">
-                                                    <span class="icon-[mdi--close]"></span>
-                                                </button>
-                                            </div>
-                                            <div
-                                                class="alert-dismissible flex items-center rounded border border-neutral-300 bg-neutral-200 px-5 py-3">
-                                                <span
-                                                    class="icon-[mdi--check-circle-outline] mr-2 align-middle text-lg text-neutral-700"></span>
-                                                <p class="text-neutral-700">A simple success alert—check it out!</p>
-                                                <button class="alert-dismiss ml-auto text-lg text-neutral-700">
-                                                    <span class="icon-[mdi--close]"></span>
-                                                </button>
-                                            </div>
+                                            <p class="ml-4 text-sky-700">A simple success alert—check it out!</p>
+                                            <button class="alert-dismiss ml-auto pr-5 text-lg text-zinc-500">
+                                                <span class="icon-[mdi--close]"></span>
+                                            </button>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-
-                        <div class="grid grid-cols-1">
-                            <div class="card dark:border-zinc-600 dark:bg-zinc-800">
-                                <div class="card-header">With accent border</div>
+                            <div class="card">
+                                <h5 class="card-header">Top Border Alerts</h5>
                                 <div class="card-body text-sm">
-                                    <div class="grid grid-cols-1 gap-5 lg:grid-cols-2">
-                                        <div class="space-y-4">
-                                            <div
-                                                class="alert-dismissible flex items-center rounded rounded-l-none border-l-4 border-primary-500 bg-primary-100 px-5 py-2.5">
-                                                <span
-                                                    class="icon-[mdi--check-all] mr-2 align-middle text-lg text-primary-700">
-                                                </span>
-                                                <p class="text-primary-700">A simple success alert—check it out!</p>
-                                                <button class="alert-dismiss ml-auto text-lg text-primary-400">
-                                                    <span class="icon-[mdi--close]"></span>
-                                                </button>
-                                            </div>
-                                            <div
-                                                class="alert-dismissible flex items-center rounded rounded-l-none border-l-4 border-gray-500 bg-gray-100 px-5 py-2.5">
-                                                <span
-                                                    class="icon-[mdi--cursor-move] mr-2 align-middle text-lg text-gray-700">
-                                                    open_with
-                                                </span>
-                                                <p class="text-gray-700">A simple success alert—check it out!</p>
-                                                <button class="alert-dismiss ml-auto text-lg text-gray-400">
-                                                    <span class="icon-[mdi--close]"></span>
-                                                </button>
-                                            </div>
-                                            <div
-                                                class="alert-dismissible flex items-center rounded rounded-l-none border-l-4 border-green-500 bg-green-50 px-5 py-2.5">
-                                                <span
-                                                    class="text-greed-700 icon-[mdi--face-agent] mr-2 align-middle text-lg">
-                                                </span>
-                                                <p class="text-green-700">A simple success alert—check it out!</p>
-                                                <button class="alert-dismiss ml-auto text-lg text-green-400">
-                                                    <span class="icon-[mdi--close]"></span>
-                                                </button>
-                                            </div>
-                                            <div
-                                                class="alert-dismissible flex items-center rounded rounded-l-none border-l-4 border-red-500 bg-red-50 px-5 py-2.5">
-                                                <span
-                                                    class="icon-[mdi--cancel] mr-2 align-middle text-lg text-red-700"></span>
-                                                <p class="text-red-700">A simple success alert—check it out!</p>
-                                                <button class="alert-dismiss ml-auto text-lg text-red-400">
-                                                    <span class="icon-[mdi--close]"></span>
-                                                </button>
-                                            </div>
+                                    <div class="space-y-4">
+                                        <div
+                                            class="alert-dismissible flex items-center rounded rounded-t-none border-t-4 border-primary-500 bg-primary-100 px-5 py-2">
+                                            <span
+                                                class="icon-[mdi--check-all] mr-2 align-middle text-lg text-primary-700"></span>
+                                            <p class="text-primary-700">A simple success alert—check it out!</p>
+                                            <button class="alert-dismiss ml-auto text-lg text-primary-400">
+                                                <span class="icon-[mdi--close]"></span>
+                                            </button>
                                         </div>
-                                        <div class="space-y-4">
-                                            <div
-                                                class="alert-dismissible flex items-center rounded rounded-l-none border-l-4 border-yellow-500 bg-yellow-50 px-5 py-2.5">
-                                                <span
-                                                    class="icon-[mdi--alert] mr-2 align-middle text-lg text-yellow-700"></span>
-                                                <p class="text-yellow-700">A simple success alert—check it out!</p>
-                                                <button class="alert-dismiss ml-auto text-lg text-yellow-400">
-                                                    <span class="icon-[mdi--close]"></span>
-                                                </button>
-                                            </div>
-                                            <div
-                                                class="alert-dismissible flex items-center rounded rounded-l-none border-l-4 border-sky-500 bg-sky-50 px-5 py-2.5">
-                                                <span
-                                                    class="icon-[mdi--information-outline] mr-2 align-middle text-lg text-sky-700">
-                                                    info
-                                                </span>
-                                                <p class="text-sky-700">A simple success alert—check it out!</p>
-                                                <button class="alert-dismiss ml-auto text-lg text-sky-400">
-                                                    <span class="icon-[mdi--close]"></span>
-                                                </button>
-                                            </div>
-                                            <div
-                                                class="alert-dismissible flex items-center rounded rounded-l-none border-l-4 border-gray-300 bg-gray-50/50 px-5 py-2.5 dark:border-zinc-500 dark:bg-zinc-700">
-                                                <span
-                                                    class="icon-[mdi--face-agent] mr-2 align-middle text-lg text-gray-400">
-                                                </span>
-                                                <p class="text-gray-400">A simple success alert—check it out!</p>
-                                                <button class="alert-dismiss ml-auto text-lg text-gray-400">
-                                                    <span class="icon-[mdi--close]"></span>
-                                                </button>
-                                            </div>
-                                            <div
-                                                class="alert-dismissible flex items-center rounded rounded-l-none border-l-4 border-neutral-400 bg-neutral-200 px-5 py-2.5">
-                                                <span
-                                                    class="icon-[mdi--check-circle-outline] mr-2 align-middle text-lg text-neutral-700">
-                                                </span>
-                                                <p class="text-neutral-700">A simple success alert—check it out!</p>
-                                                <button class="alert-dismiss ml-auto text-lg text-neutral-700">
-                                                    <span class="icon-[mdi--close]"></span>
-                                                </button>
-                                            </div>
+                                        <div
+                                            class="alert-dismissible flex items-center rounded rounded-t-none border-t-4 border-red-500 bg-red-50 px-5 py-2">
+                                            <span
+                                                class="icon-[mdi--check-all] mr-2 align-middle text-lg text-red-700"></span>
+                                            <p class="text-red-700">A simple success alert—check it out!</p>
+                                            <button class="alert-dismiss ml-auto text-lg text-red-400">
+                                                <span class="icon-[mdi--close]"></span>
+                                            </button>
                                         </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="grid grid-cols-1">
-                            <div class="dark:border-zinc-600 dark:bg-zinc-800">
-                                <div class="grid grid-cols-1 lg:grid-cols-2">
-                                    <div class="card">
-                                        <div class="card-header">Label Icon Arrow Alerts</div>
-                                        <div class="card-body text-sm">
-                                            <div class="space-y-4">
-                                                <div class="alert-dismissible flex items-center rounded bg-green-50">
-                                                    <div
-                                                        class="relative flex h-12 w-12 items-center justify-center rounded-l bg-green-400 text-center">
-                                                        <div
-                                                            class="after:absolute after:-right-3 after:top-[1.15rem] after:border-[6px] after:border-transparent after:border-l-green-400 after:content-['']"></div>
-
-                                                        <span
-                                                            class="icon-[mdi--check-all] align-middle text-white"></span>
-                                                    </div>
-                                                    <p class="ml-4 text-green-700">
-                                                        A simple success alert—check it out!
-                                                    </p>
-                                                    <button class="alert-dismiss ml-auto pr-5 text-lg text-zinc-500">
-                                                        <span class="icon-[mdi--close]"></span>
-                                                    </button>
-                                                </div>
-                                                <div class="alert-dismissible flex items-center rounded bg-red-50">
-                                                    <div
-                                                        class="relative flex h-12 w-12 items-center justify-center rounded-l bg-red-400 text-center">
-                                                        <div
-                                                            class="after:absolute after:-right-3 after:top-[1.15rem] after:border-[6px] after:border-transparent after:border-l-red-400 after:content-['']"></div>
-                                                        <span class="icon-[mdi--cancel] align-middle text-white"></span>
-                                                    </div>
-                                                    <p class="ml-4 text-red-700">
-                                                        A simple success alert—check it out!
-                                                    </p>
-                                                    <button class="alert-dismiss ml-auto pr-5 text-lg text-zinc-500">
-                                                        <span class="icon-[mdi--close]"></span>
-                                                    </button>
-                                                </div>
-                                                <div class="alert-dismissible flex items-center rounded bg-yellow-50">
-                                                    <div
-                                                        class="relative flex h-12 w-12 items-center justify-center rounded-l bg-yellow-400 text-center">
-                                                        <div
-                                                            class="after:absolute after:-right-3 after:top-[1.15rem] after:border-[6px] after:border-transparent after:border-l-yellow-400 after:content-['']"></div>
-                                                        <span class="icon-[mdi--alert] align-middle text-white"></span>
-                                                    </div>
-                                                    <p class="ml-4 text-yellow-700">
-                                                        A simple success alert—check it out!
-                                                    </p>
-                                                    <button class="alert-dismiss ml-auto pr-5 text-lg text-zinc-500">
-                                                        <span class="icon-[mdi--close]"></span>
-                                                    </button>
-                                                </div>
-                                                <div class="alert-dismissible flex items-center rounded bg-sky-50">
-                                                    <div
-                                                        class="relative flex h-12 w-12 items-center justify-center rounded-l bg-sky-400 text-center">
-                                                        <div
-                                                            class="after:absolute after:-right-3 after:top-[1.15rem] after:border-[6px] after:border-transparent after:border-l-sky-400 after:content-['']"></div>
-                                                        <span
-                                                            class="icon-[mdi--information-outline] align-middle text-white">
-                                                            info
-                                                        </span>
-                                                    </div>
-                                                    <p class="ml-4 text-sky-700">
-                                                        A simple success alert—check it out!
-                                                    </p>
-                                                    <button class="alert-dismiss ml-auto pr-5 text-lg text-zinc-500">
-                                                        <span class="icon-[mdi--close]"></span>
-                                                    </button>
-                                                </div>
-                                            </div>
+                                        <div
+                                            class="alert-dismissible flex items-center rounded rounded-t-none border-t-4 border-yellow-500 bg-yellow-50 px-5 py-2">
+                                            <span
+                                                class="icon-[mdi--check-all] mr-2 align-middle text-lg text-yellow-700"></span>
+                                            <p class="text-yellow-700">A simple success alert—check it out!</p>
+                                            <button class="alert-dismiss ml-auto text-lg text-yellow-400">
+                                                <span class="icon-[mdi--close]"></span>
+                                            </button>
                                         </div>
-                                    </div>
-                                    <div class="card">
-                                        <div class="card-header">Top Border Alerts</div>
-                                        <div class="card-body text-sm">
-                                            <div class="space-y-4">
-                                                <div
-                                                    class="alert-dismissible flex items-center rounded rounded-t-none border-t-4 border-primary-500 bg-primary-100 px-5 py-2">
-                                                    <span
-                                                        class="icon-[mdi--check-all] mr-2 align-middle text-lg text-primary-700"></span>
-                                                    <p class="text-primary-700">A simple success alert—check it out!</p>
-                                                    <button class="alert-dismiss ml-auto text-lg text-primary-400">
-                                                        <span class="icon-[mdi--close]"></span>
-                                                    </button>
-                                                </div>
-                                                <div
-                                                    class="alert-dismissible flex items-center rounded rounded-t-none border-t-4 border-red-500 bg-red-50 px-5 py-2">
-                                                    <span
-                                                        class="icon-[mdi--check-all] mr-2 align-middle text-lg text-red-700"></span>
-                                                    <p class="text-red-700">A simple success alert—check it out!</p>
-                                                    <button class="alert-dismiss ml-auto text-lg text-red-400">
-                                                        <span class="icon-[mdi--close]"></span>
-                                                    </button>
-                                                </div>
-                                                <div
-                                                    class="alert-dismissible flex items-center rounded rounded-t-none border-t-4 border-yellow-500 bg-yellow-50 px-5 py-2">
-                                                    <span
-                                                        class="icon-[mdi--check-all] mr-2 align-middle text-lg text-yellow-700"></span>
-                                                    <p class="text-yellow-700">A simple success alert—check it out!</p>
-                                                    <button class="alert-dismiss ml-auto text-lg text-yellow-400">
-                                                        <span class="icon-[mdi--close]"></span>
-                                                    </button>
-                                                </div>
-                                                <div
-                                                    class="alert-dismissible flex items-center rounded rounded-t-none border-t-4 border-sky-500 bg-sky-50 px-5 py-2">
-                                                    <span
-                                                        class="icon-[mdi--check-all] mr-2 align-middle text-lg text-sky-700"></span>
-                                                    <p class="text-sky-700">A simple success alert—check it out!</p>
-                                                    <button class="alert-dismiss ml-auto text-lg text-sky-400">
-                                                        <span class="icon-[mdi--close]"></span>
-                                                    </button>
-                                                </div>
-                                            </div>
+                                        <div
+                                            class="alert-dismissible flex items-center rounded rounded-t-none border-t-4 border-sky-500 bg-sky-50 px-5 py-2">
+                                            <span
+                                                class="icon-[mdi--check-all] mr-2 align-middle text-lg text-sky-700"></span>
+                                            <p class="text-sky-700">A simple success alert—check it out!</p>
+                                            <button class="alert-dismiss ml-auto text-lg text-sky-400">
+                                                <span class="icon-[mdi--close]"></span>
+                                            </button>
                                         </div>
                                     </div>
                                 </div>
@@ -2284,8 +2223,8 @@
                         </div>
 
                         <div class="grid gap-4 space-y-4 lg:grid lg:grid-cols-2 lg:space-y-0">
-                            <div class="dark--text card">
-                                <div class="card-header">With Background</div>
+                            <div class="card">
+                                <h5 class="card-header">With Background</h5>
                                 <div class="card-body space-y-2 text-sm">
                                     <div class="alert bg-primary text-white" role="alert">
                                         <span> Primary alert! Change a few things up and try submitting again. </span>
@@ -2313,8 +2252,8 @@
                                 </div>
                             </div>
 
-                            <div class="dark--text card">
-                                <div class="card-header">With Background Icon</div>
+                            <div class="card">
+                                <h5 class="card-header">With Background Icon</h5>
                                 <div class="card-body space-y-2 text-sm">
                                     <div class="alert-icon alert bg-primary text-white" role="alert">
                                         <span class="icon-[mdi--star]">star</span>
@@ -2350,71 +2289,69 @@
                             </div>
                         </div>
 
-                        <div class="grid grid-cols-1">
-                            <div class="card dark:border-zinc-600 dark:bg-zinc-800">
-                                <div class="grid grid-cols-1">
-                                    <div class="card-body pb-0">
-                                        <h6 class="mb-1 text-gray-700 dark:text-gray-100">Alert Examples</h6>
-                                    </div>
-                                    <div class="card-body">
-                                        <div class="grid grid-cols-1 gap-5 lg:grid-cols-2 xl:grid-cols-4">
-                                            <div
-                                                class="alert-dismissible relative rounded border-2 border-green-200 bg-green-100 px-6 py-3 text-center"
-                                                role="alert">
-                                                <button
-                                                    class="alert-dismiss absolute right-3 top-2 ml-auto text-lg text-zinc-500">
-                                                    <span class="icon-[mdi--close]"></span>
-                                                </button>
-                                                <div class="mb-4 mt-2">
-                                                    <span class="icon-[mdi--check-all] text-6xl text-green-500"></span>
-                                                </div>
-                                                <h5 class="text-green-500">Success</h5>
-                                                <p class="mb-4 mt-1 text-green-800">A simple success alert</p>
+                        <div class="card">
+                            <div class="grid grid-cols-1">
+                                <div class="card-header pb-0">
+                                    <h5 class="mb-1 text-gray-700 dark:text-gray-100">Alert Examples</h5>
+                                </div>
+                                <div class="card-body">
+                                    <div class="grid grid-cols-1 gap-5 lg:grid-cols-2 xl:grid-cols-4">
+                                        <div
+                                            class="alert-dismissible relative rounded border-2 border-green-200 bg-green-100 px-6 py-3 text-center"
+                                            role="alert">
+                                            <button
+                                                class="alert-dismiss absolute right-3 top-2 ml-auto text-lg text-zinc-500">
+                                                <span class="icon-[mdi--close]"></span>
+                                            </button>
+                                            <div class="mb-4 mt-2">
+                                                <span class="icon-[mdi--check-all] text-6xl text-green-500"></span>
                                             </div>
+                                            <h5 class="text-green-500">Success</h5>
+                                            <p class="mb-4 mt-1 text-green-800">A simple success alert</p>
+                                        </div>
 
-                                            <div
-                                                class="alert-dismissible relative rounded border-2 border-red-200 bg-red-100 px-6 py-3 text-center"
-                                                role="alert">
-                                                <button
-                                                    class="alert-dismiss absolute right-3 top-2 ml-auto text-lg text-zinc-500">
-                                                    <span class="icon-[mdi--close]"></span>
-                                                </button>
-                                                <div class="mb-4 mt-2">
-                                                    <span class="icon-[mdi--cancel] text-6xl text-red-500"> </span>
-                                                </div>
-                                                <h5 class="text-red-500">Success</h5>
-                                                <p class="mb-4 mt-1 text-red-800">A simple success alert</p>
+                                        <div
+                                            class="alert-dismissible relative rounded border-2 border-red-200 bg-red-100 px-6 py-3 text-center"
+                                            role="alert">
+                                            <button
+                                                class="alert-dismiss absolute right-3 top-2 ml-auto text-lg text-zinc-500">
+                                                <span class="icon-[mdi--close]"></span>
+                                            </button>
+                                            <div class="mb-4 mt-2">
+                                                <span class="icon-[mdi--cancel] text-6xl text-red-500"> </span>
                                             </div>
+                                            <h5 class="text-red-500">Success</h5>
+                                            <p class="mb-4 mt-1 text-red-800">A simple success alert</p>
+                                        </div>
 
-                                            <div
-                                                class="alert-dismissible relative rounded border-2 border-yellow-200 bg-yellow-100 px-6 py-3 text-center"
-                                                role="alert">
-                                                <button
-                                                    class="alert-dismiss absolute right-3 top-2 ml-auto text-lg text-zinc-500">
-                                                    <span class="icon-[mdi--close]"></span>
-                                                </button>
-                                                <div class="mb-4 mt-2">
-                                                    <span class="icon-[mdi--alert] text-6xl text-yellow-500"></span>
-                                                </div>
-                                                <h5 class="text-yellow-500">Success</h5>
-                                                <p class="mb-4 mt-1 text-yellow-800">A simple success alert</p>
+                                        <div
+                                            class="alert-dismissible relative rounded border-2 border-yellow-200 bg-yellow-100 px-6 py-3 text-center"
+                                            role="alert">
+                                            <button
+                                                class="alert-dismiss absolute right-3 top-2 ml-auto text-lg text-zinc-500">
+                                                <span class="icon-[mdi--close]"></span>
+                                            </button>
+                                            <div class="mb-4 mt-2">
+                                                <span class="icon-[mdi--alert] text-6xl text-yellow-500"></span>
                                             </div>
+                                            <h5 class="text-yellow-500">Success</h5>
+                                            <p class="mb-4 mt-1 text-yellow-800">A simple success alert</p>
+                                        </div>
 
-                                            <div
-                                                class="alert-dismissible relative rounded border-2 border-sky-200 bg-sky-100 px-6 py-3 text-center"
-                                                role="alert">
-                                                <button
-                                                    class="alert-dismiss absolute right-3 top-2 ml-auto text-lg text-zinc-500">
-                                                    <span class="icon-[mdi--close]"></span>
-                                                </button>
-                                                <div class="mb-4 mt-2">
-                                                    <span class="icon-[mdi--information-outline] text-6xl text-sky-500">
-                                                        info
-                                                    </span>
-                                                </div>
-                                                <h5 class="text-sky-500">Success</h5>
-                                                <p class="mb-4 mt-1 text-sky-800">A simple success alert</p>
+                                        <div
+                                            class="alert-dismissible relative rounded border-2 border-sky-200 bg-sky-100 px-6 py-3 text-center"
+                                            role="alert">
+                                            <button
+                                                class="alert-dismiss absolute right-3 top-2 ml-auto text-lg text-zinc-500">
+                                                <span class="icon-[mdi--close]"></span>
+                                            </button>
+                                            <div class="mb-4 mt-2">
+                                                <span class="icon-[mdi--information-outline] text-6xl text-sky-500">
+                                                    info
+                                                </span>
                                             </div>
+                                            <h5 class="text-sky-500">Success</h5>
+                                            <p class="mb-4 mt-1 text-sky-800">A simple success alert</p>
                                         </div>
                                     </div>
                                 </div>
