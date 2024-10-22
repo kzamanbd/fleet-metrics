@@ -1,6 +1,6 @@
 @layer components {
     .breadcrumb {
-        @apply dark--text mb-2 flex items-center justify-between md:mb-4;
+        @apply dark--text mb-2 flex items-center justify-between md:mb-4 print:hidden;
     }
     .breadcrumb-nav {
         @apply inline-flex items-center space-x-1 md:space-x-1;

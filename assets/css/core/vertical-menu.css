@@ -1,6 +1,6 @@
 @layer components {
     .vertical-menu {
-        @apply fixed inset-y-0 z-30 w-64 -translate-x-full border-gray-200 shadow-md duration-300 ease-in-out lg:translate-x-0;
+        @apply fixed inset-y-0 z-30 w-64 -translate-x-full border-gray-200 shadow-md duration-300 ease-in-out lg:translate-x-0 print:hidden;
     }
     .vertical-content {
         @apply flex h-full flex-col content-around bg-white dark:bg-dark [&.semi-dark]:bg-dark;
