@@ -29,6 +29,10 @@
         @apply border-green-500 focus:border-green-300 focus:ring focus:ring-green-200;
     }
 
+    .input-group {
+        @apply relative flex w-full items-stretch;
+    }
+
     /* form input sm */
     .form-input-sm {
         @apply h-8 px-2 text-sm;

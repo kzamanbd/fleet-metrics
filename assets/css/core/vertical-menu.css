@@ -1,6 +1,6 @@
 @layer components {
     .vertical-menu {
-        @apply fixed inset-y-0 z-30 w-64 -translate-x-full border-gray-200 shadow-md duration-300 ease-in-out lg:translate-x-0;
+        @apply fixed inset-y-0 z-30 w-64 -translate-x-full border-gray-200 shadow-md duration-300 ease-in-out lg:translate-x-0 print:hidden;
     }
     .vertical-content {
         @apply flex h-full flex-col content-around bg-white dark:bg-dark [&.semi-dark]:bg-dark;
@@ -94,7 +94,11 @@
     }
     .collapsed-icon,
     .expanded-icon {
-        @apply hidden dark:bg-white lg:block;
+        @apply hidden opacity-0 transition-opacity duration-300 ease-in-out dark:bg-white lg:block;
+    }
+    .vertical-menu:hover .collapsed-icon,
+    .vertical-menu:hover .expanded-icon {
+        @apply opacity-100;
     }
     .collapsed.vertical-menu {
         @apply translate-x-0 hover:w-64 lg:w-[70px];

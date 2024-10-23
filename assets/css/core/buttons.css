@@ -23,8 +23,8 @@
         @apply dark:bg-yellow-600 dark:hover:bg-yellow-700 dark:focus:ring-yellow-900;
     }
     .btn-info {
-        @apply bg-info text-white hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-300;
-        @apply dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-900;
+        @apply bg-info text-white hover:bg-info-600 focus:outline-none focus:ring-2 focus:ring-info-300;
+        @apply dark:bg-info-600 dark:hover:bg-info-700 dark:focus:ring-info-900;
     }
     .btn-light {
         @apply bg-gray-200 text-gray-800 hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-300;
@@ -54,8 +54,8 @@
         @apply dark:border-yellow-600 dark:hover:bg-yellow-600 dark:hover:text-white dark:focus:ring-yellow-900;
     }
     .btn-outline-info {
-        @apply border border-info text-info hover:bg-info hover:text-white focus:outline-none focus:ring-2 focus:ring-blue-300;
-        @apply dark:border-blue-600 dark:hover:bg-blue-600 dark:hover:text-white dark:focus:ring-blue-900;
+        @apply border border-info text-info hover:bg-info hover:text-white focus:outline-none focus:ring-2 focus:ring-info-300;
+        @apply dark:border-info-600 dark:hover:bg-info-600 dark:hover:text-white dark:focus:ring-info-900;
     }
     .btn-outline-light {
         @apply border border-gray-200 text-gray-200 hover:bg-gray-200 hover:text-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-300;
@@ -86,8 +86,8 @@
         @apply dark:text-warning-100 dark:hover:bg-warning/90 dark:focus:ring-yellow-900;
     }
     .btn-soft-info {
-        @apply border border-info bg-transparent text-info hover:bg-info-100 focus:outline-none focus:ring-2 focus:ring-blue-300;
-        @apply dark:text-info-100 dark:hover:bg-info/90 dark:focus:ring-blue-900;
+        @apply border border-info bg-transparent text-info hover:bg-info-100 focus:outline-none focus:ring-2 focus:ring-info-300;
+        @apply dark:text-info-100 dark:hover:bg-info/90 dark:focus:ring-info-900;
     }
     .btn-soft-light {
         @apply border border-gray-200 bg-transparent text-gray-200 hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-gray-300;

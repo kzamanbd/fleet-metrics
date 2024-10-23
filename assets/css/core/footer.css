@@ -1,6 +1,6 @@
 @layer components {
     .footer {
-        @apply px-4 py-2 shadow dark:bg-dark md:flex md:items-center md:justify-between md:px-6 md:py-4;
+        @apply px-4 py-2 shadow dark:bg-dark md:flex md:items-center md:justify-between md:px-6 md:py-4 print:hidden;
     }
     .footer-button {
         @apply mt-3 hidden flex-wrap items-center text-sm text-gray-500 dark:text-gray-400 sm:mt-0 md:flex;
