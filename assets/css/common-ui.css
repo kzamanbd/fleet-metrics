@@ -27,6 +27,112 @@
         @apply h-8 w-8 text-sm;
     }
 
+    /* progressbar */
+    .striped-progress-bar {
+        background-image: linear-gradient(
+            45deg,
+            hsla(0, 0%, 100%, 0.15) 25%,
+            transparent 0,
+            transparent 50%,
+            hsla(0, 0%, 100%, 0.15) 0,
+            hsla(0, 0%, 100%, 0.15) 75%,
+            transparent 0,
+            transparent
+        );
+        background-size: 1rem 1rem;
+    }
+    .animated-progress-bar {
+        background-image: linear-gradient(
+            45deg,
+            hsla(0, 0%, 100%, 0.15) 25%,
+            transparent 0,
+            transparent 50%,
+            hsla(0, 0%, 100%, 0.15) 0,
+            hsla(0, 0%, 100%, 0.15) 75%,
+            transparent 0,
+            transparent
+        );
+        background-size: 1rem 1rem;
+    }
+    .striped-progress-bar2 {
+        background-image: linear-gradient(
+            45deg,
+            hsla(0, 0%, 100%, 0.15) 25%,
+            transparent 0,
+            transparent 50%,
+            hsla(0, 0%, 100%, 0.15) 0,
+            hsla(0, 0%, 100%, 0.15) 75%,
+            transparent 0,
+            transparent
+        );
+        background-size: 1rem 1rem;
+    }
+    .striped-progress-bar3 {
+        background-image: linear-gradient(
+            45deg,
+            hsla(0, 0%, 100%, 0.15) 25%,
+            transparent 0,
+            transparent 50%,
+            hsla(0, 0%, 100%, 0.15) 0,
+            hsla(0, 0%, 100%, 0.15) 75%,
+            transparent 0,
+            transparent
+        );
+        background-size: 1rem 1rem;
+    }
+    .pstriped-rogress-bar4 {
+        background-image: linear-gradient(
+            45deg,
+            hsla(0, 0%, 100%, 0.15) 25%,
+            transparent 0,
+            transparent 50%,
+            hsla(0, 0%, 100%, 0.15) 0,
+            hsla(0, 0%, 100%, 0.15) 75%,
+            transparent 0,
+            transparent
+        );
+        background-size: 1rem 1rem;
+    }
+    .animated-rogress-bar5 {
+        background-image: linear-gradient(
+            45deg,
+            hsla(0, 0%, 100%, 0.15) 25%,
+            transparent 0,
+            transparent 50%,
+            hsla(0, 0%, 100%, 0.15) 0,
+            hsla(0, 0%, 100%, 0.15) 75%,
+            transparent 0,
+            transparent
+        );
+        background-size: 1rem 1rem;
+    }
+    .animated-rogress-bar6 {
+        background-image: linear-gradient(
+            45deg,
+            hsla(0, 0%, 100%, 0.15) 25%,
+            transparent 0,
+            transparent 50%,
+            hsla(0, 0%, 100%, 0.15) 0,
+            hsla(0, 0%, 100%, 0.15) 75%,
+            transparent 0,
+            transparent
+        );
+        background-size: 1rem 1rem;
+    }
+    .animated-rogress-bar7 {
+        background-image: linear-gradient(
+            45deg,
+            hsla(0, 0%, 100%, 0.15) 25%,
+            transparent 0,
+            transparent 50%,
+            hsla(0, 0%, 100%, 0.15) 0,
+            hsla(0, 0%, 100%, 0.15) 75%,
+            transparent 0,
+            transparent
+        );
+        background-size: 1rem 1rem;
+    }
+
     .timeline-widget {
         position: relative;
     }
