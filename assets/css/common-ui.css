@@ -17,16 +17,6 @@
         @apply rounded-md bg-[#f4f4f4] p-3 pb-5 shadow dark:bg-[#262e40];
     }
 
-    /* avatar */
-
-    .avatar {
-        @apply inline-flex h-10 w-10 items-center justify-center rounded-full bg-gray-100 object-cover dark:bg-gray-700;
-    }
-    /* avatar avatar-sm */
-    .avatar-sm {
-        @apply h-8 w-8 text-sm;
-    }
-
     /* progressbar */
     .striped-progress-bar {
         background-image: linear-gradient(
