@@ -15,5 +15,11 @@
             "source.organizeImports": "always"
         }
     },
-    "cSpell.words": ["Customizer", "simplebar", "tailwindcss"]
+    "cSpell.words": [
+        "alpinejs",
+        "Customizer",
+        "iconify",
+        "simplebar",
+        "tailwindcss"
+    ]
 }
