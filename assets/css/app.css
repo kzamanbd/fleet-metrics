@@ -28,6 +28,7 @@ Version: 1.0
 @import './core/vertical-menu.css';
 @import './core/footer.css';
 @import './core/accordion.css';
+@import './core/avatar.css';
 @import './core/badges.css';
 @import './core/cards.css';
 @import './core/buttons.css';
