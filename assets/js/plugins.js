@@ -29,8 +29,8 @@ import flatpickr from 'flatpickr';
 window.flatpickr = flatpickr;
 
 // tabulator tables
-import { Tabulator } from 'tabulator-tables';
-window.Tabulator = Tabulator;
+// import { Tabulator } from 'tabulator-tables';
+// window.Tabulator = Tabulator;
 
 // simple data tables
 import { DataTable, exportCSV, exportJSON, exportTXT } from 'simple-datatables';

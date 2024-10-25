@@ -1,7 +1,7 @@
 document.addEventListener('alpine:init', () => {
     Alpine.data('checkbox', () => ({
         ids: [],
-        datatable: null,
+        dataTable: null,
         tableData: [
             [1, 1, 'Caroline', 'Jensen', 'carolinejensen@zidant.com', '+1 (821) 447-3782'],
             [2, 2, 'Celeste', 'Grant', 'celestegrant@polarax.com', '+1 (838) 515-3408'],
@@ -31,29 +31,28 @@ document.addEventListener('alpine:init', () => {
         ],
 
         init() {
-            this.datatable = new window.DataTable('#myTable', {
-                data: {
-                    data: this.tableData,
-                },
-                perPage: 10,
-                perPageSelect: [10, 20, 30, 50, 100],
-                columns: [
-                    {
-                        select: 0,
-                        sortable: false,
-                        render: (data, cell, row) => {
-                            return `<input type="checkbox" class="form-checkbox" x-model="ids" :value="${data}" />`;
-                        },
+            document.addEventListener('DOMContentLoaded', () => {
+                this.dataTable = new window.DataTable('#myTable', {
+                    data: {
+                        data: this.tableData,
                     },
-                ],
-                firstLast: true,
-                labels: {
-                    perPage: '{select}',
-                },
-                layout: {
-                    top: '{search}{select}',
-                    bottom: '{info}{pager}',
-                },
+                    perPage: 10,
+                    perPageSelect: [10, 20, 30, 50, 100],
+                    columns: [
+                        {
+                            select: 0,
+                            sortable: false,
+                            render: (data, cell, row) => {
+                                return `<input type="checkbox" class="form-checkbox" x-model="ids" :value="${data[0].data}" />`;
+                            },
+                        },
+                    ],
+                    firstLast: true,
+                    layout: {
+                        top: '{search}{select}',
+                        bottom: '{info}{pager}',
+                    },
+                });
             });
         },
 

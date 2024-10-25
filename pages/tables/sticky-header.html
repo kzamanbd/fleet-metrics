@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Table Range Search - Admin Template</title>
+        <title>Table Sticky Header - Admin Template</title>
         <link rel="icon" href="/favicon.png" />
         <link rel="mask-icon" href="/favicon.png" color="#009EF7" />
         <meta name="theme-color" content="#009EF7" />
@@ -1374,7 +1374,7 @@
                     <!-- Start Breadcrumb -->
                     <nav class="breadcrumb hidden">
                         <div class="left-link">
-                            <h4 class="breadcrumb-title">Range Search</h4>
+                            <h4 class="breadcrumb-title">Sticky Header</h4>
                         </div>
                         <ol class="breadcrumb-nav">
                             <li class="inline-flex items-center">
@@ -1384,40 +1384,61 @@
                             <li aria-current="page">
                                 <div class="flex items-center">
                                     <span class="icon-[mdi--chevron-right]"></span>
-                                    <span class="breadcrumb-item-current"> Range Search </span>
+                                    <span class="breadcrumb-item-current"> Sticky Header </span>
                                 </div>
                             </li>
                         </ol>
                     </nav>
                     <!-- End Breadcrumb -->
 
-                    <div x-data="rangeSearch">
-                        <div class="card">
-                            <h5 class="card-header">Range Search</h5>
+                    <!-- End:Breadcrumb -->
+                    <div x-data="stickyHeader" class="grid grid-cols-1 gap-6">
+                        <div class="card sticky-header">
+                            <h5 class="card-header">Sticky Header</h5>
                             <div class="card-body relative">
-                                <div class="md:absolute md:left-5 md:top-2.5">
-                                    <div class="flex items-center gap-x-5">
-                                        <div class="mb-5 w-1/2 md:w-auto">
-                                            <input
-                                                id="minvalue"
-                                                type="text"
-                                                placeholder="Minimum age..."
-                                                class="form-input"
-                                                x-model="minAge"
-                                                @keyup.prevent="rangeChange()" />
-                                        </div>
-                                        <div class="mb-5 w-1/2 md:w-auto">
-                                            <input
-                                                id="maxvalue"
-                                                type="text"
-                                                placeholder="Maximum age..."
-                                                class="form-input"
-                                                x-model="maxAge"
-                                                @keyup.prevent="rangeChange()" />
-                                        </div>
-                                    </div>
-                                </div>
-                                <table id="myTable" class="tw-table table-hover whitespace-nowrap"></table>
+                                <table id="myTable1" class="tw-table table-hover whitespace-nowrap">
+                                    <thead class="sticky top-0 z-10">
+                                        <tr>
+                                            <th>
+                                                <input
+                                                    type="checkbox"
+                                                    class="form-checkbox"
+                                                    :value="ids1.length === tableData1.length"
+                                                    @change="checkAll1($event.target.checked)" />
+                                            </th>
+                                            <th>ID</th>
+                                            <th>First Name</th>
+                                            <th>Last Name</th>
+                                            <th>Email</th>
+                                            <th>Phone</th>
+                                        </tr>
+                                    </thead>
+                                </table>
+                            </div>
+                        </div>
+
+                        <div class="card sticky-column sticky-header">
+                            <h5 class="card-header">Sticky Header & First Column</h5>
+                            <div class="card-body relative">
+                                <table id="myTable3" class="tw-table table-hover whitespace-nowrap">
+                                    <thead>
+                                        <tr>
+                                            <th>
+                                                <input type="checkbox" class="form-checkbox" />
+                                            </th>
+                                            <th>ID</th>
+                                            <th>First Name</th>
+                                            <th>Last Name</th>
+                                            <th>Email</th>
+                                            <th>Phone</th>
+                                            <th>Company</th>
+                                            <th>Address</th>
+                                            <th>Age</th>
+                                            <th>Birthday</th>
+                                            <th>Active</th>
+                                        </tr>
+                                    </thead>
+                                </table>
                             </div>
                         </div>
                     </div>
@@ -1692,6 +1713,6 @@
             </div>
         </div>
         <script src="/assets/js/plugins.js" type="module"></script>
-        <script src="/features/tables/range-search.js"></script>
+        <script src="/features/tables/sticky-header.js"></script>
     </body>
 </html>

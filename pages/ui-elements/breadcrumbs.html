@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Table Sticky Header - Admin Template</title>
+        <title>Breadcrumb - Admin Template</title>
         <link rel="icon" href="/favicon.png" />
         <link rel="mask-icon" href="/favicon.png" color="#009EF7" />
         <meta name="theme-color" content="#009EF7" />
@@ -1372,100 +1372,24 @@
 
                 <main class="tw--content">
                     <!-- Start Breadcrumb -->
-                    <nav class="breadcrumb hidden">
+                    <nav class="breadcrumb">
                         <div class="left-link">
-                            <h4 class="breadcrumb-title">Sticky Header</h4>
+                            <h4 class="breadcrumb-title">Breadcrumb</h4>
                         </div>
                         <ol class="breadcrumb-nav">
                             <li class="inline-flex items-center">
-                                <a href="/" class="breadcrumb-item"> Data Tables </a>
+                                <a href="/" class="breadcrumb-item"> UI Elements </a>
                             </li>
 
                             <li aria-current="page">
                                 <div class="flex items-center">
                                     <span class="icon-[mdi--chevron-right]"></span>
-                                    <span class="breadcrumb-item-current"> Sticky Header </span>
+                                    <span class="breadcrumb-item-current"> Breadcrumb </span>
                                 </div>
                             </li>
                         </ol>
                     </nav>
                     <!-- End Breadcrumb -->
-
-                    <!-- End:Breadcrumb -->
-                    <div x-data="stickyHeader" class="grid grid-cols-1 gap-6">
-                        <div class="card sticky-header">
-                            <h5 class="card-header">Sticky Header</h5>
-                            <div class="card-body relative">
-                                <table id="myTable1" class="tw-table table-hover whitespace-nowrap">
-                                    <thead class="sticky top-0 z-10">
-                                        <tr>
-                                            <th>
-                                                <input
-                                                    type="checkbox"
-                                                    class="form-checkbox"
-                                                    :value="ids1.length === tableData1.length"
-                                                    @change="checkAll1($event.target.checked)" />
-                                            </th>
-                                            <th>ID</th>
-                                            <th>First Name</th>
-                                            <th>Last Name</th>
-                                            <th>Email</th>
-                                            <th>Phone</th>
-                                        </tr>
-                                    </thead>
-                                </table>
-                            </div>
-                        </div>
-                        <div class="card sticky-column">
-                            <h5 class="card-header">Sticky First Column</h5>
-                            <div class="card-body relative">
-                                <table id="myTable2" class="tw-table table-hover whitespace-nowrap">
-                                    <thead>
-                                        <tr>
-                                            <th>
-                                                <input type="checkbox" class="form-checkbox" />
-                                            </th>
-                                            <th>ID</th>
-                                            <th>First Name</th>
-                                            <th>Last Name</th>
-                                            <th>Email</th>
-                                            <th>Phone</th>
-                                            <th>Company</th>
-                                            <th>Address</th>
-                                            <th>Age</th>
-                                            <th>Birthday</th>
-                                            <th>Active</th>
-                                        </tr>
-                                    </thead>
-                                </table>
-                            </div>
-                        </div>
-
-                        <div class="card sticky-column sticky-header">
-                            <h5 class="card-header">Sticky Header & First Column</h5>
-                            <div class="card-body relative">
-                                <table id="myTable3" class="tw-table table-hover whitespace-nowrap">
-                                    <thead>
-                                        <tr>
-                                            <th>
-                                                <input type="checkbox" class="form-checkbox" />
-                                            </th>
-                                            <th>ID</th>
-                                            <th>First Name</th>
-                                            <th>Last Name</th>
-                                            <th>Email</th>
-                                            <th>Phone</th>
-                                            <th>Company</th>
-                                            <th>Address</th>
-                                            <th>Age</th>
-                                            <th>Birthday</th>
-                                            <th>Active</th>
-                                        </tr>
-                                    </thead>
-                                </table>
-                            </div>
-                        </div>
-                    </div>
                 </main>
 
                 <footer class="footer" :class="footerType">
@@ -1736,7 +1660,5 @@
                 </nav>
             </div>
         </div>
-        <script src="/assets/js/plugins.js" type="module"></script>
-        <script src="/features/tables/sticky-header.js"></script>
     </body>
 </html>

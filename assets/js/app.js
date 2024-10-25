@@ -323,10 +323,10 @@ window.tippy = tippy;
             return 'https://draftscripts.com/ui';
         },
         get themeDocs() {
-            return 'https://draftscripts.com/docs';
+            return 'https://theme-docs.vercel.app';
         },
         get repoLink() {
-            return 'https://github.com/kzamanbd/twilightui';
+            return '#';
         },
     }));
 
