@@ -1,6 +1,6 @@
 @layer components {
     .vertical-menu {
-        @apply fixed inset-y-0 z-30 w-64 -translate-x-full border-gray-200 shadow-md duration-300 ease-in-out lg:translate-x-0 print:hidden;
+        @apply fixed inset-y-0 z-30 w-64 border-gray-200 shadow-md duration-300 ease-in-out lg:!translate-x-0 ltr:-translate-x-full rtl:translate-x-full print:hidden;
     }
     .vertical-content {
         @apply flex h-full flex-col content-around bg-white dark:bg-dark [&.semi-dark]:bg-dark;
@@ -51,7 +51,7 @@
         @apply dark--text ml-3 rounded-md hover:text-gray-900 dark:hover:text-gray-100;
     }
     .vertical-menu .tw-arrow {
-        @apply ml-auto -rotate-90 transform transition-transform;
+        @apply -rotate-90 transform transition-transform ltr:ml-auto rtl:mr-auto;
     }
     .tw-menu-link.active > .tw-arrow,
     .tw-menu-item.active > .tw-menu-link .tw-arrow,
@@ -59,8 +59,8 @@
         @apply rotate-0;
     }
     .vertical-menu .twd--link {
-        @apply flex w-full items-center truncate rounded-md p-1.5 pl-5 text-sm font-medium text-gray-700 hover:bg-primary-100 hover:text-primary dark:text-gray-400 hover:dark:bg-gray-700 dark:hover:text-primary;
-        @apply relative after:absolute after:left-2 after:top-1/2 after:h-1 after:w-1 after:-translate-y-1/2 after:rounded-full after:bg-gray-500 hover:after:bg-primary;
+        @apply flex w-full items-center truncate rounded-md p-1.5 text-sm font-medium text-gray-700 hover:bg-primary-100 hover:text-primary dark:text-gray-400 hover:dark:bg-gray-700 dark:hover:text-primary ltr:pl-5 rtl:pr-5;
+        @apply relative after:absolute after:top-1/2 after:h-1 after:w-1 after:-translate-y-1/2 after:rounded-full after:bg-gray-500 hover:after:bg-primary ltr:after:left-2 rtl:after:right-2;
     }
     .vertical-menu .twd--link.active {
         @apply text-primary after:bg-primary;
@@ -140,7 +140,7 @@
         @apply btn-primary mb-0 flex w-full items-center justify-center justify-items-end py-2;
     }
     .footer-menu-dropdown {
-        @apply mt-auto border-t px-6 py-3;
+        @apply mt-auto border-t px-6 py-3 dark:border-gray-700;
     }
     .footer-menu-dropdown .dropdown-menu {
         @apply w-56 p-1;

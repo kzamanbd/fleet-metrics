@@ -49,28 +49,18 @@
     .loading {
         @apply fixed inset-0 z-[9999] flex items-center justify-center bg-gray-100 supports-[backdrop-filter]:bg-light/50 supports-[backdrop-filter]:backdrop-blur-sm dark:bg-dark-700 dark:supports-[backdrop-filter]:bg-light/10;
     }
-    .boxed-layout .navbar-nav,
-    .boxed-layout .footer,
-    .boxed-layout .tw--content {
-        @apply lg:container lg:mx-auto !important;
-    }
-    .boxed-layout .tw--content,
-    .boxed-layout .primary-header {
-        @apply px-0;
-    }
-
-    .boxed-layout .navbar-nav.scrollable .primary-header {
-        @apply px-6;
+    .boxed-layout {
+        @apply md:mx-auto md:w-[1600px] !important;
     }
 
     .tw--wrapper {
         @apply dark--text bg-light text-sm font-normal antialiased dark:bg-dark-700 print:bg-transparent;
     }
     .tw--container {
-        @apply relative flex min-h-screen flex-col transition-all duration-300 dark:bg-dark-700 lg:ml-64 print:m-0;
+        @apply relative flex min-h-screen flex-col transition-all duration-300 dark:bg-dark-700 ltr:lg:ml-64 rtl:lg:mr-64 print:m-0;
     }
     .expanded.tw--container {
-        @apply lg:ml-[70px];
+        @apply ltr:lg:ml-[70px] rtl:lg:mr-[70px];
     }
     .horizontal .tw--container,
     .vertical.toggle-menu .tw--container {
@@ -89,16 +79,19 @@
         @apply fixed inset-0 z-50 bg-[black]/60 px-4 transition-[display] supports-[backdrop-filter]:bg-light/20 supports-[backdrop-filter]:backdrop-blur;
     }
     .customizer-icon {
-        @apply fixed right-0 top-[calc(50%_-_18px)] z-20 flex cursor-pointer items-center justify-center rounded-md bg-primary p-2 text-white print:hidden;
+        @apply fixed top-[calc(50%_-_18px)] z-20 flex cursor-pointer items-center justify-center rounded-md bg-primary p-2 text-white ltr:right-0 rtl:left-0 print:hidden;
     }
     .customizer-card {
         @apply mb-3 rounded-md border border-dashed border-[#e0e6ed] p-3 dark:border-[#1b2e4b];
+    }
+    .customizer-card .form-radio {
+        @apply ltr:mr-2 rtl:ml-2;
     }
     .customizer-header {
         @apply mb-1 text-base leading-none dark:text-white;
     }
     .customizer-close {
-        @apply absolute right-3 top-3 opacity-30 hover:opacity-100 dark:text-white;
+        @apply absolute top-3 opacity-30 hover:opacity-100 dark:text-white ltr:right-3 rtl:left-3;
     }
     .app-drawers.theme p {
         @apply dark:text-gray-300;
