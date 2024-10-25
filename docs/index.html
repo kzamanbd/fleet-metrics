@@ -2,7 +2,7 @@
 <html>
     <head lang="en">
         <meta http-equiv="content-type" content="text/html;charset=utf-8" />
-        <title>Template Documentation Template</title>
+        <title>FleetMetrics Documentation</title>
         <!-- Framework CSS -->
         <link rel="stylesheet" href="assets/blueprint-css/screen.css" type="text/css" media="screen, projection" />
         <link rel="stylesheet" href="assets/blueprint-css/print.css" type="text/css" media="print" />
@@ -25,7 +25,13 @@
                 margin-bottom: 10px;
             }
             img {
-                max-width: 100%;
+                width: 100%;
+                object-fit: cover;
+            }
+            @media print {
+                img {
+                    max-width: 100%;
+                }
             }
         </style>
     </head>
@@ -68,7 +74,7 @@
                 <li><a href="#cssFiles">CSS Files and Structure</a></li>
                 <li><a href="#javascript">JavaScript</a></li>
                 <li><a href="#credits">Sources and Credits</a></li>
-                <li><a href="#">Any additional unique features that need an overview</a></li>
+                <li><a href="https://theme-docs.vercel.app/" target="_blank">Full Documentation</a></li>
             </ol>
 
             <hr />
