@@ -1,29 +1,29 @@
 @layer components {
     .btn {
-        @apply flex items-center justify-center rounded-md border px-4 py-2 text-center text-sm font-medium transition-all duration-300 ease-in-out dark:border-gray-700;
+        @apply flex items-center justify-center rounded-md border border-transparent px-4 py-2 text-center text-sm font-medium shadow-md transition-all duration-300 ease-in-out hover:shadow-sm dark:border-gray-700;
     }
     .btn-primary {
-        @apply bg-primary text-white hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-primary-300;
+        @apply bg-primary text-white shadow-primary-100 hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-primary-300;
         @apply dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-900;
     }
     .btn-secondary {
-        @apply bg-secondary text-white hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-gray-300;
+        @apply bg-secondary text-white shadow-secondary-100 hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-gray-300;
         @apply dark:bg-gray-600 dark:hover:bg-gray-700 dark:focus:ring-gray-900;
     }
     .btn-success {
-        @apply bg-success text-white hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-300;
+        @apply bg-success text-white shadow-success-100 hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-300;
         @apply dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-900;
     }
     .btn-danger {
-        @apply bg-danger text-white hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-red-300;
+        @apply bg-danger text-white shadow-danger-100 hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-red-300;
         @apply dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900;
     }
     .btn-warning {
-        @apply bg-warning text-white hover:bg-yellow-600 focus:outline-none focus:ring-2 focus:ring-yellow-300;
+        @apply bg-warning text-white shadow-warning-100 hover:bg-yellow-600 focus:outline-none focus:ring-2 focus:ring-yellow-300;
         @apply dark:bg-yellow-600 dark:hover:bg-yellow-700 dark:focus:ring-yellow-900;
     }
     .btn-info {
-        @apply bg-info text-white hover:bg-info-600 focus:outline-none focus:ring-2 focus:ring-info-300;
+        @apply bg-info text-white shadow-info-100 hover:bg-info-600 focus:outline-none focus:ring-2 focus:ring-info-300;
         @apply dark:bg-info-600 dark:hover:bg-info-700 dark:focus:ring-info-900;
     }
     .btn-light {
