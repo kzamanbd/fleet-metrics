@@ -1,7 +1,7 @@
 document.addEventListener('alpine:init', () => {
     Alpine.data('stickyHeader', () => ({
         ids1: [],
-        datatable1: null,
+        dataTable1: null,
         tableData1: [
             [1, 1, 'Caroline', 'Jensen', 'carolinejensen@zidant.com', '+1 (821) 447-3782'],
             [2, 2, 'Celeste', 'Grant', 'celestegrant@polarax.com', '+1 (838) 515-3408'],
@@ -358,132 +358,86 @@ document.addEventListener('alpine:init', () => {
             ],
         ],
         ids2: [],
-        datatable2: null,
+        dataTable2: null,
         tableData2: this.tableData || [],
 
         ids3: [],
-        datatable3: null,
+        dataTable3: null,
         tableData3: this.tableData || [],
 
         init() {
             this.tableData2 = this.tableData;
             this.tableData3 = this.tableData;
+            document.addEventListener('DOMContentLoaded', () => {
+                this.dataTable1 = new window.DataTable('#myTable1', {
+                    data: {
+                        data: this.tableData1,
+                    },
+                    perPage: 20,
+                    perPageSelect: [10, 20, 30, 50, 100],
+                    columns: [
+                        {
+                            select: 0,
+                            sortable: false,
+                            render: (data, cell, row) => {
+                                return `<input type="checkbox" class="form-checkbox" x-model="ids1" :value="${data[0].data}" />`;
+                            },
+                        },
+                        {
+                            select: 1,
+                            render: (data, cell, row) => {
+                                return `<strong>#${data[0].data}</strong>`;
+                            },
+                        },
+                    ],
+                    firstLast: true,
 
-            this.datatable1 = new window.DataTable('#myTable1', {
-                data: {
-                    data: this.tableData1,
-                },
-                perPage: 20,
-                perPageSelect: [10, 20, 30, 50, 100],
-                columns: [
-                    {
-                        select: 0,
-                        sortable: false,
-                        render: (data, cell, row) => {
-                            return `<input type="checkbox" class="form-checkbox" x-model="ids1" :value="${data}" />`;
-                        },
+                    layout: {
+                        top: '{search}{select}',
+                        bottom: '{info}{pager}',
                     },
-                    {
-                        select: 1,
-                        render: (data, cell, row) => {
-                            return `<strong>#${data}</strong>`;
-                        },
-                    },
-                ],
-                firstLast: true,
-                labels: {
-                    perPage: '{select}',
-                },
-                layout: {
-                    top: '{search}{select}',
-                    bottom: '{info}{pager}',
-                },
-            });
+                });
 
-            this.datatable2 = new window.DataTable('#myTable2', {
-                data: {
-                    data: this.tableData2,
-                },
-                perPage: 10,
-                perPageSelect: [10, 20, 30, 50, 100],
-                columns: [
-                    {
-                        select: 0,
-                        sortable: false,
-                        render: (data, cell, row) => {
-                            return `<input type="checkbox" class="form-checkbox" x-model="ids2" :value="${data}" />`;
-                        },
+                this.dataTable3 = new window.DataTable('#myTable3', {
+                    data: {
+                        data: this.tableData3,
                     },
-                    {
-                        select: 1,
-                        render: (data, cell, row) => {
-                            return `<strong>#${data}</strong>`;
+                    perPage: 20,
+                    perPageSelect: [10, 20, 30, 50, 100],
+                    columns: [
+                        {
+                            select: 0,
+                            sortable: false,
+                            render: (data, cell, row) => {
+                                return `<input type="checkbox" class="form-checkbox" x-model="ids3" :value="${data[0].data}" />`;
+                            },
                         },
-                    },
-                    {
-                        select: 4,
-                        render: (data, cell, row) => {
-                            return `<a href="mailto:${data}" class="text-primary hover:underline">${data}</a>`;
+                        {
+                            select: 1,
+                            render: (data, cell, row) => {
+                                return `<strong>#${data[0].data}</strong>`;
+                            },
                         },
-                    },
-                    {
-                        select: 9,
-                        render: (data, cell, row) => {
-                            return this.formatDate(data);
+                        {
+                            select: 4,
+                            render: (data, cell, row) => {
+                                return `<a href="mailto:${data[0].data}" class="text-primary hover:underline">${data[0].data}</a>`;
+                            },
                         },
-                    },
-                ],
-                firstLast: true,
-                labels: {
-                    perPage: '{select}',
-                },
-                layout: {
-                    top: '{search}{select}',
-                    bottom: '{info}{pager}',
-                },
-            });
+                        {
+                            select: 9,
+                            render: (data, cell, row) => {
+                                return this.formatDate(data[0].data);
+                            },
+                        },
+                    ],
+                    firstLast: true,
 
-            this.datatable3 = new window.DataTable('#myTable3', {
-                data: {
-                    data: this.tableData3,
-                },
-                perPage: 20,
-                perPageSelect: [10, 20, 30, 50, 100],
-                columns: [
-                    {
-                        select: 0,
-                        sortable: false,
-                        render: (data, cell, row) => {
-                            return `<input type="checkbox" class="form-checkbox" x-model="ids3" :value="${data}" />`;
-                        },
+                    layout: {
+                        top: '{search}{select}',
+                        bottom: '{info}{pager}',
                     },
-                    {
-                        select: 1,
-                        render: (data, cell, row) => {
-                            return `<strong>#${data}</strong>`;
-                        },
-                    },
-                    {
-                        select: 4,
-                        render: (data, cell, row) => {
-                            return `<a href="mailto:${data}" class="text-primary hover:underline">${data}</a>`;
-                        },
-                    },
-                    {
-                        select: 9,
-                        render: (data, cell, row) => {
-                            return this.formatDate(data);
-                        },
-                    },
-                ],
-                firstLast: true,
-                labels: {
-                    perPage: '{select}',
-                },
-                layout: {
-                    top: '{search}{select}',
-                    bottom: '{info}{pager}',
-                },
+                });
             });
         },
 

@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Order Sorting - Admin Template</title>
+        <title>Show/Hide Columns - Admin Template</title>
         <link rel="icon" href="/favicon.png" />
         <link rel="mask-icon" href="/favicon.png" color="#009EF7" />
         <meta name="theme-color" content="#009EF7" />
@@ -1374,7 +1374,7 @@
                     <!-- Start Breadcrumb -->
                     <nav class="breadcrumb hidden">
                         <div class="left-link">
-                            <h4 class="breadcrumb-title">Order Sorting</h4>
+                            <h4 class="breadcrumb-title">Column Chooser</h4>
                         </div>
                         <ol class="breadcrumb-nav">
                             <li class="inline-flex items-center">
@@ -1384,17 +1384,69 @@
                             <li aria-current="page">
                                 <div class="flex items-center">
                                     <span class="icon-[mdi--chevron-right]"></span>
-                                    <span class="breadcrumb-item-current"> Order Sorting </span>
+                                    <span class="breadcrumb-item-current"> Column Chooser </span>
                                 </div>
                             </li>
                         </ol>
                     </nav>
                     <!-- End Breadcrumb -->
 
-                    <div x-data="sorting">
+                    <div x-data="miscellaneous">
                         <div class="card">
-                            <h5 class="card-header">Order Sorting</h5>
-                            <div class="card-body">
+                            <h5 class="card-header">Show/Hide Columns</h5>
+                            <div class="card-body relative">
+                                <div class="sm:absolute sm:right-10 sm:top-4 sm:mb-0">
+                                    <div class="flex items-center">
+                                        <div
+                                            class="theme-dropdown relative"
+                                            x-data="{ columnDropdown: false }"
+                                            @click.outside="columnDropdown = false">
+                                            <a
+                                                href="javascript:;"
+                                                class="dark:text-white-dark flex items-center rounded-md border border-[#e0e6ed] px-4 py-2 text-sm font-semibold dark:border-[#253b5c] dark:bg-[#1b2e4b]"
+                                                @click="columnDropdown = ! columnDropdown">
+                                                <span class="ltr:mr-1 rtl:ml-1">Columns</span>
+                                                <svg
+                                                    class="h-5 w-5"
+                                                    viewBox="0 0 24 24"
+                                                    fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M19 9L12 15L5 9"
+                                                        stroke="currentColor"
+                                                        stroke-width="1.5"
+                                                        stroke-linecap="round"
+                                                        stroke-linejoin="round"></path>
+                                                </svg>
+                                            </a>
+                                            <div
+                                                class="absolute top-11 z-[10] hidden w-[100px] min-w-[150px] rounded bg-white py-2 text-dark shadow dark:bg-[#1b2e4b] dark:text-white-light ltr:left-0 rtl:right-0"
+                                                :class="columnDropdown && '!block'">
+                                                <ul class="space-y-2 px-4 font-semibold">
+                                                    <template x-for="(col,i) in columns" :key="i">
+                                                        <li>
+                                                            <div>
+                                                                <label class="cursor-pointer">
+                                                                    <input
+                                                                        type="checkbox"
+                                                                        class="form-checkbox"
+                                                                        :id="`chk-${i}`"
+                                                                        :value="(i)"
+                                                                        @change="col.hidden=  $event.target.checked,showHideColumns(i,$event.target.checked)"
+                                                                        :checked="col.hidden" />
+                                                                    <span
+                                                                        :for="`chk-${i}`"
+                                                                        class="ltr:ml-2 rtl:mr-2"
+                                                                        x-text="col.name"></span>
+                                                                </label>
+                                                            </div>
+                                                        </li>
+                                                    </template>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                                 <table id="myTable" class="tw-table table-hover whitespace-nowrap"></table>
                             </div>
                         </div>
@@ -1670,6 +1722,6 @@
             </div>
         </div>
         <script src="/assets/js/plugins.js" type="module"></script>
-        <script src="/features/tables/order-sorting.js"></script>
+        <script src="/features/tables/column-chooser.js"></script>
     </body>
 </html>

@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Advanced DataTable - Admin Template</title>
+        <title>Export DataTable - Admin Template</title>
         <link rel="icon" href="/favicon.png" />
         <link rel="mask-icon" href="/favicon.png" color="#009EF7" />
         <meta name="theme-color" content="#009EF7" />
@@ -1374,7 +1374,7 @@
                     <!-- Start Breadcrumb -->
                     <nav class="breadcrumb hidden">
                         <div class="left-link">
-                            <h4 class="breadcrumb-title">Advanced</h4>
+                            <h4 class="breadcrumb-title">Export</h4>
                         </div>
                         <ol class="breadcrumb-nav">
                             <li class="inline-flex items-center">
@@ -1384,18 +1384,56 @@
                             <li aria-current="page">
                                 <div class="flex items-center">
                                     <span class="icon-[mdi--chevron-right]"></span>
-                                    <span class="breadcrumb-item-current"> Advanced </span>
+                                    <span class="breadcrumb-item-current"> Export </span>
                                 </div>
                             </li>
                         </ol>
                     </nav>
                     <!-- End Breadcrumb -->
 
-                    <div x-data="advanced">
+                    <div x-data="exportTable">
                         <div class="card">
-                            <h5 class="card-header">Advanced</h5>
-                            <div class="card-body">
-                                <table id="myTable" class="tw-table table-hover whitespace-nowrap"></table>
+                            <h5 class="card-header">Export</h5>
+                            <div class="card-body relative">
+                                <div class="md:absolute md:right-5 md:top-2.5">
+                                    <div class="mb-5 flex flex-wrap items-center">
+                                        <button
+                                            type="button"
+                                            class="btn btn-primary btn-sm m-1"
+                                            @click="exportTable('csv')">
+                                            CSV
+                                        </button>
+                                        <button
+                                            type="button"
+                                            class="btn btn-primary btn-sm m-1"
+                                            @click="exportTable('txt')">
+                                            TXT
+                                        </button>
+                                        <button
+                                            type="button"
+                                            class="btn btn-primary btn-sm m-1"
+                                            @click="exportTable('json')">
+                                            JSON
+                                        </button>
+                                        <button type="button" class="btn btn-primary btn-sm m-1" @click="printTable">
+                                            PRINT
+                                        </button>
+                                    </div>
+                                </div>
+                                <table id="myTable" class="tw-table table-hover whitespace-nowrap">
+                                    <thead>
+                                        <tr>
+                                            <th>Id</th>
+                                            <th>First Name</th>
+                                            <th>Last Name</th>
+                                            <th>Company</th>
+                                            <th>Age</th>
+                                            <th>Start Date</th>
+                                            <th>Email</th>
+                                            <th>Phone No.</th>
+                                        </tr>
+                                    </thead>
+                                </table>
                             </div>
                         </div>
                     </div>
@@ -1670,6 +1708,6 @@
             </div>
         </div>
         <script src="/assets/js/plugins.js" type="module"></script>
-        <script src="/features/tables/advanced.js"></script>
+        <script src="/features/tables/export-data.js"></script>
     </body>
 </html>
