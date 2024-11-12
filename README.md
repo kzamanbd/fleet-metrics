@@ -30,7 +30,7 @@ See Vue.js version [here](<https://twilightui.netlify.app/>)
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/kzamaan/twilightui.git
+git clone https://github.com/kzamanbd/fleet-metrics
 ```
 
 ### 2. Install dependencies
